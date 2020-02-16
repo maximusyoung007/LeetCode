@@ -4,6 +4,7 @@ import com.maximus.easy.TwoSum;
 import com.maximus.medium.AddTwoNumbers;
 import com.maximus.medium.LengthOfLongestSubstring;
 import com.maximus.medium.LongestPalindrome;
+import com.maximus.medium.ZigZagConversion;
 import com.maximus.structure.ListNode;
 
 public class MainTest {
@@ -52,10 +53,15 @@ public class MainTest {
         s2 = s1;
         System.out.println(s2);*/
         //0005
-        LongestPalindrome longestPalindrome = new LongestPalindrome();
+        /*LongestPalindrome longestPalindrome = new LongestPalindrome();
         String s1 = "babad";
         System.out.println(longestPalindrome.longestPalindrome(s1));
         String s2 = "cbbd";
-        System.out.println(longestPalindrome.longestPalindrome(s2));
+        System.out.println(longestPalindrome.longestPalindrome(s2));*/
+    	//0006
+    	ZigZagConversion z = new ZigZagConversion();
+    	String s = "LEETCODEISHIRING";
+    	String r = z.convert(s, 3);
+    	System.out.println(r.equals("LCIRETOESIIGEDHN"));
     }
 }
