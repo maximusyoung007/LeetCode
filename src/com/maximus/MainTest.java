@@ -3,6 +3,7 @@ package com.maximus;
 import com.maximus.easy.TwoSum;
 import com.maximus.medium.AddTwoNumbers;
 import com.maximus.medium.LengthOfLongestSubstring;
+import com.maximus.medium.LongestPalindrome;
 import com.maximus.structure.ListNode;
 
 public class MainTest {
@@ -42,6 +43,19 @@ public class MainTest {
         String s3 = "pwwkew";
         int r3 = lengthOfLongestSubstring.lengthOfLongestSubstring(s3);
         System.out.println(r1 + "\n" + r2 + "\n" + r3);*/
-        
+        //比较两个字符是否相等
+        /*char a = 'a',b = 'a';
+        System.out.println(a == b);*/
+        //字符串
+        /*String s1 = "aa";
+        String s2 = "bbb";
+        s2 = s1;
+        System.out.println(s2);*/
+        //0005
+        LongestPalindrome longestPalindrome = new LongestPalindrome();
+        String s1 = "babad";
+        System.out.println(longestPalindrome.longestPalindrome(s1));
+        String s2 = "cbbd";
+        System.out.println(longestPalindrome.longestPalindrome(s2));
     }
 }
