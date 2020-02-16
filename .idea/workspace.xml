@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a3e7301-8578-4326-b79c-5d0e57b90bcc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/maximus/medium/AddTwoNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/maximus/medium/AddTwoNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/com/maximus/MainTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/com/maximus/easy/TwoSum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/com/maximus/medium/AddTwoNumbers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/com/maximus/medium/LengthOfLongestSubstring.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/leetcode/com/maximus/structure/ListNode.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +52,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RunManager">
     <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -91,8 +94,23 @@
       <workItem from="1581668464663" duration="3943000" />
       <workItem from="1581748718120" duration="6253000" />
       <workItem from="1581815439821" duration="593000" />
-      <workItem from="1581816195716" duration="1656000" />
+      <workItem from="1581816195716" duration="2324000" />
     </task>
+    <task id="LOCAL-00001" summary="test git">
+      <created>1581817878611</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581817878611</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test git">
+      <created>1581817904636</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581817904636</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +137,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test git" />
+    <option name="LAST_COMMIT_MESSAGE" value="test git" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="552" y="181" key="#Notifications" timestamp="1580786028187">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -136,14 +158,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="790" y="319" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581815556826" />
-    <state x="672" y="166" key="CommitChangelistDialog2" timestamp="1581817877903">
+    <state x="672" y="166" key="CommitChangelistDialog2" timestamp="1581817904120">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="672" y="166" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581817877903" />
-    <state x="1155" y="345" key="FileChooserDialogImpl" timestamp="1581817007795">
+    <state x="672" y="166" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581817904120" />
+    <state x="1155" y="345" key="FileChooserDialogImpl" timestamp="1581818512284">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1155" y="345" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581817007795" />
+    <state x="1155" y="345" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581818512284" />
     <state width="321" height="341" key="GridCell.Tab.0.bottom" timestamp="1581817137962">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -176,14 +198,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="321" height="341" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581817137962" />
-    <state x="492" y="302" key="SettingsEditor" timestamp="1581817853892">
+    <state x="507" y="305" key="SettingsEditor" timestamp="1581818260229">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="492" y="302" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581817853892" />
-    <state x="652" y="306" key="Vcs.Push.Dialog.v2" timestamp="1581817508702">
+    <state x="507" y="305" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581818260229" />
+    <state x="652" y="306" key="Vcs.Push.Dialog.v2" timestamp="1581818016389">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="652" y="306" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581817508702" />
+    <state x="652" y="306" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1581818016389" />
     <state x="0" y="695" key="com.intellij.ide.util.TipDialog" timestamp="1581815500997">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
