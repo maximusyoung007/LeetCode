@@ -1,3 +1,5 @@
+package com.maximus.medium;
+
 import java.util.HashMap;
 import java.util.Map;
 //动态规划

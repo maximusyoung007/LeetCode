@@ -1,6 +1,9 @@
+package com.maximus.medium;
+
+import com.maximus.structure.ListNode;
 
 public class AddTwoNumbers {
-    public ListNode addTwoNumbers(ListNode l1,ListNode l2) {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode result = new ListNode(0);
         ListNode p = l1;
         ListNode q = l2;

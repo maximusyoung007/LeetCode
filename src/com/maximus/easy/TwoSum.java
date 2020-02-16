@@ -1,6 +1,8 @@
-//0001
+package com.maximus.easy;
+
 import java.util.HashMap;
 import java.util.Map;
+
 public class TwoSum {
     public int[] twoSum(int[] nums, int target) {
         int len = nums.length;

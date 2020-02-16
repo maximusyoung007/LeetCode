@@ -1,7 +1,14 @@
+package com.maximus;
+
+import com.maximus.easy.TwoSum;
+import com.maximus.medium.AddTwoNumbers;
+import com.maximus.medium.LengthOfLongestSubstring;
+import com.maximus.structure.ListNode;
+
 public class MainTest {
     public static void main(String[] args){
         //0001
-       /* TwoSum twoSum0001 = new TwoSum();
+        /*TwoSum twoSum0001 = new TwoSum();
         int[] nums = {2,7,11,15};
         int target = 9;
         int[] result0001 = new int[2];
@@ -27,14 +34,14 @@ public class MainTest {
             System.out.println(x.val);
         }*/
         //0003
-        LengthOfLongestSubstring lengthOfLongestSubstring = new LengthOfLongestSubstring();
+        /*LengthOfLongestSubstring lengthOfLongestSubstring = new LengthOfLongestSubstring();
         String s1 = "abcabcbb";
         int r1 = lengthOfLongestSubstring.lengthOfLongestSubstring(s1);
         String s2 = "bbbbb";
         int r2 = lengthOfLongestSubstring.lengthOfLongestSubstring(s2);
         String s3 = "pwwkew";
         int r3 = lengthOfLongestSubstring.lengthOfLongestSubstring(s3);
-        System.out.println(r1 + "\n" + r2 + "\n" + r3);
-
+        System.out.println(r1 + "\n" + r2 + "\n" + r3);*/
+        
     }
 }
