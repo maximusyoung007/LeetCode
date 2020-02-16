@@ -17,10 +17,8 @@ public class AddTwoNumbers {
             r1 = r1 % 10;
             current.next = new ListNode(r1);
             current = current.next;
-            if(p != null)
-                p = p.next;
-            if(q != null)
-                q = q.next;
+            if(p != null) p = p.next;
+            if(q != null) q = q.next;
         }
         if(carry > 0)
             current.next = new ListNode(carry);
