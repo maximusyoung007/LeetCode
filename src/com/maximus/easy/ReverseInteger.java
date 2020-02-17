@@ -16,7 +16,7 @@ public class ReverseInteger {
             result = result * 10 + last;
             x = x / 10;
         }
-        if(flag == false) result = -result;
+        if(!flag) return -result;
         return result;
     }
 }
