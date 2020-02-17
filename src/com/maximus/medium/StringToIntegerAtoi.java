@@ -35,7 +35,6 @@ public class StringToIntegerAtoi {
                             result = Integer.MIN_VALUE;
                             break;
                         }
-                        //System.out.println(result);
                         result = result * 10 - num;
                     }
                 } else {
