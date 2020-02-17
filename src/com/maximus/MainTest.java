@@ -2,11 +2,9 @@ package com.maximus;
 
 import com.maximus.easy.ReverseInteger;
 import com.maximus.easy.TwoSum;
-import com.maximus.medium.AddTwoNumbers;
-import com.maximus.medium.LengthOfLongestSubstring;
-import com.maximus.medium.LongestPalindrome;
-import com.maximus.medium.ZigZagConversion;
+import com.maximus.medium.*;
 import com.maximus.structure.ListNode;
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 public class MainTest {
     public static void main(String[] args){
@@ -70,12 +68,57 @@ public class MainTest {
     	System.out.println(r.equals("LCIRETOESIIGEDHN"));*/
 
     	//0007
-		ReverseInteger reverseInteger = new ReverseInteger();
+		/*ReverseInteger reverseInteger = new ReverseInteger();
 		int a = 123;
 		System.out.println(reverseInteger.reverse(a));
 		int b = -123;
 		System.out.println(reverseInteger.reverse(b));
     	int c = 120;
-    	System.out.println(reverseInteger.reverse(c));
+    	System.out.println(reverseInteger.reverse(c));*/
+
+		//0008
+		StringToIntegerAtoi stringToIntegerAtoi = new StringToIntegerAtoi();
+		String s1 = "42";
+		System.out.println(stringToIntegerAtoi.myAtoi(s1));
+		String s2 = "   -42";
+		System.out.println(stringToIntegerAtoi.myAtoi(s2));
+		String s3 = "4193 with words";
+		System.out.println(stringToIntegerAtoi.myAtoi(s3));
+		String s4 = "words and 987";
+		System.out.println(stringToIntegerAtoi.myAtoi(s4));
+		String s5 = "-91283472332";
+		System.out.println(stringToIntegerAtoi.myAtoi(s5));
+		String s6 = "3.14159";
+		System.out.println(stringToIntegerAtoi.myAtoi(s6));
+		String s7 = "+1";
+		System.out.println(stringToIntegerAtoi.myAtoi(s7));
+		String s8 = "+-2";
+		System.out.println(stringToIntegerAtoi.myAtoi(s8));
+		String s9 = "   +0 123";
+		System.out.println(stringToIntegerAtoi.myAtoi(s9));
+		String s10 = "  0000000000012345678";
+		System.out.println(stringToIntegerAtoi.myAtoi(s10));
+		String s11 = "-000000000000001";
+		System.out.println(stringToIntegerAtoi.myAtoi(s11));
+		String s12 = "     +004500";
+		System.out.println(stringToIntegerAtoi.myAtoi(s12));
+		String s13 = "-2147483647";
+		System.out.println(stringToIntegerAtoi.myAtoi(s13));
+		String s14 = "-2147483649";
+		System.out.println(stringToIntegerAtoi.myAtoi(s14));
+		String s15 = "-   234";
+		System.out.println(stringToIntegerAtoi.myAtoi(s15));
+		String s16 = "0-1";
+		System.out.println(stringToIntegerAtoi.myAtoi(s16));
+		String s17 = "123-";
+		System.out.println(stringToIntegerAtoi.myAtoi(s17));
+		String s18 = "    -88827   5655  U";
+		System.out.println(stringToIntegerAtoi.myAtoi(s18));
+		//test char
+		/*char a = ' ';
+		System.out.println(a == ' ');*/
+
+		//test max and min
+		//System.out.println(Integer.MAX_VALUE + "\n" + Integer.MIN_VALUE);
     }
 }
