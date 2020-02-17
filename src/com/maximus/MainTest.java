@@ -1,5 +1,6 @@
 package com.maximus;
 
+import com.maximus.easy.ReverseInteger;
 import com.maximus.easy.TwoSum;
 import com.maximus.medium.AddTwoNumbers;
 import com.maximus.medium.LengthOfLongestSubstring;
@@ -18,6 +19,7 @@ public class MainTest {
         for(int i = 0;i < result0001.length;i++){
             System.out.println(result0001[i]);
         }*/
+
         //0002
         /*AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
         ListNode l1 = new ListNode(2);
@@ -35,6 +37,7 @@ public class MainTest {
         for(ListNode x = result;x != null;x = x.next) {
             System.out.println(x.val);
         }*/
+
         //0003
         /*LengthOfLongestSubstring lengthOfLongestSubstring = new LengthOfLongestSubstring();
         String s1 = "abcabcbb";
@@ -52,16 +55,27 @@ public class MainTest {
         String s2 = "bbb";
         s2 = s1;
         System.out.println(s2);*/
+
         //0005
         /*LongestPalindrome longestPalindrome = new LongestPalindrome();
         String s1 = "babad";
         System.out.println(longestPalindrome.longestPalindrome(s1));
         String s2 = "cbbd";
         System.out.println(longestPalindrome.longestPalindrome(s2));*/
-    	//0006
-    	ZigZagConversion z = new ZigZagConversion();
+
+        //0006
+    	/*ZigZagConversion z = new ZigZagConversion();
     	String s = "LEETCODEISHIRING";
     	String r = z.convert(s, 3);
-    	System.out.println(r.equals("LCIRETOESIIGEDHN"));
+    	System.out.println(r.equals("LCIRETOESIIGEDHN"));*/
+
+    	//0007
+		ReverseInteger reverseInteger = new ReverseInteger();
+		int a = 123;
+		System.out.println(reverseInteger.reverse(a));
+		int b = -123;
+		System.out.println(reverseInteger.reverse(b));
+    	int c = 120;
+    	System.out.println(reverseInteger.reverse(c));
     }
 }
