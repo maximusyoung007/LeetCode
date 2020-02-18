@@ -129,8 +129,17 @@ public class MainTest {
 		System.out.println(palindromeNumber.isPalindrome(10));*/
 
 		//0011
-		ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
+		/*ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
 		int[] a = {1,8,6,2,5,4,8,3,7};
-		System.out.println(containerWithMostWater.maxArea(a));
+		System.out.println(containerWithMostWater.maxArea(a));*/
+
+		//0012
+		IntegerToRoman integerToRoman = new IntegerToRoman();
+		System.out.println(integerToRoman.intToRoman(3));
+		System.out.println(integerToRoman.intToRoman(4));
+		System.out.println(integerToRoman.intToRoman(9));
+		System.out.println(integerToRoman.intToRoman(58));
+		System.out.println(integerToRoman.intToRoman(1994));
+		System.out.println(integerToRoman.intToRoman(1800));
     }
 }
