@@ -1,5 +1,6 @@
 package com.maximus;
 
+import com.maximus.easy.PalindromeNumber;
 import com.maximus.easy.ReverseInteger;
 import com.maximus.easy.TwoSum;
 import com.maximus.medium.*;
@@ -77,7 +78,7 @@ public class MainTest {
     	System.out.println(reverseInteger.reverse(c));*/
 
 		//0008
-		StringToIntegerAtoi stringToIntegerAtoi = new StringToIntegerAtoi();
+		/*StringToIntegerAtoi stringToIntegerAtoi = new StringToIntegerAtoi();
 		String s1 = "42";
 		System.out.println(stringToIntegerAtoi.myAtoi(s1));
 		String s2 = "   -42";
@@ -113,12 +114,18 @@ public class MainTest {
 		String s17 = "123-";
 		System.out.println(stringToIntegerAtoi.myAtoi(s17));
 		String s18 = "    -88827   5655  U";
-		System.out.println(stringToIntegerAtoi.myAtoi(s18));
+		System.out.println(stringToIntegerAtoi.myAtoi(s18));*/
 		//test char
 		/*char a = ' ';
 		System.out.println(a == ' ');*/
 
 		//test max and min
 		//System.out.println(Integer.MAX_VALUE + "\n" + Integer.MIN_VALUE);
+
+		//0009
+		PalindromeNumber palindromeNumber = new PalindromeNumber();
+		System.out.println(palindromeNumber.isPalindrome(121));
+		System.out.println(palindromeNumber.isPalindrome(-121));
+		System.out.println(palindromeNumber.isPalindrome(10));
     }
 }
