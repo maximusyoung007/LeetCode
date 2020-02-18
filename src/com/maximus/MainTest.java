@@ -123,9 +123,14 @@ public class MainTest {
 		//System.out.println(Integer.MAX_VALUE + "\n" + Integer.MIN_VALUE);
 
 		//0009
-		PalindromeNumber palindromeNumber = new PalindromeNumber();
+		/*PalindromeNumber palindromeNumber = new PalindromeNumber();
 		System.out.println(palindromeNumber.isPalindrome(121));
 		System.out.println(palindromeNumber.isPalindrome(-121));
-		System.out.println(palindromeNumber.isPalindrome(10));
+		System.out.println(palindromeNumber.isPalindrome(10));*/
+
+		//0011
+		ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
+		int[] a = {1,8,6,2,5,4,8,3,7};
+		System.out.println(containerWithMostWater.maxArea(a));
     }
 }
