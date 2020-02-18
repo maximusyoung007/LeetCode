@@ -2,6 +2,7 @@ package com.maximus;
 
 import com.maximus.easy.PalindromeNumber;
 import com.maximus.easy.ReverseInteger;
+import com.maximus.easy.RomanToInteger;
 import com.maximus.easy.TwoSum;
 import com.maximus.medium.*;
 import com.maximus.structure.ListNode;
@@ -134,12 +135,20 @@ public class MainTest {
 		System.out.println(containerWithMostWater.maxArea(a));*/
 
 		//0012
-		IntegerToRoman integerToRoman = new IntegerToRoman();
+		/*IntegerToRoman integerToRoman = new IntegerToRoman();
 		System.out.println(integerToRoman.intToRoman(3));
 		System.out.println(integerToRoman.intToRoman(4));
 		System.out.println(integerToRoman.intToRoman(9));
 		System.out.println(integerToRoman.intToRoman(58));
 		System.out.println(integerToRoman.intToRoman(1994));
-		System.out.println(integerToRoman.intToRoman(1800));
+		System.out.println(integerToRoman.intToRoman(1800));*/
+
+		//0013
+		RomanToInteger romanToInteger = new RomanToInteger();
+		System.out.println(romanToInteger.romanToInt("III"));
+		System.out.println(romanToInteger.romanToInt("IX"));
+		System.out.println(romanToInteger.romanToInt("LVIII"));
+		System.out.println(romanToInteger.romanToInt("MCMXCIV"));
+		System.out.println(romanToInteger.romanToInt("MDCCC"));
     }
 }
