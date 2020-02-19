@@ -1,9 +1,6 @@
 package com.maximus;
 
-import com.maximus.easy.PalindromeNumber;
-import com.maximus.easy.ReverseInteger;
-import com.maximus.easy.RomanToInteger;
-import com.maximus.easy.TwoSum;
+import com.maximus.easy.*;
 import com.maximus.medium.*;
 import com.maximus.structure.ListNode;
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
@@ -144,11 +141,20 @@ public class MainTest {
 		System.out.println(integerToRoman.intToRoman(1800));*/
 
 		//0013
-		RomanToInteger romanToInteger = new RomanToInteger();
+		/*RomanToInteger romanToInteger = new RomanToInteger();
 		System.out.println(romanToInteger.romanToInt("III"));
 		System.out.println(romanToInteger.romanToInt("IX"));
 		System.out.println(romanToInteger.romanToInt("LVIII"));
 		System.out.println(romanToInteger.romanToInt("MCMXCIV"));
-		System.out.println(romanToInteger.romanToInt("MDCCC"));
+		System.out.println(romanToInteger.romanToInt("MDCCC"));*/
+
+		//0014
+		LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
+		//String[] strs1 = {"flower","flow","flight"};
+		//System.out.println(longestCommonPrefix.longestCommonPrefix(strs1));
+		//String[] strs2 = {"dog","racecar","car"};
+		//System.out.println(longestCommonPrefix.longestCommonPrefix(strs2));
+		String[] strs3 = {"aca","cba"};
+		System.out.println(longestCommonPrefix.longestCommonPrefix(strs3));
     }
 }
