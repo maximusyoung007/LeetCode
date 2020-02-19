@@ -149,12 +149,17 @@ public class MainTest {
 		System.out.println(romanToInteger.romanToInt("MDCCC"));*/
 
 		//0014
-		LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
+		//LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
 		//String[] strs1 = {"flower","flow","flight"};
 		//System.out.println(longestCommonPrefix.longestCommonPrefix(strs1));
 		//String[] strs2 = {"dog","racecar","car"};
 		//System.out.println(longestCommonPrefix.longestCommonPrefix(strs2));
-		String[] strs3 = {"aca","cba"};
-		System.out.println(longestCommonPrefix.longestCommonPrefix(strs3));
+		//String[] strs3 = {"aca","cba"};
+		//System.out.println(longestCommonPrefix.longestCommonPrefix(strs3));
+
+		//0015
+		ThreeSum threeSum = new ThreeSum();
+		int[] nums = {-1,0,1,2,-1,-4};
+		System.out.println(threeSum.threeSum(nums).toString());
     }
 }
