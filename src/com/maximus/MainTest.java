@@ -172,8 +172,20 @@ public class MainTest {
 		System.out.println(threeSumClosest.threeSumClosed(nums2,3));*/
 
 		//0017
-		LetterCombinationsOfAPhoneNumber letterCombinationsOfAPhoneNumber = new LetterCombinationsOfAPhoneNumber();
+		/*LetterCombinationsOfAPhoneNumber letterCombinationsOfAPhoneNumber = new LetterCombinationsOfAPhoneNumber();
 		System.out.println(letterCombinationsOfAPhoneNumber.letterCombinations("23"));
-		System.out.println(letterCombinationsOfAPhoneNumber.letterCombinations(""));
+		System.out.println(letterCombinationsOfAPhoneNumber.letterCombinations(""));*/
+
+		//0018
+		FourSum fourSum = new FourSum();
+		/*int[] nums0 = {1,0,-1,0,-2,2};
+		int target = 0;
+		System.out.println(fourSum.fourSum(nums0,target));
+		int[] nums1 = {-3,-2,-1,0,0,1,2,3};
+		System.out.println(fourSum.fourSum(nums1,target));
+		int[] nums2 = {1,-2,-5,-4,-3,3,3,5};
+		System.out.println(fourSum.fourSum(nums2,-11));*/
+		int[] nums3 = {0,1,5,0,1,5,5,-4};
+		System.out.println(fourSum.fourSum(nums3,11));
     }
 }
