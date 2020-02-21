@@ -163,12 +163,17 @@ public class MainTest {
 		System.out.println(threeSum.threeSum(nums).toString());*/
 
 		//0016
-		ThreeSumClosest threeSumClosest = new ThreeSumClosest();
+		/*ThreeSumClosest threeSumClosest = new ThreeSumClosest();
 		int[] nums = {-1,2,1,-4};
 		System.out.println(threeSumClosest.threeSumClosed(nums,1));
 		int[] nums1 = {0,2,1,-3};
 		System.out.println(threeSumClosest.threeSumClosed(nums1,1));
 		int[] nums2 = {0,1,2};
-		System.out.println(threeSumClosest.threeSumClosed(nums2,3));
+		System.out.println(threeSumClosest.threeSumClosed(nums2,3));*/
+
+		//0017
+		LetterCombinationsOfAPhoneNumber letterCombinationsOfAPhoneNumber = new LetterCombinationsOfAPhoneNumber();
+		System.out.println(letterCombinationsOfAPhoneNumber.letterCombinations("23"));
+		System.out.println(letterCombinationsOfAPhoneNumber.letterCombinations(""));
     }
 }
