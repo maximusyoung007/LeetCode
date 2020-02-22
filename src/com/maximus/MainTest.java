@@ -208,11 +208,29 @@ public class MainTest {
 		}*/
 
 		//0020
-		ValidParentheses validParentheses = new ValidParentheses();
+		/*ValidParentheses validParentheses = new ValidParentheses();
 		System.out.println(validParentheses.isValid("()"));
 		System.out.println(validParentheses.isValid("()[]{}"));
 		System.out.println(validParentheses.isValid("(]"));
 		System.out.println(validParentheses.isValid("([)]"));
-		System.out.println(validParentheses.isValid("{[]}"));
+		System.out.println(validParentheses.isValid("{[]}"));*/
+
+		//0021
+		MergeTwoSortedLists mergeTwoSortedLists = new MergeTwoSortedLists();
+		ListNode l1 = new ListNode(1);
+		ListNode l2 = new ListNode(2);
+		ListNode l3 = new ListNode(4);
+		l1.next = l2;
+		l2.next = l3;
+		ListNode n1 = new ListNode(1);
+		ListNode n2 = new ListNode(3);
+		ListNode n3 = new ListNode(4);
+		n1.next = n2;
+		n2.next = n3;
+		ListNode result = mergeTwoSortedLists.mergeTwoLists(l1,n1);
+		while(result != null) {
+			System.out.println(result.val);
+			result = result.next;
+		}
 	}
 }
