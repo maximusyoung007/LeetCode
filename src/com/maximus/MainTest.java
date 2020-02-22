@@ -190,7 +190,7 @@ public class MainTest {
 		System.out.println(fourSum.fourSum(nums3,11));*/
 
 		//0019
-		RemoveNthNodeFromEndOfList removeNthNodeFromEndOfList = new RemoveNthNodeFromEndOfList();
+		/*RemoveNthNodeFromEndOfList removeNthNodeFromEndOfList = new RemoveNthNodeFromEndOfList();
 		ListNode l1 = new ListNode(1);
 		ListNode l2 = new ListNode(2);
 		ListNode l3 = new ListNode(3);
@@ -205,7 +205,14 @@ public class MainTest {
 		while(p != null) {
 			System.out.println(p.val);
 			p = p.next;
-		}
+		}*/
 
+		//0020
+		ValidParentheses validParentheses = new ValidParentheses();
+		System.out.println(validParentheses.isValid("()"));
+		System.out.println(validParentheses.isValid("()[]{}"));
+		System.out.println(validParentheses.isValid("(]"));
+		System.out.println(validParentheses.isValid("([)]"));
+		System.out.println(validParentheses.isValid("{[]}"));
 	}
 }
