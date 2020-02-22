@@ -5,6 +5,7 @@ import com.maximus.medium.*;
 import com.maximus.structure.ListNode;
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
+//测试数据
 public class MainTest {
     public static void main(String[] args){
         //0001
@@ -177,15 +178,34 @@ public class MainTest {
 		System.out.println(letterCombinationsOfAPhoneNumber.letterCombinations(""));*/
 
 		//0018
-		FourSum fourSum = new FourSum();
+		//FourSum fourSum = new FourSum();
 		/*int[] nums0 = {1,0,-1,0,-2,2};
 		int target = 0;
 		System.out.println(fourSum.fourSum(nums0,target));
 		int[] nums1 = {-3,-2,-1,0,0,1,2,3};
 		System.out.println(fourSum.fourSum(nums1,target));
 		int[] nums2 = {1,-2,-5,-4,-3,3,3,5};
-		System.out.println(fourSum.fourSum(nums2,-11));*/
+		System.out.println(fourSum.fourSum(nums2,-11));
 		int[] nums3 = {0,1,5,0,1,5,5,-4};
-		System.out.println(fourSum.fourSum(nums3,11));
-    }
+		System.out.println(fourSum.fourSum(nums3,11));*/
+
+		//0019
+		RemoveNthNodeFromEndOfList removeNthNodeFromEndOfList = new RemoveNthNodeFromEndOfList();
+		ListNode l1 = new ListNode(1);
+		ListNode l2 = new ListNode(2);
+		ListNode l3 = new ListNode(3);
+		ListNode l4 = new ListNode(4);
+		ListNode l5 = new ListNode(5);
+		l1.next = l2;
+		l2.next = l3;
+		l3.next = l4;
+		l4.next = l5;
+		ListNode result = removeNthNodeFromEndOfList.removeNthFormEnd(l1,2);
+		ListNode p = result;
+		while(p != null) {
+			System.out.println(p.val);
+			p = p.next;
+		}
+
+	}
 }
