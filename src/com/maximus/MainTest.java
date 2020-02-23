@@ -243,7 +243,7 @@ public class MainTest {
 		}*/
 
 		//0024
-		SwapNodesInPairs swapNodesInPairs = new SwapNodesInPairs();
+		//SwapNodesInPairs swapNodesInPairs = new SwapNodesInPairs();
 		/*ListNode l1 = new ListNode(1);
 		ListNode l2 = new ListNode(2);
 		ListNode l3 = new ListNode(3);
@@ -256,5 +256,13 @@ public class MainTest {
 			System.out.println(result.val);
 			result = result.next;
 		}*/
+
+		//0026
+		RemoveDuplicatesFromSortedArray removeDuplicatesFromSortedArray = new RemoveDuplicatesFromSortedArray();
+		int[] nums = {0,0,1,1,1,2,2,3,3,4};
+		int len = removeDuplicatesFromSortedArray.removeDuplicates(nums);
+		for(int i = 0;i < len;i++) {
+			System.out.println(nums[i]);
+		}
 	}
 }
