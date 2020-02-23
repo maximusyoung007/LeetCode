@@ -258,9 +258,17 @@ public class MainTest {
 		}*/
 
 		//0026
-		RemoveDuplicatesFromSortedArray removeDuplicatesFromSortedArray = new RemoveDuplicatesFromSortedArray();
+		/*RemoveDuplicatesFromSortedArray removeDuplicatesFromSortedArray = new RemoveDuplicatesFromSortedArray();
 		int[] nums = {0,0,1,1,1,2,2,3,3,4};
 		int len = removeDuplicatesFromSortedArray.removeDuplicates(nums);
+		for(int i = 0;i < len;i++) {
+			System.out.println(nums[i]);
+		}*/
+
+		//0027
+		RemoveElement removeElement = new RemoveElement();
+		int[] nums = {0,1,2,2,3,0,4,2};
+		int len = removeElement.removeElement(nums,2);
 		for(int i = 0;i < len;i++) {
 			System.out.println(nums[i]);
 		}
