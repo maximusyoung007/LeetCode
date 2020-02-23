@@ -236,10 +236,25 @@ public class MainTest {
 		}*/
 
 		//0022
-		GenerateParentheses generateParentheses = new GenerateParentheses();
+		/*GenerateParentheses generateParentheses = new GenerateParentheses();
 		List<String> result = generateParentheses.generateParenthesis(3);
 		for(int i = 0;i < result.size();i++) {
 			System.out.println(result.get(i));
-		}
+		}*/
+
+		//0024
+		SwapNodesInPairs swapNodesInPairs = new SwapNodesInPairs();
+		/*ListNode l1 = new ListNode(1);
+		ListNode l2 = new ListNode(2);
+		ListNode l3 = new ListNode(3);
+		ListNode l4 = new ListNode(4);
+		l1.next = l2;
+		l2.next = l3;
+		l3.next = l4;
+		ListNode result = swapNodesInPairs.swapPairs(l1);
+		while(result != null) {
+			System.out.println(result.val);
+			result = result.next;
+		}*/
 	}
 }
