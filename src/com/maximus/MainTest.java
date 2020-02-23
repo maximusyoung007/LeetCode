@@ -5,6 +5,8 @@ import com.maximus.medium.*;
 import com.maximus.structure.ListNode;
 import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
+import java.util.List;
+
 //测试数据
 public class MainTest {
     public static void main(String[] args){
@@ -216,7 +218,7 @@ public class MainTest {
 		System.out.println(validParentheses.isValid("{[]}"));*/
 
 		//0021
-		MergeTwoSortedLists mergeTwoSortedLists = new MergeTwoSortedLists();
+		/*MergeTwoSortedLists mergeTwoSortedLists = new MergeTwoSortedLists();
 		ListNode l1 = new ListNode(1);
 		ListNode l2 = new ListNode(2);
 		ListNode l3 = new ListNode(4);
@@ -231,6 +233,13 @@ public class MainTest {
 		while(result != null) {
 			System.out.println(result.val);
 			result = result.next;
+		}*/
+
+		//0022
+		GenerateParentheses generateParentheses = new GenerateParentheses();
+		List<String> result = generateParentheses.generateParenthesis(3);
+		for(int i = 0;i < result.size();i++) {
+			System.out.println(result.get(i));
 		}
 	}
 }
