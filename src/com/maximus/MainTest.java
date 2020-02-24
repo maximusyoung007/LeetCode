@@ -274,10 +274,26 @@ public class MainTest {
 		}*/
 
 		//0028
-		ImplementstrStr implementstrStr = new ImplementstrStr();
+		/*ImplementstrStr implementstrStr = new ImplementstrStr();
 		String haystack1 = "hello", needle1 = "ll";
 		System.out.println(implementstrStr.strStr(haystack1,needle1));
 		String haystack = "aaaaa", needle = "bba";
-		System.out.println(implementstrStr.strStr(haystack,needle));
+		System.out.println(implementstrStr.strStr(haystack,needle));*/
+
+		//0029
+		DivideTwoIntegers divideTwoIntegers = new DivideTwoIntegers();
+		int dividend = 10,divisor = 3;
+		System.out.println(divideTwoIntegers.divide(dividend,divisor));
+		int dividend2 = 7,divisor2 = -3;
+		System.out.println(divideTwoIntegers.divide(dividend2,divisor2));
+		int dividend3 = 1,divisor3 = 1;
+		System.out.println(divideTwoIntegers.divide(dividend3,divisor3));
+		int dividend4 = -1,divisor4 = -1;
+		System.out.println(divideTwoIntegers.divide(dividend4,divisor4));
+		int dividend5 = -2147483648,divisor5 = -1;
+		System.out.println(divideTwoIntegers.divide(dividend5,divisor5));
+		System.out.println(Integer.MAX_VALUE + " ------- " + Integer.MIN_VALUE);
+		int dividend6 = -2147483648,divisor6 = 1;
+		System.out.println(divideTwoIntegers.divide(dividend6,divisor6));
 	}
 }
