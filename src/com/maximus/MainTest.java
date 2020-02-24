@@ -266,11 +266,18 @@ public class MainTest {
 		}*/
 
 		//0027
-		RemoveElement removeElement = new RemoveElement();
+		/*RemoveElement removeElement = new RemoveElement();
 		int[] nums = {0,1,2,2,3,0,4,2};
 		int len = removeElement.removeElement(nums,2);
 		for(int i = 0;i < len;i++) {
 			System.out.println(nums[i]);
-		}
+		}*/
+
+		//0028
+		ImplementstrStr implementstrStr = new ImplementstrStr();
+		String haystack1 = "hello", needle1 = "ll";
+		System.out.println(implementstrStr.strStr(haystack1,needle1));
+		String haystack = "aaaaa", needle = "bba";
+		System.out.println(implementstrStr.strStr(haystack,needle));
 	}
 }
