@@ -281,7 +281,7 @@ public class MainTest {
 		System.out.println(implementstrStr.strStr(haystack,needle));*/
 
 		//0029
-		DivideTwoIntegers divideTwoIntegers = new DivideTwoIntegers();
+		/*DivideTwoIntegers divideTwoIntegers = new DivideTwoIntegers();
 		int dividend = 10,divisor = 3;
 		System.out.println(divideTwoIntegers.divide(dividend,divisor));
 		int dividend2 = 7,divisor2 = -3;
@@ -294,6 +294,33 @@ public class MainTest {
 		System.out.println(divideTwoIntegers.divide(dividend5,divisor5));
 		System.out.println(Integer.MAX_VALUE + " ------- " + Integer.MIN_VALUE);
 		int dividend6 = -2147483648,divisor6 = 1;
-		System.out.println(divideTwoIntegers.divide(dividend6,divisor6));
+		System.out.println(divideTwoIntegers.divide(dividend6,divisor6));*/
+
+		//0031
+		NextPermutation nextPermutation = new NextPermutation();
+		/*int[] nums = {1,5,8,4,7,6,5,3,1};
+		nextPermutation.nextPermutation(nums);
+		for(int i = 0;i < nums.length;i++) {
+			System.out.print(nums[i] + " ");
+		}
+		System.out.println();*/
+		int[] nums2 = {3,2,1};
+		nextPermutation.nextPermutation(nums2);
+		for(int i = 0;i < nums2.length;i++) {
+			System.out.print(nums2[i] + " ");
+		}
+		System.out.println();
+		int[] nums3 = {1,1};
+		nextPermutation.nextPermutation(nums3);
+		for(int i = 0;i < nums3.length;i++) {
+			System.out.print(nums3[i] + " ");
+		}
+		System.out.println();
+		int[] nums4 = {5,1,1};
+		nextPermutation.nextPermutation(nums4);
+		for(int i = 0; i < nums4.length;i++) {
+			System.out.print(nums4[i] + " ");
+		}
+		System.out.println();
 	}
 }
