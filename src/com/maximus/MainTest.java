@@ -297,13 +297,13 @@ public class MainTest {
 		System.out.println(divideTwoIntegers.divide(dividend6,divisor6));*/
 
 		//0031
-		NextPermutation nextPermutation = new NextPermutation();
+		//NextPermutation nextPermutation = new NextPermutation();
 		/*int[] nums = {1,5,8,4,7,6,5,3,1};
 		nextPermutation.nextPermutation(nums);
 		for(int i = 0;i < nums.length;i++) {
 			System.out.print(nums[i] + " ");
 		}
-		System.out.println();*/
+		System.out.println();
 		int[] nums2 = {3,2,1};
 		nextPermutation.nextPermutation(nums2);
 		for(int i = 0;i < nums2.length;i++) {
@@ -321,6 +321,12 @@ public class MainTest {
 		for(int i = 0; i < nums4.length;i++) {
 			System.out.print(nums4[i] + " ");
 		}
-		System.out.println();
+		System.out.println();*/
+
+		//0033
+		SearchinRotatedSortedArray searchinRotatedSortedArray = new SearchinRotatedSortedArray();
+		int[] nums = {4,5,6,7,0,1,2};
+		System.out.println(searchinRotatedSortedArray.search(nums,0));
+		System.out.println(searchinRotatedSortedArray.search(nums,3));
 	}
 }
