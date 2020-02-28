@@ -330,7 +330,7 @@ public class MainTest {
 		System.out.println(searchinRotatedSortedArray.search(nums,3));*/
 
 		//0034
-		FindFirstAndLastPositionOfElementInSortedArray findFirstAndLastPositionOfElementInSortedArray = new FindFirstAndLastPositionOfElementInSortedArray();
+		/*FindFirstAndLastPositionOfElementInSortedArray findFirstAndLastPositionOfElementInSortedArray = new FindFirstAndLastPositionOfElementInSortedArray();
 		int[] nums = {5,7,7,8,8,10};
 		int[] result = findFirstAndLastPositionOfElementInSortedArray.searchRange(nums,8);
 		for(int i = 0;i < result.length;i++) {
@@ -341,6 +341,15 @@ public class MainTest {
 		for(int i = 0;i < result2.length;i++) {
 			System.out.println(result2[i] + " ");
 		}
-		System.out.println();
+		System.out.println();*/
+
+		//0035
+		SearchInsertPosition searchInsertPosition = new SearchInsertPosition();
+		System.out.println(7/2);
+		int[] nums = {1,3,5,6};
+		System.out.println(searchInsertPosition.searchInsert(nums,5));
+		System.out.println(searchInsertPosition.searchInsert(nums,2));
+		System.out.println(searchInsertPosition.searchInsert(nums,7));
+		System.out.println(searchInsertPosition.searchInsert(nums,0));
 	}
 }
