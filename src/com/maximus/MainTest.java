@@ -324,9 +324,23 @@ public class MainTest {
 		System.out.println();*/
 
 		//0033
-		SearchinRotatedSortedArray searchinRotatedSortedArray = new SearchinRotatedSortedArray();
+		/*SearchinRotatedSortedArray searchinRotatedSortedArray = new SearchinRotatedSortedArray();
 		int[] nums = {4,5,6,7,0,1,2};
 		System.out.println(searchinRotatedSortedArray.search(nums,0));
-		System.out.println(searchinRotatedSortedArray.search(nums,3));
+		System.out.println(searchinRotatedSortedArray.search(nums,3));*/
+
+		//0034
+		FindFirstAndLastPositionOfElementInSortedArray findFirstAndLastPositionOfElementInSortedArray = new FindFirstAndLastPositionOfElementInSortedArray();
+		int[] nums = {5,7,7,8,8,10};
+		int[] result = findFirstAndLastPositionOfElementInSortedArray.searchRange(nums,8);
+		for(int i = 0;i < result.length;i++) {
+			System.out.print(result[i] + " ");
+		}
+		System.out.println();
+		int[] result2 = findFirstAndLastPositionOfElementInSortedArray.searchRange(nums,6);
+		for(int i = 0;i < result2.length;i++) {
+			System.out.println(result2[i] + " ");
+		}
+		System.out.println();
 	}
 }
