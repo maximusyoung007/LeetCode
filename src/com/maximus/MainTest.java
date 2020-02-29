@@ -397,13 +397,18 @@ public class MainTest {
 //		System.out.println(validSudoku.isValidSudoku(c3));
     	
     	//0038
-    	CountAndSay cas = new CountAndSay();
-    	System.out.println(cas.countAndSay(1));
-    	System.out.println(cas.countAndSay(2));
-    	System.out.println(cas.countAndSay(3));
-    	System.out.println(cas.countAndSay(4));
-    	System.out.println(cas.countAndSay(5));
-    	System.out.println(cas.countAndSay(6));
-    	System.out.println(cas.countAndSay(7));
+    	// CountAndSay cas = new CountAndSay();
+    	// System.out.println(cas.countAndSay(1));
+    	// System.out.println(cas.countAndSay(2));
+    	// System.out.println(cas.countAndSay(3));
+    	// System.out.println(cas.countAndSay(4));
+    	// System.out.println(cas.countAndSay(5));
+    	// System.out.println(cas.countAndSay(6));
+		// System.out.println(cas.countAndSay(7));
+		
+		//0053
+		MaximumSubarray maximumSubarray = new MaximumSubarray();
+		int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
+		System.out.println(maximumSubarray.maxSubArray(nums));
 	}
 }
