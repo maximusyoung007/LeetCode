@@ -406,9 +406,16 @@ public class MainTest {
     	// System.out.println(cas.countAndSay(6));
 		// System.out.println(cas.countAndSay(7));
 		
+		//0039
+		CombinationSum combinationSum = new CombinationSum();
+		int[] candidates = {2,3,6,7};
+		int target = 7;
+		List<List<Integer>> result = combinationSum.combinationSum(candidates, target);
+		System.out.println(result);
+
 		//0053
-		MaximumSubarray maximumSubarray = new MaximumSubarray();
-		int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
-		System.out.println(maximumSubarray.maxSubArray(nums));
+		// MaximumSubarray maximumSubarray = new MaximumSubarray();
+		// int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
+		// System.out.println(maximumSubarray.maxSubArray(nums));
 	}
 }
