@@ -408,9 +408,23 @@ public class MainTest {
 		
 		//0039
 		CombinationSum combinationSum = new CombinationSum();
-		int[] candidates = {2,3,6,7};
-		int target = 7;
-		List<List<Integer>> result = combinationSum.combinationSum(candidates, target);
+//		int[] candidates = {2,3,6,7};
+//		int target = 7;
+//		List<List<Integer>> result = combinationSum.combinationSum(candidates, target);
+//		System.out.println(result);
+
+		//0040
+		CombinationSum2 combinationSum2 = new CombinationSum2();
+		int[] a = {10,1,2,7,6,1,5};
+		int target = 8;
+		List<List<Integer>> result = combinationSum2.combinationSum2(a,target);
+		List<List<Integer>> result2 = combinationSum.combinationSum(a,target);
+		System.out.println(result);
+		System.out.println(result2);
+		int[] b = {2,5,2,1,2};
+		int target2 = 5;
+		result.clear();
+		result = combinationSum2.combinationSum2(b,target2);
 		System.out.println(result);
 
 		//0053
