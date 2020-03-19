@@ -436,16 +436,22 @@ public class MainTest {
 //        StringBuilder s3 = new StringBuilder("9999");
 //        StringBuilder s4 = new StringBuilder("999");
 //        System.out.println(multiplyStrings.add(s3,s4));
-        MultiplyStrings multiplyStrings = new MultiplyStrings();
+//        MultiplyStrings multiplyStrings = new MultiplyStrings();
 //        String s1 = "2";
 //        String s2 = "3";
 //        System.out.println(multiplyStrings.multiply(s1,s2));
-        String num1 = "123";
-        String num2 = "456";
-        System.out.println(multiplyStrings.multiply(num1,num2));
-        String num3 = "9";
-        String num4 = "9";
-        System.out.println(multiplyStrings.multiply(num3,num4));
+//        String num1 = "123";
+//        String num2 = "456";
+//        System.out.println(multiplyStrings.multiply(num1,num2));
+//        String num3 = "9";
+//        String num4 = "9";
+//        System.out.println(multiplyStrings.multiply(num3,num4));
+
+        //0046
+        Permutations permutations = new Permutations();
+        int[] nums = {1,2,3};
+        List<List<Integer>> result = permutations.permute(nums);
+        System.out.println(result);
 		//0053
 		// MaximumSubarray maximumSubarray = new MaximumSubarray();
 		// int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
