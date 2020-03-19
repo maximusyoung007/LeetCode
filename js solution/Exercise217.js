@@ -8,7 +8,6 @@ var containDuplicate = function(nums) {
         exist.add(nums[i])
     return exist.size != nums.length
 }
-
 //test
 var nums = [1,2,3,1]
 console.log(containDuplicate(nums))
