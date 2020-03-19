@@ -407,26 +407,45 @@ public class MainTest {
 		// System.out.println(cas.countAndSay(7));
 		
 		//0039
-		CombinationSum combinationSum = new CombinationSum();
+//		CombinationSum combinationSum = new CombinationSum();
 //		int[] candidates = {2,3,6,7};
 //		int target = 7;
 //		List<List<Integer>> result = combinationSum.combinationSum(candidates, target);
 //		System.out.println(result);
 
 		//0040
-		CombinationSum2 combinationSum2 = new CombinationSum2();
-		int[] a = {10,1,2,7,6,1,5};
-		int target = 8;
-		List<List<Integer>> result = combinationSum2.combinationSum2(a,target);
-		List<List<Integer>> result2 = combinationSum.combinationSum(a,target);
-		System.out.println(result);
-		System.out.println(result2);
-		int[] b = {2,5,2,1,2};
-		int target2 = 5;
-		result.clear();
-		result = combinationSum2.combinationSum2(b,target2);
-		System.out.println(result);
+//		CombinationSum2 combinationSum2 = new CombinationSum2();
+//		int[] a = {10,1,2,7,6,1,5};
+//		int target = 8;
+//		List<List<Integer>> result = combinationSum2.combinationSum2(a,target);
+//		List<List<Integer>> result2 = combinationSum.combinationSum(a,target);
+//		System.out.println(result);
+//		System.out.println(result2);
+//		int[] b = {2,5,2,1,2};
+//		int target2 = 5;
+//		result.clear();
+//		result = combinationSum2.combinationSum2(b,target2);
+//		System.out.println(result);
 
+        //0043
+//        MultiplyStrings multiplyStrings = new MultiplyStrings();
+//        StringBuilder s1 = new StringBuilder("1123");
+//        StringBuilder s2 = new StringBuilder("24");
+//        StringBuilder result = multiplyStrings.add(s1,s2);
+//        System.out.println(result);
+//        StringBuilder s3 = new StringBuilder("9999");
+//        StringBuilder s4 = new StringBuilder("999");
+//        System.out.println(multiplyStrings.add(s3,s4));
+        MultiplyStrings multiplyStrings = new MultiplyStrings();
+//        String s1 = "2";
+//        String s2 = "3";
+//        System.out.println(multiplyStrings.multiply(s1,s2));
+        String num1 = "123";
+        String num2 = "456";
+        System.out.println(multiplyStrings.multiply(num1,num2));
+        String num3 = "9";
+        String num4 = "9";
+        System.out.println(multiplyStrings.multiply(num3,num4));
 		//0053
 		// MaximumSubarray maximumSubarray = new MaximumSubarray();
 		// int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
