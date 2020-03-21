@@ -31,7 +31,7 @@ var reverseVowels = function(s) {
  * @return {boolean}  
  */
 var isVowel = function(c) {
-    var s = "aeiouAEIOU";
+    var s = "aeiouAEIOU"
     if(s.indexOf(c) != -1)
         return true
     return false
