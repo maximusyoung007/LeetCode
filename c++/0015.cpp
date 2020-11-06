@@ -1,4 +1,5 @@
 #include<vector>
+#include<algorithm>
 #include "0015.h"
 using namespace std;
 
