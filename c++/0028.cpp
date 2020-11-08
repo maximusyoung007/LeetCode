@@ -4,14 +4,14 @@
 using namespace std;
 
 int Solution0028::substr(string haystack, string needle) {
-	if (haystack == "" && needle == "")
-		return 0;
-	for (int i = 0; i < haystack.size(); i++) {
-		int j, k;
-		for (j = i, k = 0; k < needle.size() && haystack[j] == needle[k]; j++, k++);
-		if (k > 0 && k == needle.size()) {
-			return j - k;
-		}
-	}
-	return -1;
+    if (haystack == "" && needle == "")
+        return 0;
+    if (needle.size() > haystack.size())
+        return -1;
+    for (int i = 0; i <= haystack.size() - needle.size(); i++) {
+        if (haystack.substr(i, needle.size()) == needle) {
+            return i;
+        }
+    }
+    return -1;
 }
