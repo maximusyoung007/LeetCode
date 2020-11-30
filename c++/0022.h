@@ -6,5 +6,6 @@ using namespace std;
 class Solution0022 {
 public:
     vector<string> generateParenthesis(int n);
+    void dfs(const string &littleResult,int left,int right,vector<string> &result,int n);
 };
 #endif //C___0022_H
