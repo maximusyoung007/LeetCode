@@ -3,18 +3,20 @@
 
 int Solution0029::divide(int dividend, int divisor) {
     if(dividend == 0) return 0;
-    if(divisor == 1) return 1;
-    long count = 0;
-    long dividend_ = (long)dividend > 0 ? (long)dividend : -(long)dividend;
-    long divisor_ = (long)divisor > 0 ? (long)divisor : -(long)divisor;
-    while(dividend_ >= divisor_) {
-        int temp = 1;
-        while(dividend_ - divisor_ >= divisor_) {
-            divisor_ += divisor_;
-            temp += temp;
+    if(dividend == INT_MIN && divisor == -1) return INT_MAX;
+    if(dividend == INT_MIN && divisor == 1) return INT_MIN;
+    int count = 0;
+    int dividend_ = dividend < 0 ? dividend : -dividend;
+    int divisor_ = divisor < 0 ? divisor : -divisor;
+    while(dividend_ <= divisor_) {
+        int temp = divisor_;
+        int c = 1;
+        while(dividend_ - temp <= temp) {
+            temp = temp + temp;
+            c = c + c;
         }
-        dividend_ -= divisor_;
-
+        dividend_ -= temp;
+        count += c;
     }
     if((dividend > 0 && divisor < 0) || (dividend < 0 && divisor > 0)) {
         count = -count;
