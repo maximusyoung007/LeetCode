@@ -10,17 +10,17 @@ bool Solution0036::isValidSudoku(vector<vector<char>> &board) {
             }
             int num = (board[i][j] - '0') - 1;
             int index = (i / 3) * 3 + j / 3;
-            if(row[i][num] == 1 || line[num][i] == 1 || area[index][num] == 1) {
+            if(row[i][num] == 1 || line[j][num] == 1 || area[index][num] == 1) {
                 return false;
             }
             if(row[i][num] == 0) {
                 row[i][num] = 1;
             }
-            if(line[num][i] == 0) {
-                line[num][i] == 1;
+            if(line[j][num] == 0) {
+                line[j][num] = 1;
             }
             if(area[index][num] == 0) {
-                area[num][i] = 1;
+                area[index][num] = 1;
             }
         }
     }
