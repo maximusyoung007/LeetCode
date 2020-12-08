@@ -1,8 +1,8 @@
 #include<vector>
 using namespace std;
-class Solution39 {
+class Solution40 {
 public:
-    vector<vector<int>> combinationSum(vector<int>& candidates, int target);
+    vector<vector<int>> combinationSum2(vector<int>& candidates, int target);
 
     void dfs(vector<int> &candidate, int target, vector<int> &path, vector<vector<int>> &resultList,int begin);
 };
