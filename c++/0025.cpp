@@ -5,26 +5,32 @@ public:
     ListNode* reverseKGroup(ListNode* head, int k) {
         ListNode* hair = new ListNode(-1);
         hair->next = head;
+        int flag = 0;
         ListNode* start = head;
         ListNode* end = head;
-        while(end->next != nullptr) {
+        ListNode *pre = hair;
+        while(end != nullptr) {
             for(int i = 0;i < k - 1;i++) {
                 if(end->next != nullptr) {
                     end = end->next;
                 }else {
+                    flag = 1;
                     break;
                 }
             }
-            ListNode *pre = hair;
+            if(flag == 1) {
+                pre->next = start;
+                break;
+            }
+            ListNode* tail = end->next;
             //翻转从start到end
             ListNode* e = reverseStartEnd(start,end->next);
             pre->next = e;
-            pre = hair;
-            for(int i = 0;i < k;i++) {
-                pre = pre->next;
-            }
+            pre = start;
+            start = tail;
+            end = tail;
         }
-        return hair;
+        return hair->next;
     }
 
     ListNode* reverseStartEnd(ListNode* start,ListNode* end) {
