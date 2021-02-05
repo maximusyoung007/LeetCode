@@ -2,8 +2,36 @@
 #include<stack>
 using namespace std;
 
-class Solution0084 {
+class Solution0085 {
 public:
+    int maximalRectangle(vector<vector<char>>& matrix) {
+        if(matrix.size() == 0) {
+            return 0;
+        }
+        int row = 0,result = 0;
+        vector<int> height;
+        while (row < matrix.size()) {
+            height.clear();
+            for (int j = 0; j < matrix[0].size(); j++) {
+                int temp = 0;
+                for (int i = 0; i <= row; i++) {
+                    if(matrix[i][j] == '1') {
+                        temp += 1;
+                    } else {
+                        temp = 0;
+                    }
+                }
+                height.push_back(temp);
+            }
+            row++;
+            int t = largestRectangleArea(height);
+            if (t > result) {
+                result = t;
+            }
+        }
+        return result;
+    }
+
     int largestRectangleArea(vector<int>& heights) {
         vector<int> guard1;
         vector<int> guard2;
