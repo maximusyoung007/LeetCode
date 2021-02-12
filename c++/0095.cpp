@@ -17,7 +17,6 @@ public:
         copy(v.begin(), v.end(), a);
         do {
             TreeNode *root = new TreeNode(-1);
-            int len = 1;
             for (int i = 0; i < n; i++) {
                 TreeNode* node = new TreeNode(a[i]);
                 if (root->val == -1) {
