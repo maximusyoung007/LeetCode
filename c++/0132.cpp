@@ -5,8 +5,6 @@ using namespace std;
 class Solution0132 {
 public:
     int minCut(string s) {
-        vector<vector<string>> result;
-        vector<string> partResult;
         int n = s.size();
         vector<vector<bool>> f(n, vector<bool>(n));
         for (int l = 0; l < n; l++) {
