@@ -4,7 +4,7 @@ using namespace std;
 class Solution0134 {
 public:
     int canCompleteCircuit(vector<int>& gas, vector<int>& cost) {
-        int totalGas = 0, totalCost = 0, minCost = 0, earnCost = 0, minIndex = 0;
+        int totalGas = 0, totalCost = 0, minCost = 0, earnCost = 0, minIndex = -1;
         for (int i = 0; i < gas.size(); i++) {
             totalGas += gas[i];
             totalCost += cost[i];
