@@ -51,9 +51,10 @@ public class Solution0248 {
         for (String s : result) {
             Long tl = Long.parseLong(s);
             if (tl >= Long.parseLong(low) && tl <= Long.parseLong(high)) {
-
+                count++;
             }
         }
+        return count;
     }
     void dfs(List<String> res, String t, Map<String, String> map, int n) {
         if (t.length() == n) {
