@@ -33,16 +33,22 @@ class Solution0985 {
             }
         }
         int[] result = new int[queries.length];
-        for (int i = 0; i < result.length; i++) {
-            result[i] = r;
-        }
         for (int i = 0; i < queries.length; i++) {
             int val = queries[i][0];
             int index = queries[i][1];
-            if (val % 2 == 0) {
-                r += val;
-                result[i] = r;
+            if ((val + nums[index]) % 2 == 0) {
+                if (nums[index] % 2 == 0) {
+                    r = r + val;
+                } else {
+                    r = r + nums[index] + val;
+                }
+            } else {
+                if (nums[index] % 2 == 0) {
+                    r = r - nums[index];
+                }
             }
+            result[i] = r;
+            nums[index] = nums[index] + val;
         }
         return result;
     }
