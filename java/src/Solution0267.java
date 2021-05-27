@@ -67,13 +67,12 @@ public class Solution0267 {
                 used.add(0);
             }
             dfs(curr, used, chars, result);
-            Set<String> set = new HashSet<>();
-            set.addAll(result);
-            List<String> r = new ArrayList<>();
-            r.addAll(set);
+            Set<String> set = new HashSet(result);
+            result.clear();;
+            result.addAll(set);
             List<String> rr = new ArrayList<>();
-            for (int i = 0; i < r.size(); i++) {
-                String ts = r.get(i);
+            for (int i = 0; i < result.size(); i++) {
+                String ts = result.get(i);
                 String rts = new StringBuilder(ts).reverse().toString();
                 String tr = "";
                 if (s.length() % 2 == 0) {
@@ -94,16 +93,10 @@ public class Solution0267 {
         }
         for (int i = 0; i < chars.size(); i++) {
             if (used.get(i) == 0) {
-                List<Integer> used2 = new ArrayList<>();
-                for (int j = 0; j < used.size(); j++) {
-                    if (j == i || used.get(j) == 1) {
-                        used2.add(1);
-                    } else {
-                        used2.add(0);
-                    }
-                }
+                used.set(i, 1);
                 curr.append(chars.get(i));
-                dfs(curr, used2, chars, result);
+                dfs(curr, used, chars, result);
+                used.set(i, 0);
                 curr.replace(curr.length() - 1, curr.length(), "");
             }
         }
