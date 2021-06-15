@@ -1,5 +1,8 @@
+import apple.laf.JRSUIUtils;
 import dataStructure.TreeNode;
 
+import java.util.HashSet;
+import java.util.Set;
 import java.util.Stack;
 
 /**
@@ -43,40 +46,44 @@ public class Solution0298 {
     int len = 0, maxLen = 0;
     public int longestConsecutive(TreeNode root) {
         Stack<TreeNode> s1 = new Stack<TreeNode>();
+        Set<TreeNode> s2 = new HashSet<>();
         if (root != null) {
             s1.push(root);
         }
         while (!s1.empty()) {
             TreeNode n1 = s1.pop();
-            if (n1.right != null) {
+            //优化代码，如果节点在已经存在的路径上，则当前节点组成的路径一定小于最大路径
+            if (n1.right != null && !s2.contains(n1.right)) {
                 s1.push(n1.right);
             }
-            if (n1.left != null) {
+            if (n1.left != null && !s2.contains(n1.left)) {
                 s1.push(n1.left);
             }
-            findPath(n1);
+            findPath(n1, s2);
         }
 
         return maxLen + 1;
     }
 
-    public void findPath(TreeNode root) {
+    public void findPath(TreeNode root, Set<TreeNode> set) {
         if (root != null) {
             //以root为节点判断最长路径
             if (root.left != null && root.left.val == root.val + 1) {
                 len++;
+                set.add(root.left);
                 if (len > maxLen) {
                     maxLen = len;
                 }
-                findPath(root.left);
+                findPath(root.left, set);
                 len--;
             }
             if (root.right != null && root.right.val == root.val + 1) {
                 len++;
+                set.add(root.right);
                 if (len > maxLen) {
                     maxLen = len;
                 }
-                findPath(root.right);
+                findPath(root.right, set);
                 len--;
             }
         }
