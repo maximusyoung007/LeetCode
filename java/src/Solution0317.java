@@ -37,7 +37,7 @@ import java.util.Queue;
  * 链接：https://leetcode-cn.com/problems/shortest-distance-from-all-buildings
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class Solution0371 {
+public class Solution0317 {
     //当前节点到各个节点的距离
     int[][] distance;
     //到达建筑物的数量
