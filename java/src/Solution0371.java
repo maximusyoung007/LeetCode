@@ -43,9 +43,18 @@ public class Solution0371 {
     //到达建筑物的数量
     int num = 0;
     int[][] nextMove = new int[][] {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+    int result = -1;
+    int nums2 = 0;
     public int shortestDistance(int[][] grid) {
         int m = grid.length;
         int n = grid[0].length;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (grid[i][j] == 1) {
+                    nums2++;
+                }
+            }
+        }
         int minSum = -1;
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
@@ -54,34 +63,14 @@ public class Solution0371 {
                     continue;
                 }
                 bfs(grid, i, j);
-                int sum = 0;
-                int nums = 0;
-                for (int k = 0; k < m; k++) {
-                    for (int l = 0; l < n; l++) {
-                        if (grid[k][l] == 1) {
-                            sum += distance[k][l];
-                            nums++;
-                        }
-                    }
-                }
-                //不能到达全部建筑物
-                if (num < nums) {
-                    continue;
-                } else {
-                    if (minSum == -1) {
-                        minSum = sum;
-                    }
-                    if (sum < minSum) {
-                        minSum = sum;
-                    }
-                }
             }
         }
-        return minSum;
+        return result;
     }
 
     void bfs(int[][] grid, int i, int j) {
         num = 0;
+        int t = 0;
         int m = grid.length;
         int n = grid[0].length;
         distance = new int[m][n];
@@ -113,6 +102,7 @@ public class Solution0371 {
                         distance[i2][j2] = distance[i][j] + 1;
                         if (grid[i2][j2] == 1) {
                             num++;
+                            t += distance[i2][j2];
                         } else {
                             queue.add(new int[]{i2, j2});
                         }
@@ -120,6 +110,14 @@ public class Solution0371 {
                 }
             }
             queue.poll();
+        }
+        if (num == nums2) {
+            if (result == -1) {
+                result = t;
+            }
+            if (result > t) {
+                result = t;
+            }
         }
     }
 }
