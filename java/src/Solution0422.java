@@ -47,15 +47,16 @@ public class Solution0422 {
         Queue<String> queue = new LinkedList<>(words);
         String t = "";
         List<String> words2 = new ArrayList<>();
+        int ts = size;
         while (!queue.isEmpty()) {
             String word = queue.poll();
             if (word.length() > 0) {
                 t = t + word.charAt(0);
-                if (word.length() >= 1) {
+                if (word.length() > 1) {
                     word = word.substring(1);
                     queue.add(word);
                 } else {
-                    size--;
+                    ts--;
                 }
             }
             s++;
@@ -63,7 +64,11 @@ public class Solution0422 {
                 words2.add(t);
                 t = "";
                 s = 0;
+                size = ts;
             }
+        }
+        if (words.size() != words2.size()) {
+            return false;
         }
         for (int i = 0; i < words.size(); i++) {
             if (!words.get(i).equals(words2.get(i))) {
