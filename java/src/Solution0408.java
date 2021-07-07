@@ -30,27 +30,25 @@ import java.util.List;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class Solution0408 {
-    boolean r = false;
-    String abbr;
     public boolean validWordAbbreviation(String word, String abbr) {
-        this.abbr = abbr;
-        dfs(word, 0, 0, "");
-        return r;
+        int num = 0;
+        int wordIndex = 0;
+        for (int i = 0; i < abbr.length(); i++) {
+            if (abbr.charAt(i) >= 'a' && abbr.charAt(i) <= 'z') {
+                wordIndex = wordIndex + num;
+                if (wordIndex > word.length() - 1 || word.charAt(wordIndex) != abbr.charAt(i)) {
+                    return false;
+                }
+                num = 0;
+            } else {
+                if (num == 0 && abbr.charAt(i) == '0') {
+                    return false;
+                }
+                num = num * 10 + (abbr.charAt(i) - '0');
+            }
+        }
+        return wordIndex + num == word.length();
     }
 
-    void dfs(String word, int index, Integer num, String current) {
-        if (index == word.length()) {
-            if (num > 0) {
-                current = current + num.toString();
-            }
-            if (current.equals(abbr)) {
-                r = true;
-            }
-            return;
-        }
-        if (!r) {
-            dfs(word, index + 1, num + 1, current);
-            dfs(word, index + 1, 0, current + (num > 0 ? num.toString() : "") + word.charAt(index));
-        }
-    }
+
 }
