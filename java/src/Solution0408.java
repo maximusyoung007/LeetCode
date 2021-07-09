@@ -35,8 +35,8 @@ public class Solution0408 {
         int wordIndex = 0;
         for (int i = 0; i < abbr.length(); i++) {
             if (abbr.charAt(i) >= 'a' && abbr.charAt(i) <= 'z') {
-                wordIndex = wordIndex + num;
-                if (wordIndex > word.length() - 1 || word.charAt(wordIndex) != abbr.charAt(i)) {
+                wordIndex = wordIndex + num + 1;
+                if (wordIndex > word.length() || word.charAt(wordIndex - 1) != abbr.charAt(i)) {
                     return false;
                 }
                 num = 0;
