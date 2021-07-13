@@ -73,7 +73,7 @@ import java.util.*;
 public class Solution0425 {
     class Trie2 {
         Trie2[] next;
-        //遍历完了就把单词放进来,相当于208的boolean isEnd
+        //前缀对应的单词
         List<String> wordList;
 
         public Trie2() {
@@ -89,8 +89,8 @@ public class Solution0425 {
                     node.next[c - 'a'] = new Trie2();
                 }
                 node = node.next[c - 'a'];
+                node.wordList.add(word);
             }
-            node.wordList.add(word);
         }
 
         public boolean startsWith(String prefix) {
@@ -127,12 +127,11 @@ public class Solution0425 {
         }
         this.n = words[0].length();
         this.words = words;
-        Stack<String> s = new Stack<>();
         List<List<String>> result = new ArrayList<>();
         for (String word : words) {
+            Stack<String> s = new Stack<>();
             s.push(word);
             dfs(1, s, result);
-            s.pop();
         }
         return result;
     }
@@ -149,11 +148,11 @@ public class Solution0425 {
             prefix = prefix + word.charAt(step);
         }
 
-        boolean startWith = head.startsWith(prefix);
         List<String> wordList = head.getWordsWithPrefix(prefix);
         for (String word : wordList) {
             partResult.push(word);
             dfs(step + 1, partResult, result);
+            partResult.pop();
         }
     }
 
