@@ -22,8 +22,6 @@ import java.util.Comparator;
  *
  * 输入：nums = [10]
  * 输出："10"
- *  
- *
  * 提示：
  *
  * 1 <= nums.length <= 100
