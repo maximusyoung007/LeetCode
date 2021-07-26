@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Given an m x n board of characters and a list of strings words, return all words on the board.
@@ -39,6 +41,7 @@ public class Solution0212 {
             {-1, 0}
     };
     public List<String> findWords(char[][] board, String[] words) {
+        Set<String> set = new HashSet<>();
         List<String> result = new ArrayList<>();
         if (board.length <= 0 || words.length <= 0) {
             return result;
@@ -64,10 +67,11 @@ public class Solution0212 {
                 x = start.get(i)[0];
                 y = start.get(i)[1];
                 if (bfs(board, word, x, y, 0, visited)) {
-                    result.add(word);
+                    set.add(word);
                 }
             }
         }
+        result.addAll(set);
         return result;
     }
 
@@ -103,6 +107,7 @@ public class Solution0212 {
                 return r;
             }
         }
+        visited[x][y] = 0;
         return false;
     }
 
