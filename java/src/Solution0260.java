@@ -34,6 +34,7 @@ public class Solution0260 {
         //不为0的最低位
         int t = r & (-r);
         for (int n : nums) {
+            //按位与是否为0分组
             if ((t & n) != 0) {
                 result[0] ^= n;
             } else {
