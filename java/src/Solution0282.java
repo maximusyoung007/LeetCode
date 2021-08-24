@@ -38,10 +38,13 @@ public class Solution0282 {
         List<List<String>> result = new ArrayList<>();
         List<String> partResult = new ArrayList<>();
         List<String> r = new ArrayList<>();
-        for (int j = 1; j < num.length(); j++) {
+        for (int j = 1; j <= num.length(); j++) {
             String sc = num.substring(0, j);
+            if (sc.length() > 1 && sc.charAt(0) == '0') {
+                continue;
+            }
             partResult.add(sc);
-            int ic = Integer.parseInt(sc);
+            long ic = Long.parseLong(sc);
             dfs(result, partResult, j, num, target, ic);
             partResult.remove(partResult.size() - 1);
         }
@@ -55,8 +58,8 @@ public class Solution0282 {
         return r;
     }
 
-    public void dfs (List<List<String>> result, List<String> partResult, int index, String num, int target, int computed) {
-        if (computed == target) {
+    public void dfs (List<List<String>> result, List<String> partResult, int index, String num, int target, Long computed) {
+        if (computed == target && index == num.length()) {
             List<String> addList = new ArrayList<>();
             for (String s : partResult) {
                 addList.add(s);
@@ -76,7 +79,7 @@ public class Solution0282 {
             int ic = Integer.parseInt(sc);
 
             //加号
-            int nextComputed = computed + ic;
+            long nextComputed = computed + ic;
             partResult.add("+");
             partResult.add(sc);
             dfs(result, partResult, index + i, num, target, nextComputed);
@@ -92,38 +95,62 @@ public class Solution0282 {
             partResult.remove(partResult.size() - 1);
             //乘号
             if (partResult.size() >= 3) {
-                int preNum0 = Integer.parseInt(partResult.get(partResult.size() - 3));
                 int preNum = Integer.parseInt(partResult.get(partResult.size() - 1));
-                if (partResult.get(partResult.size() - 2).equals("-")) {
-                    nextComputed = preNum0 - preNum * ic;
+                if (partResult.size() - 2 >= 0 && partResult.get(partResult.size() - 2).equals("-")) {
+                    nextComputed = computed + preNum - preNum * ic;
                     partResult.add("*");
                     partResult.add(sc);
                     dfs(result, partResult, index + i, num, target, nextComputed);
                     partResult.remove(partResult.size() - 1);
                     partResult.remove(partResult.size() - 1);
-                } else if (partResult.get(partResult.size() - 2).equals("+")) {
-                    nextComputed = preNum0 + preNum * ic;
+                } else if (partResult.size() - 2 >= 0 && partResult.get(partResult.size() - 2).equals("+")) {
+                    nextComputed = computed - preNum + preNum * ic;
                     partResult.add("*");
                     partResult.add(sc);
                     dfs(result, partResult, index + i, num, target, nextComputed);
                     partResult.remove(partResult.size() - 1);
                     partResult.remove(partResult.size() - 1);
-                } else {
-                    nextComputed = computed * ic;
-                    partResult.add("*");
-                    partResult.add(sc);
-                    dfs(result, partResult, index + i, num, target, nextComputed);
-                    partResult.remove(partResult.size() - 1);
-                    partResult.remove(partResult.size() - 1);
+                } else if (partResult.size() - 2 >= 0 && partResult.get(partResult.size() - 2).equals("*")) {
+                    int times = 1;
+                    int product = Integer.parseInt(partResult.get(partResult.size() - 1));
+                    while (partResult.size() - 2 * times >= 0 && partResult.get(partResult.size() - 2 * times).equals("*")) {
+                        int factor2 = Integer.parseInt(partResult.get(partResult.size() - 2 * times - 1));
+                        product *= factor2;
+                        times++;
+                    }
+                    if (partResult.size() - 2 * times > 0 && partResult.get(partResult.size() - 2 * times).equals("+")) {
+                        nextComputed = computed - product + product * ic;
+                        partResult.add("*");
+                        partResult.add(sc);
+                        dfs(result, partResult, index + i, num, target, nextComputed);
+                        partResult.remove(partResult.size() - 1);
+                        partResult.remove(partResult.size() - 1);
+                    } else if (partResult.size() - 2 * times > 0 && partResult.get(partResult.size() - 2 * times).equals("-")) {
+                        nextComputed = computed + product - product * ic;
+                        partResult.add("*");
+                        partResult.add(sc);
+                        dfs(result, partResult, index + i, num, target, nextComputed);
+                        partResult.remove(partResult.size() - 1);
+                        partResult.remove(partResult.size() - 1);
+                    } else if (partResult.size() - 2 * times <= 0) {
+                        nextComputed = product * ic;
+                        partResult.add("*");
+                        partResult.add(sc);
+                        dfs(result, partResult, index + i, num, target, nextComputed);
+                        partResult.remove(partResult.size() - 1);
+                        partResult.remove(partResult.size() - 1);
+                    }
                 }
             } else {
-                nextComputed = computed * ic;
+                int factor1 = Integer.parseInt(partResult.get(0));
+                nextComputed = factor1 * ic;
                 partResult.add("*");
                 partResult.add(sc);
                 dfs(result, partResult, index + i, num, target, nextComputed);
                 partResult.remove(partResult.size() - 1);
                 partResult.remove(partResult.size() - 1);
             }
+
         }
     }
 }
