@@ -46,22 +46,46 @@ public class Solution0307 {
 
 class NumArray0307 {
     int[] tree;
+    int[] nums;
+    int len;
 
     int lowbit(int x) {
         return x & (-x);
     }
 
     public NumArray0307(int[] nums) {
-        int n = nums.length;
-        
+        this.nums = nums;
+        len = nums.length;
+        tree = new int[len + 1];
+        for (int i = 0; i < len; i++) {
+            for (int j = i + 1; j <= len; j += lowbit(j)) {
+                tree[j] += nums[i];
+            }
+        }
     }
 
     public void update(int index, int val) {
-
+        int sub = val - nums[index];
+        for (int i = index + 1; i <= len; i += lowbit(i)) {
+            tree[i] += sub;
+        }
+        nums[index] = val;
     }
 
     public int sumRange(int left, int right) {
+        int suml = 0;
+        while (left > 0) {
+            suml += tree[left];
+            left -= lowbit(left);
+        }
 
+        int sumr = 0;
+        right += 1;
+        while (right > 0) {
+            sumr += tree[right];
+            right -= lowbit(right);
+        }
+        return sumr - suml;
     }
 
 }
