@@ -25,57 +25,78 @@
  */
 public class Solution0306 {
     public boolean isAdditiveNumber(String num) {
-        return dfs(num, 0, 1, 1,1);
-    }
-
-    public boolean dfs(String num, int index1, int index2, int len1, int len2) {
-        boolean r1 = false, r2 = false, r3 = false, r4 = false, r5 = false;
-        int t1 = Integer.parseInt(num.substring(index1, index1 + len1));
-        int t2 = Integer.parseInt(num.substring(index2, index2 + len2));
-        int rt = t1 + t2;
-        int rtc = rt;
-        int len3 = 0;
-        if (t1 != 0 && t2 != 0) {
-            while (rtc > 0) {
-                rtc /= 10;
-                len3++;
-            }
-        } else {
-            if (t1 == 0 && t2 != 0) {
-                int t2c = t2;
-                while (t2c > 0) {
-                    t2c /= 10;
-                    len3++;
-                }
-            } else if (t1 != 0 && t2 == 0) {
-                int t1c = t1;
-                while (t1c > 0) {
-                    t1c /= 10;
-                    len3++;
-                }
-            } else {
-                len3 = 1;
-            }
-        }
-        int index3 = index2 + len2;
-        if (index3 + len3 > num.length()) {
+        if (num.length() < 3) {
             return false;
         }
-        else {
-            int t3 = Integer.parseInt(num.substring(index3, index3 + len3));
-            if (t3 == t1 + t2) {
-                if (index3 + len3 == num.length()) {
-                    return true;
-                } else {
-                    r1 = dfs(num, index2, index2 + len2, len2, 1);
+        return dfs(num,0, 0);
+    }
+
+    public boolean dfs(String num, int startIndex, int endIndex) {
+        boolean res = false;
+        if (endIndex >= num.length()) {
+            return false;
+        }
+        for (int len1 = 1; len1 + startIndex <= num.length(); len1++) {
+            for (int len2 = 1; startIndex + len1 + len2 <= num.length(); len2++) {
+                String num1 = num.substring(startIndex, startIndex + len1);
+                String num2 = num.substring(startIndex + len1, startIndex + len1 + len2);
+                if (num1.length() > 1 && num1.charAt(0) == '0') {
+                    continue;
                 }
-            } else {
-                r2 = dfs(num, index1 + 1, index2 + 1, len1, len2);
-                r3 = dfs(num, index1, index2 + 1, len1, len2);
-                r4 = dfs(num, index1, index2 + 1, len1 + 1, len2);
-                r5 = dfs(num, index1, index2, len1, len2 + 1);
+                if (num2.length() > 1 && num2.charAt(0) == '0') {
+                    continue;
+                }
+                String sum = add(num1, num2);
+                int len3 = sum.length();
+                if (startIndex + len1 + len2 + len3 <= num.length()) {
+                    String num3 = num.substring(startIndex + len1 + len2, startIndex + len1 + len2 + len3);
+                    if (sum.equals(num3)) {
+                        if (startIndex + len1 + len2 + len3 == num.length()) {
+                            return true;
+                        }
+                        res = dfs(num, startIndex + len1, startIndex + len1 + len2 + len3);
+                    }
+                }
             }
         }
-        return r1 || r2 || r3 || r4 || r5;
+        return res;
     }
+
+    public String add(String s1, String s2) {
+        StringBuilder sb = new StringBuilder();
+        int carry = 0;
+        int len1 = s1.length() - 1;
+        int len2 = s2.length() - 1;
+        while (len1 >= 0 && len2 >= 0) {
+            int t = (s1.charAt(len1) - '0') + (s2.charAt(len2) - '0') + carry;
+            carry = t / 10;
+            t %= 10;
+            len1--;
+            len2--;
+            sb.append(t);
+        }
+        if (len1 >= 0) {
+            while (len1 >= 0) {
+                int t = (s1.charAt(len1) - '0') + carry;
+                carry = t / 10;
+                t %= 10;
+                len1--;
+                sb.append(t);
+            }
+        }
+        if (len2 >= 0) {
+            while (len2 >= 0) {
+                int t = (s2.charAt(len2) - '0') + carry;
+                carry = t / 10;
+                t %= 10;
+                len2--;
+                sb.append(t);
+            }
+        }
+        if (carry > 0) {
+            sb.append(carry);
+        }
+        return sb.reverse().toString();
+    }
+
 }
