@@ -1,8 +1,8 @@
 package solution
 
 import (
-	"strings"
 	"math"
+	"strings"
 )
 
 /*
@@ -49,19 +49,18 @@ func ToHex(num int) string {
 		num_ /= 16
 		sb.WriteString(string(s[mod]))
 		if num_ <= 0 {
-			break;
+			break
 		}
 	}
 	return reverseString(sb.String())
 }
 
-func reverseString(str string) string{
+func reverseString(str string) string {
 	var bytes []byte = []byte(str)
 	var build strings.Builder
 	for i := 0; i < len(bytes); i++ {
-		i2 := bytes[len(bytes) - i - 1]
+		i2 := bytes[len(bytes)-i-1]
 		build.WriteString(string(i2))
 	}
 	return build.String()
 }
-

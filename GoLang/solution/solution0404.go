@@ -30,7 +30,7 @@ func preOrder(sum *int, node *datastructure.TreeNode) {
 	if node == nil {
 		return
 	} else {
-		if node.Left != nil && node.Left.Left == nil && node.Left.Right == nil{
+		if node.Left != nil && node.Left.Left == nil && node.Left.Right == nil {
 			*sum = *sum + node.Left.Val
 		}
 	}

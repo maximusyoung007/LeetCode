@@ -49,12 +49,12 @@ func LongestPalindrome(s string) int {
 	}
 	//如果有多个奇数，v/2，相当于奇数都只取其中偶数个的或者不取，最后再加上最中间的那个奇数个
 	for _, v := range counts {
-		result += v /2
-		if v % 2 != 0 {
+		result += v / 2
+		if v%2 != 0 {
 			odd = 1
 		}
 	}
-	result *= 2;
+	result *= 2
 	result += odd
 	return result
 }
