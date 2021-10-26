@@ -1,7 +1,7 @@
 package solution
 
 import (
-	"gproject/dataStructure"
+    "gproject/dataStructure"
 )
 
 /*
@@ -21,16 +21,16 @@ import (
 // }
 
 func SumOfLeftLeaves(root *datastructure.TreeNode) int {
-	sum := 0
-	preOrder(&sum, root)
-	return sum
+    sum := 0
+    preOrder(&sum, root)
+    return sum
 }
 
 func preOrder(sum *int, node *datastructure.TreeNode) {
-	if node == nil {
-		return
-	} else {
-		if node.Left != nil && node.Left.Left == nil && node.Left.Right == nil {
+    if node == nil {
+        return
+    } else {
+        if node.Left != nil && node.Left.Left == nil && node.Left.Right == nil {
 			*sum = *sum + node.Left.Val
 		}
 	}
