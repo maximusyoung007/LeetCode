@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -72,14 +73,41 @@ public class Solution0321 {
 		}
 		int i = 0, j = 0, t = 0;
 		while (i < nums1.length && j < nums2.length && t < k) {
-			if (nums1[i] >= nums2[j]) {
+			if (nums1[i] > nums2[j]) {
 				res[t] = nums1[i];
 				t++;
 				i++;
-			} else {
+			} else if (nums1[i] < nums2[j]){
 				res[t] = nums2[j];
 				t++;
 				j++;
+			} else {
+				int flag = -1;
+				int i1 = i, j1 = j;
+				while (i1 < nums1.length && j1 < nums2.length && flag == -1) {
+					if (nums1[i1] == nums2[j1]) {
+						i1++;
+						j1++;
+					} else if (nums1[i1] > nums2[j1]) {
+						flag = 1;
+					} else if (nums2[j1] > nums1[i1]) {
+						flag = 2;
+					}
+				}
+				if (i1 >= nums1.length) {
+					flag = 2;
+				} else if (j1 >= nums2.length) {
+					flag = 1;
+				}
+				if (flag == 1) {
+					res[t] = nums1[i];
+					t++;
+					i++;
+				} else {
+					res[t] = nums2[j];
+					t++;
+					j++;
+				}
 			}
 		}
 		while (i < nums1.length && t < k) {
@@ -107,12 +135,12 @@ public class Solution0321 {
 				stack.push(nums[i]);
 			} else {
 				if (time < left && nums[i] > stack.peek()) {
-					stack.pop();
-					time++;
+					while (time < left && !stack.isEmpty() && nums[i] > stack.peek()) {
+						stack.pop();
+						time++;
+					}
 				}
-				if (stack.size() < k) {
-					stack.push(nums[i]);
-				}
+				stack.push(nums[i]);
 			}
 		}
 		while (!stack.isEmpty()) {
