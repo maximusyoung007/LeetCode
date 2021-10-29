@@ -29,6 +29,11 @@ func main() {
 	// s = solution.ToHex(-1)
 	// fmt.Print(s)
 	//409
-	var s string = "abccccdd"
-	fmt.Print(solution.LongestPalindrome(s))
+	// var s string = "abccccdd"
+	// fmt.Print(solution.LongestPalindrome(s))
+	//412
+	s1 := solution.FizzBuzz(5)
+	for i := range s1 {
+		fmt.Print(s1[i] + " ")
+	}
 }
