@@ -32,8 +32,12 @@ func main() {
 	// var s string = "abccccdd"
 	// fmt.Print(solution.LongestPalindrome(s))
 	//412
-	s1 := solution.FizzBuzz(5)
-	for i := range s1 {
-		fmt.Print(s1[i] + " ")
-	}
+	// s1 := solution.FizzBuzz(5)
+	// for i := range s1 {
+	// 	fmt.Print(s1[i] + " ")
+	// }
+	//414
+	//112 2231 122535
+	nums1 := [...]int {1, 2, 2, 5, 3, 5}
+	fmt.Print(solution.ThirdMax(nums1[:]))
 }
