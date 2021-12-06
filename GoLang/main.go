@@ -38,6 +38,14 @@ func main() {
 	// }
 	//414
 	//112 2231 122535
-	nums1 := [...]int {1, 2, 2, 5, 3, 5}
-	fmt.Print(solution.ThirdMax(nums1[:]))
+	//nums1 := [...]int {1, 2, 2, 5, 3, 5}
+	//fmt.Println("test")
+	//fmt.Print(solution.ThirdMax(nums1[:]))
+	nums1 := []int{2, 7, 11, 15}
+	res := solution.TwoSum(nums1, 9)
+	for i := range res {
+		fmt.Println(res[i])
+	}
+
+	fmt.Println()
 }
