@@ -48,20 +48,60 @@ func main() {
 	//	fmt.Println(res[i])
 	//}
 
-	n7 := &datastructure.ListNode{9, nil}
-	n6 := &datastructure.ListNode{9, n7}
-	n5 := &datastructure.ListNode{9, n6}
-	n4 := &datastructure.ListNode{9, n5}
-	n3 := &datastructure.ListNode{9, n4}
-	n2 := &datastructure.ListNode{9, n3}
-	n1 := &datastructure.ListNode{9, n2}
+	//n7 := &datastructure.ListNode{9, nil}
+	//n6 := &datastructure.ListNode{9, n7}
+	//n5 := &datastructure.ListNode{9, n6}
+	//n4 := &datastructure.ListNode{9, n5}
+	//n3 := &datastructure.ListNode{9, n4}
+	//n2 := &datastructure.ListNode{9, n3}
+	//n1 := &datastructure.ListNode{9, n2}
+	//
+	//l4 := &datastructure.ListNode{9, nil}
+	//l3 := &datastructure.ListNode{9, l4}
+	//l2 := &datastructure.ListNode{9, l3}
+	//l1 := &datastructure.ListNode{9, l2}
+	//
+	//res := solution.AddTwoNumbers(n1, l1)
+	//for res != nil {
+	//	fmt.Println(res.Val)
+	//	res = res.Next
+	//}
 
-	l4 := &datastructure.ListNode{9, nil}
-	l3 := &datastructure.ListNode{9, l4}
-	l2 := &datastructure.ListNode{9, l3}
-	l1 := &datastructure.ListNode{9, l2}
+	//0019
+	//n5 := &datastructure.ListNode{5, nil}
+	//n4 := &datastructure.ListNode{4, n5}
+	//n3 := &datastructure.ListNode{3, n4}
+	//n2 := &datastructure.ListNode{2, n3}
+	//n1 := &datastructure.ListNode{1, n2}
+	//res := solution.RemoveNthFromEnd(n1, 6)
+	//for res != nil {
+	//	fmt.Println(res.Val)
+	//	res = res.Next
+	//}
 
-	res := solution.AddTwoNumbers(n1, l1)
+	//n1 := &datastructure.ListNode{1, nil}
+	//res := solution.RemoveNthFromEnd(n1, 1)
+	//for res != nil {
+	//	fmt.Println(res.Val)
+	//	res = res.Next
+	//}
+
+	//n2 := &datastructure.ListNode{2, nil}
+	//n1 := &datastructure.ListNode{1, n2}
+	//res := solution.RemoveNthFromEnd(n1, 1)
+	//for res != nil {
+	//	fmt.Println(res.Val)
+	//	res = res.Next
+	//}
+
+	//0021
+	n3 := &datastructure.ListNode{Val: 0}
+	//n2 := &datastructure.ListNode{Val: 2, Next: n3}
+	//n1 := &datastructure.ListNode{Val: 1, Next: n2}
+	//l3 := &datastructure.ListNode{Val: 4}
+	//l2 := &datastructure.ListNode{Val: 3, Next: l3}
+	//l1 := &datastructure.ListNode{Val: 1, Next: l2}
+	res := solution.MergeTwoLists(n3, nil)
 	for res != nil {
 		fmt.Println(res.Val)
 		res = res.Next
