@@ -1,4 +1,3 @@
-package com.maximus;
 
 /**
  * TinyURL 是一种 URL 简化服务， 比如：当你输入一个 URL https://leetcode.com/problems/design-tinyurl 时，
