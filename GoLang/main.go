@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	datastructure "gproject/dataStructure"
 	"gproject/solution"
 	// "gproject/dataStructure"
 )
@@ -95,17 +94,23 @@ func main() {
 	//}
 
 	//0021
-	n3 := &datastructure.ListNode{Val: 0}
+	//n3 := &datastructure.ListNode{Val: 0}
 	//n2 := &datastructure.ListNode{Val: 2, Next: n3}
 	//n1 := &datastructure.ListNode{Val: 1, Next: n2}
 	//l3 := &datastructure.ListNode{Val: 4}
 	//l2 := &datastructure.ListNode{Val: 3, Next: l3}
 	//l1 := &datastructure.ListNode{Val: 1, Next: l2}
-	res := solution.MergeTwoLists(n3, nil)
-	for res != nil {
-		fmt.Println(res.Val)
-		res = res.Next
-	}
+	//res := solution.MergeTwoLists(n3, nil)
+	//for res != nil {
+	//	fmt.Println(res.Val)
+	//	res = res.Next
+	//}
+	//
+	//fmt.Println()
 
-	fmt.Println()
+	longUrl := "https://leetcode.com/problems/design-tinyurl"
+	obj := solution.Constructor()
+	url := obj.Encode(longUrl)
+	ans := obj.Decode(url)
+	fmt.Println(ans)
 }
