@@ -8,8 +8,11 @@ func Constructor0729() MyCalendar {
 }
 
 func (c *MyCalendar) Book(start, end int) bool {
+	end--
 	for _, p := range *c {
-		if p.start < end && start < p.end {
+		if p.end < start || end < p.start {
+			continue
+		} else {
 			return false
 		}
 	}
