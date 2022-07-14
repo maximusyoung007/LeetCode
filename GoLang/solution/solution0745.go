@@ -4,7 +4,7 @@ import "strings"
 
 type TrieNode struct {
 	child []*TrieNode
-	list []int
+	list  []int
 }
 
 type WordFilter struct {
@@ -19,26 +19,20 @@ func Constructor745(words []string) WordFilter {
 	q := rootR
 	for index, s := range words {
 		for _, value := range s {
-			if p.child[value - 'a'] == nil {
-				p.child[value - 'a'] = &TrieNode{
-					child: make([]*TrieNode, 26),
-					list: make([]int, 0),
-				}
+			if p.child[value-'a'] == nil {
+				p.child[value-'a'] = &TrieNode{child: make([]*TrieNode, 26), list: make([]int, 0)}
 			}
-			p = p.child[value - 'a']
+			p = p.child[value-'a']
 			p.list = append(p.list, index)
 		}
 		p = rootL
 
 		for i := len(s) - 1; i >= 0; i-- {
 			value := s[i]
-			if q.child[value - 'a'] == nil {
-				q.child[value - 'a'] = &TrieNode{
-					child: make([]*TrieNode, 26),
-					list: make([]int, 0),
-				}
+			if q.child[value-'a'] == nil {
+				q.child[value-'a'] = &TrieNode{child: make([]*TrieNode, 26), list: make([]int, 0)}
 			}
-			q = q.child[value - 'a']
+			q = q.child[value-'a']
 			q.list = append(q.list, index)
 		}
 		q = rootR
@@ -57,16 +51,15 @@ func startWith(s string, trieNode *TrieNode) []int {
 	return trieNode.list
 }
 
-
 func (this *WordFilter) F(pref string, suff string) int {
 	rootL, rootR := this.rootL, this.rootR
-	left :=  startWith(pref, rootL)
+	left := startWith(pref, rootL)
 	suff = myReverse(suff)
 	right := startWith(suff, rootR)
 	if left == nil || right == nil {
 		return -1
 	}
-	p1, p2 := len(left) - 1, len(right) - 1
+	p1, p2 := len(left)-1, len(right)-1
 	for p1 >= 0 && p2 >= 0 {
 		l := left[p1]
 		r := right[p2]
@@ -81,7 +74,8 @@ func (this *WordFilter) F(pref string, suff string) int {
 	return -1
 }
 
-func myReverse(str string) string{
+//leetcode不支持reverse()
+func myReverse(str string) string {
 	var bytes []byte = []byte(str)
 	var build strings.Builder
 	for i := 0; i < len(bytes); i++ {
