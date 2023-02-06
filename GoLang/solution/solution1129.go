@@ -1,5 +1,6 @@
 package solution
 
+// 领接表 bfs
 func ShortestAlternatingPaths(n int, redEdges [][]int, blueEdges [][]int) []int {
 	var queue [][2]int
 	//邻接表
