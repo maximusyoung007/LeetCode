@@ -31,6 +31,7 @@ func MaxScoreWords(words []string, letters []byte, score []int) int {
 			if wordCounts[i] <= counts[i] {
 				sum += wordCounts[i] * score[i]
 			} else {
+				//如果其中有一个字母不行，就表示当前这个s不行
 				isOk = false
 			}
 		}
