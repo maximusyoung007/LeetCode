@@ -55,3 +55,7 @@ java/.DS_Store
 /c++/out/build/x64-Debug (默认值)
 /c++/cmake-build-debug
 /c++/main.cpp
+c++/main.dSYM/Contents/Info.plist
+c++/main.dSYM/Contents/Resources/DWARF/main
+.idea/inspectionProfiles/Project_Default.xml
+leetcodepy/.gitignore
