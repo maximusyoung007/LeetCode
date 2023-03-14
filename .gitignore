@@ -57,3 +57,8 @@ c++/main.dSYM/Contents/Info.plist
 c++/main.dSYM/Contents/Resources/DWARF/main
 .idea/inspectionProfiles/Project_Default.xml
 leetcodepy/.gitignore
+c++/obj/Debug/main.o
+c++/bin/Debug/c++.exe
+c++/main.exe
+c++/c++.layout
+c++/c++.cbp
