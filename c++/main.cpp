@@ -1,20 +1,21 @@
 #include <iostream>
-// #include "0954.cpp"
-// #include "0736.cpp"
-//#include "0187.cpp"
 using namespace std;
-// #include"1615.cpp"
-#include"2488.c"
+#include"2389.cpp"
 int main() {
-    //vector<vector<int>> v = {{0,1}, {0,3}, {1,2}, {1,3}};
-    // vector<vector<int>> v = {{0,1}, {0,3}, {1,2}, {1,3}, {2,3}, {2,4}};
-    // vector<vector<int>> v = {{0,1}, {2,3}, {1,2}, {2,4}, {5,6}, {5,7}};
-    //vector<vector<int>> v = {};
-    //vector<vector<int>> v = {{0, 2}, {0, 1}};
-    //vector<vector<int>> v = {{4,6},{5,2},{3,5},{7,5},{7,6}};
-   // vector<vector<int>> v = {{1, 0}};
-    // cout << maximalNetworkRank(5, v) << endl;
-    int num[] = {2,3,1};
-    int* nums = num;
-    cout << countSubarrays(num, 3, 3) << endl;
+    vector<int> num;
+    num.push_back(2);
+    num.push_back(3);
+    num.push_back(4);
+    num.push_back(5);
+    vector<int> query;
+    query.push_back(1);
+    // query.push_back(10);
+    // query.push_back(21);
+    vector<int> res = answerQueries(num, query);
+    vector<int>::iterator start = res.begin();//指向容器的初始位置
+    vector<int>::iterator end = res.end();
+    while (start != end) {
+        cout << *start << endl;
+        start++;
+    }
 }
