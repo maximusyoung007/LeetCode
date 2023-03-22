@@ -1,7 +1,7 @@
 #include <iostream>
 #include<string>
 #include<algorithm>
-#include "1625.cpp"
+#include "1626.cpp"
 using namespace std;
 int main() {
     //1616
@@ -20,8 +20,17 @@ int main() {
     //1625
     // string s = "5525";
     // cout << findLexSmallestString(s, 9, 2);
-    string s = "74";
-    cout << findLexSmallestString(s, 5, 1);
+    // string s = "74";
+    // cout << findLexSmallestString(s, 5, 1);
     // cout << findLexSmallestString("0011", 4, 2);
     // cout << findLexSmallestString("43987654", 7, 3);
+    // vector<int> scores = {1, 3, 5, 10 ,15};
+    // vector<int> ages = {1, 2, 3,4,5};
+    // vector<int> scores = {4,5,6,5};
+    // vector<int> ages = {2,1,2,1};
+    // vector<int> scores = {1, 2, 3, 5};
+    // vector<int> ages = {8, 9, 10, 1};
+    vector<int> scores = {1, 3, 7, 3,2,4,10,7,5};
+    vector<int> ages = {4,5,2,1,1,2,4,1,4};
+    cout << "res:" << beatTeamScore(scores, ages) << endl;
 }
