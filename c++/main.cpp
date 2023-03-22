@@ -30,7 +30,7 @@ int main() {
     // vector<int> ages = {2,1,2,1};
     // vector<int> scores = {1, 2, 3, 5};
     // vector<int> ages = {8, 9, 10, 1};
-    vector<int> scores = {1, 3, 7, 3,2,4,10,7,5};
-    vector<int> ages = {4,5,2,1,1,2,4,1,4};
-    cout << "res:" << beatTeamScore(scores, ages) << endl;
+    // vector<int> scores = {1, 3, 7, 3,2,4,10,7,5};
+    // vector<int> ages = {4,5,2,1,1,2,4,1,4};
+    // cout << "res:" << beatTeamScore(scores, ages) << endl;
 }
