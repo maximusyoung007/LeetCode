@@ -1,7 +1,7 @@
 #include <iostream>
 #include<string>
 #include<algorithm>
-#include "1626.cpp"
+#include "1630.cpp"
 using namespace std;
 int main() {
     //1616
@@ -33,4 +33,18 @@ int main() {
     // vector<int> scores = {1, 3, 7, 3,2,4,10,7,5};
     // vector<int> ages = {4,5,2,1,1,2,4,1,4};
     // cout << "res:" << beatTeamScore(scores, ages) << endl;
+
+    //1630
+    // vector<int> nums = {4,6,5,9,3,7};
+    // vector<int> l = {0,0,2};
+    // vector<int> r = {2,3,5};
+    //nums = 
+    //[-12,-9,-3,-12,-6,15,20,-25,-20,-15,-10], l = [0,1,6,4,8,7], r = [4,4,9,7,9,10]
+    vector<int> nums = {-12,-9,-3,-12,-6,15,20,-25,-20,-15,-10};
+    vector<int> l = {0,1,6,4,8,7};
+    vector<int> r = {4,4,9,7,9,10};
+    vector<bool> res = checkArithmeticSubarrays(nums, l, r);
+    for (int i = 0; i < res.size(); i++ ) {
+        cout << res[i] << endl;
+    }
 }
