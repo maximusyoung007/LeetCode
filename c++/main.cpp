@@ -4,6 +4,7 @@
 #include "1630.cpp"
 #include"6354.cpp"
 #include"6355.cpp"
+#include"1574.cpp"
 using namespace std;
 int main() {
     //1616
@@ -50,10 +51,30 @@ int main() {
     //     cout << res[i] << endl;
     // }
     // cout << kItemsWithMaximumSum(6, 6, 6, 13) << endl;
-    vector<int> nums;
-    nums.push_back(4);
-    nums.push_back(9);
-    nums.push_back(6);
-    nums.push_back(10);
-    cout << primeSubOperation(nums) << endl;
+    // vector<int> nums;
+    // nums.push_back(4);
+    // nums.push_back(9);
+    // nums.push_back(6);
+    // nums.push_back(10);
+    // cout << primeSubOperation(nums) << endl;
+    // vector<int> arr = {1,2};
+    // arr.push_back(1);
+    // arr.push_back(2);
+    // arr.push_back(3);
+    // arr.push_back(10);
+    // arr.push_back(4);
+    // arr.push_back(2);
+    // arr.push_back(3);
+    // arr.push_back(5);
+    // arr.push_back(5);
+    // arr.push_back(4);
+    // arr.push_back(3);
+    // arr.push_back(2);
+    // arr.push_back(1);
+    // arr.push_back(1);
+    // arr.push_back(2);
+    // arr.push_back(3);
+    // vector<int> arr = {1, 3, 2, 4};
+    vector<int> arr = {1,2,3,10,4,2,3,5};
+    cout << findLengthOfShortestSubarray(arr) << endl;
 }
