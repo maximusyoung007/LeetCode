@@ -62,3 +62,5 @@ c++/bin/Debug/c++.exe
 c++/main.exe
 c++/c++.layout
 c++/c++.cbp
+c++/test.dSYM/Contents/Info.plist
+c++/test.dSYM/Contents/Resources/DWARF/test

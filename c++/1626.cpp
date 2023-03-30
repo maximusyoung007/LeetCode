@@ -14,7 +14,7 @@ using namespace std;
 */
 int beatTeamScore(vector<int>& scores, vector<int>& ages) {
     int len = scores.size();
-    vector<pair<int, int>> arr(len);
+    vector<pair<int, int> > arr(len);
     for (int i = 0; i < len; i++) {
         arr[i].first = scores[i];
         arr[i].second = ages[i];
@@ -25,14 +25,14 @@ int beatTeamScore(vector<int>& scores, vector<int>& ages) {
         dp[i] = arr[i].first;
     }
 
+    int res = dp[0];
     for (int i = 1; i < len; i++) {
         for (int j = 0; j < i; j++) {
             if (arr[i].second >= arr[j].second) {
                 dp[i] = max(dp[i], dp[j] + arr[i].first);
-            } else {
-                dp[i] = max(dp[i], dp[j]);
             }
         }
+        res = max(dp[i], res);
     }
-    return dp[len - 1];
+    return res;
 }   

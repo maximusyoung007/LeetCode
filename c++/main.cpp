@@ -2,6 +2,9 @@
 #include<string>
 #include<algorithm>
 #include "1630.cpp"
+#include"6354.cpp"
+#include"6355.cpp"
+#include"1574.cpp"
 using namespace std;
 int main() {
     //1616
@@ -40,11 +43,38 @@ int main() {
     // vector<int> r = {2,3,5};
     //nums = 
     //[-12,-9,-3,-12,-6,15,20,-25,-20,-15,-10], l = [0,1,6,4,8,7], r = [4,4,9,7,9,10]
-    vector<int> nums = {-12,-9,-3,-12,-6,15,20,-25,-20,-15,-10};
-    vector<int> l = {0,1,6,4,8,7};
-    vector<int> r = {4,4,9,7,9,10};
-    vector<bool> res = checkArithmeticSubarrays(nums, l, r);
-    for (int i = 0; i < res.size(); i++ ) {
-        cout << res[i] << endl;
-    }
+    // vector<int> nums = {-12,-9,-3,-12,-6,15,20,-25,-20,-15,-10};
+    // vector<int> l = {0,1,6,4,8,7};
+    // vector<int> r = {4,4,9,7,9,10};
+    // vector<bool> res = checkArithmeticSubarrays(nums, l, r);
+    // for (int i = 0; i < res.size(); i++ ) {
+    //     cout << res[i] << endl;
+    // }
+    // cout << kItemsWithMaximumSum(6, 6, 6, 13) << endl;
+    // vector<int> nums;
+    // nums.push_back(4);
+    // nums.push_back(9);
+    // nums.push_back(6);
+    // nums.push_back(10);
+    // cout << primeSubOperation(nums) << endl;
+    // vector<int> arr = {1,2};
+    // arr.push_back(1);
+    // arr.push_back(2);
+    // arr.push_back(3);
+    // arr.push_back(10);
+    // arr.push_back(4);
+    // arr.push_back(2);
+    // arr.push_back(3);
+    // arr.push_back(5);
+    // arr.push_back(5);
+    // arr.push_back(4);
+    // arr.push_back(3);
+    // arr.push_back(2);
+    // arr.push_back(1);
+    // arr.push_back(1);
+    // arr.push_back(2);
+    // arr.push_back(3);
+    // vector<int> arr = {1, 3, 2, 4};
+    vector<int> arr = {1,2,3,10,4,2,3,5};
+    cout << findLengthOfShortestSubarray(arr) << endl;
 }
