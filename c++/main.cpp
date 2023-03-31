@@ -3,6 +3,7 @@
 #include<algorithm>
 #include "1630.cpp"
 #include"0179.cpp"
+#include"0318.cpp"
 using namespace std;
 int main() {
     //1616
@@ -77,7 +78,8 @@ int main() {
     // cout << findLengthOfShortestSubarray(arr) << endl;
     // vector<int> nums = {10, 2};
     // vector<int> nums = {3,30 ,34,5,9};
-    vector<int> nums = {0, 0};
-    cout << largestNumber(nums) << endl;
-
+    // vector<int> nums = {0, 0};
+    // cout << largestNumber(nums) << endl;
+    vector<string> words = {"abcw","baz","foo","bar","xtfn","abcdef"};
+    cout << maxProduct(words) << endl;
 }
