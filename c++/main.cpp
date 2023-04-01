@@ -4,6 +4,7 @@
 #include "1630.cpp"
 #include"0179.cpp"
 #include"0318.cpp"
+#include"0831.cpp"
 using namespace std;
 int main() {
     //1616
@@ -80,6 +81,13 @@ int main() {
     // vector<int> nums = {3,30 ,34,5,9};
     // vector<int> nums = {0, 0};
     // cout << largestNumber(nums) << endl;
-    vector<string> words = {"abcw","baz","foo","bar","xtfn","abcdef"};
-    cout << maxProduct(words) << endl;
+    // vector<string> words = {"abcw","baz","foo","bar","xtfn","abcdef"};
+    // cout << maxProduct(words) << endl;
+    // string s = "122";
+    // cout << (s.find('@') == string::npos) << endl;
+    string s = "LeetCode@LeetCode.com";
+    // string s = "AB@qq.com";
+    // string s = "1(234)567-890";
+    // string s = "86-(10)12345678";
+    cout << maskPII(s) << endl;
 }
