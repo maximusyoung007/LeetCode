@@ -4,6 +4,7 @@
 #include "1630.cpp"
 #include"0179.cpp"
 #include"0318.cpp"
+#include"1053.cpp"
 using namespace std;
 int main() {
     //1616
@@ -80,6 +81,17 @@ int main() {
     // vector<int> nums = {3,30 ,34,5,9};
     // vector<int> nums = {0, 0};
     // cout << largestNumber(nums) << endl;
-    vector<string> words = {"abcw","baz","foo","bar","xtfn","abcdef"};
-    cout << maxProduct(words) << endl;
+    // vector<string> words = {"abcw","baz","foo","bar","xtfn","abcdef"};
+    // cout << maxProduct(words) << endl;
+    // vector<int> arr = {3, 1, 1, 3};
+    // vector<int> arr = {3, 1, 2, 3};
+    // vector<int> arr = {4, 1, 2, 3};
+    //  vector<int> arr = {3, 2, 1};
+    // vector<int> arr = {1, 1, 5};
+    vector<int> arr = {1, 9, 4, 6, 7};
+    vector<int> res = prevPermOpt1(arr);
+    for (int r : res) {
+        cout << r << " ";
+    }
+    cout << endl;
 }
