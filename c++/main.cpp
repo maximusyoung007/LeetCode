@@ -5,6 +5,7 @@
 #include"0179.cpp"
 #include"0318.cpp"
 #include"1053.cpp"
+#include"2611.cpp"
 using namespace std;
 int main() {
     //1616
@@ -88,10 +89,13 @@ int main() {
     // vector<int> arr = {4, 1, 2, 3};
     //  vector<int> arr = {3, 2, 1};
     // vector<int> arr = {1, 1, 5};
-    vector<int> arr = {1, 9, 4, 6, 7};
-    vector<int> res = prevPermOpt1(arr);
-    for (int r : res) {
-        cout << r << " ";
-    }
-    cout << endl;
+    // vector<int> arr = {1, 9, 4, 6, 7};
+    // vector<int> res = prevPermOpt1(arr);
+    // for (int r : res) {
+    //     cout << r << " ";
+    // }
+    // cout << endl;
+    vector<int> r1 = {1,1,3,4};
+    vector<int> r2 = {4,4,1,1};
+    cout << miceAndCheese(r1, r2, 2) << endl;
 }
