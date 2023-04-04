@@ -5,6 +5,7 @@
 #include"0179.cpp"
 #include"0318.cpp"
 #include"0831.cpp"
+#include"6364.cpp"
 using namespace std;
 int main() {
     //1616
@@ -85,9 +86,30 @@ int main() {
     // cout << maxProduct(words) << endl;
     // string s = "122";
     // cout << (s.find('@') == string::npos) << endl;
-    string s = "LeetCode@LeetCode.com";
+    // string s = "LeetCode@LeetCode.com";
     // string s = "AB@qq.com";
     // string s = "1(234)567-890";
     // string s = "86-(10)12345678";
-    cout << maskPII(s) << endl;
+    // cout << maskPII(s) << endl;
+    // string s = "01000111";
+    // string s = "00111";
+    // string s = "111";
+    // string s = "001";
+    // string s = "010101";
+    // cout << findTheLongestBalancedSubstring(s) << endl;
+    // vector<int> nums = {1,3,4,1,2,3,1};
+    // vector<int> nums = {1,2,3,4};
+    // vector<vector <int> > res = findMatrix(nums);
+    // for (vector<int> t : res) {
+    //     for (int i : t) {
+    //         cout << i << " ";
+    //     }
+    //     cout << endl;
+    // }
+    // vector <int> reward1 = {1,1,3,4};
+    // vector <int> reward2 = {4,4,1,1};
+    vector <int> reward1 = {1,1};
+    vector <int> reward2 = {1,1};
+    int k = 2;
+    cout << miceAndCheese(reward1, reward2, k) << endl; 
 }
