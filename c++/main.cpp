@@ -4,6 +4,8 @@
 #include "1630.cpp"
 #include"0179.cpp"
 #include"0318.cpp"
+#include"1053.cpp"
+#include"2611.cpp"
 #include"0831.cpp"
 #include"6364.cpp"
 using namespace std;
@@ -84,6 +86,22 @@ int main() {
     // cout << largestNumber(nums) << endl;
     // vector<string> words = {"abcw","baz","foo","bar","xtfn","abcdef"};
     // cout << maxProduct(words) << endl;
+    // vector<int> arr = {3, 1, 1, 3};
+    // vector<int> arr = {3, 1, 2, 3};
+    // vector<int> arr = {4, 1, 2, 3};
+    //  vector<int> arr = {3, 2, 1};
+    // vector<int> arr = {1, 1, 5};
+    // vector<int> arr = {1, 9, 4, 6, 7};
+    // vector<int> res = prevPermOpt1(arr);
+    // for (int r : res) {
+    //     cout << r << " ";
+    // }
+    // cout << endl;
+    vector<int> r1 = {1,1,3,4};
+    vector<int> r2 = {4,4,1,1};
+    cout << miceAndCheese(r1, r2, 2) << endl;
+    // vector<string> words = {"abcw","baz","foo","bar","xtfn","abcdef"};
+    // cout << maxProduct(words) << endl;
     // string s = "122";
     // cout << (s.find('@') == string::npos) << endl;
     // string s = "LeetCode@LeetCode.com";
@@ -111,5 +129,5 @@ int main() {
     vector <int> reward1 = {1,1};
     vector <int> reward2 = {1,1};
     int k = 2;
-    cout << miceAndCheese(reward1, reward2, k) << endl; 
+    cout << miceAndCheese(reward1, reward2, k) << endl;
 }
