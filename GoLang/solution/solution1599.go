@@ -1,4 +1,4 @@
-package main
+package solution
 
 func minOperationsMaxProfit(customers []int, boardingCost, runningCost int) int {
 	ans := -1
