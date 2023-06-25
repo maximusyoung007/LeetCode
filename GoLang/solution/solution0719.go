@@ -2,6 +2,7 @@ package solution
 
 import (
 	"fmt"
+	"sort"
 )
 
 /*
@@ -30,7 +31,29 @@ func smallestDistancePair(nums []int, k int) int {
 	//	}
 	//}
 	//return res
-	return 0
+	n := len(nums)
+	sort.Ints(nums)
+	l, r := 0, nums[n-1]-nums[0]
+	for l < r {
+		m := (l + r) / 2
+		if countK(m, nums) >= k {
+			r = m
+		} else {
+			l = m + 1
+		}
+	}
+	return l
+}
+
+func countK(k int, nums []int) int {
+	cnt, l, n := 0, 0, len(nums)
+	for r := 0; r < n; r++ {
+		for l < r && nums[r]-nums[l] > k {
+			l++
+		}
+		cnt += r - l
+	}
+	return cnt
 }
 
 //小根堆超时
@@ -69,9 +92,9 @@ func Test0719() {
 	//k := 1
 	//nums := []int{1, 6, 1}
 	//k := 3
-	//nums := []int{1, 1, 1}
-	//k := 1
-	nums := []int{9, 10, 7, 10, 6, 1, 5, 4, 9, 8}
-	k := 18
+	nums := []int{1, 1, 1}
+	k := 2
+	//nums := []int{9, 10, 7, 10, 6, 1, 5, 4, 9, 8}
+	//k := 18
 	fmt.Println(smallestDistancePair(nums, k))
 }

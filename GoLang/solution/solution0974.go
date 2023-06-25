@@ -11,6 +11,7 @@ import "fmt"
 func subarraysDivByK(nums []int, k int) int {
 	preSum := make([]int, len(nums)+1)
 	m := make(map[int]int, 0)
+	//m[0]初始化为1的原因，对于不是0的情况，需要i,j两个一对才可以整除，但是对于0，本身就可以整除，因此其他m[i]初始化为0， m[0]初始化为1
 	m[0] = 1
 	res := 0
 	for i := 1; i < len(nums)+1; i++ {
