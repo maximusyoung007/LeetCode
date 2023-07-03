@@ -8,7 +8,7 @@ import (
 func findPrimePairs(n int) [][]int {
 	m := make(map[int]int, 0)
 	res := make([][]int, 0)
-	primes := isPrime35202(n)
+	primes := euler(n)
 	for i := 0; i < len(primes); i++ {
 		if primes[i]+primes[i] == n {
 			res = append(res, []int{primes[i], primes[i]})
@@ -49,9 +49,53 @@ func isPrime35202(n int) []int {
 	return res
 }
 
+func eratosthenes(n int) []int {
+	res := make([]int, 0)
+	//isPrime是否是素数，0-是，1-否
+	isPrime := make([]int, n)
+
+	for i := 2; i < n; i++ {
+		if isPrime[i] == 0 {
+			res = append(res, i)
+			for j := 2; j <= n; j++ {
+				if i*j >= n {
+					break
+				}
+				isPrime[i*j] = 1
+			}
+		}
+	}
+	return res
+}
+
+func euler(n int) []int {
+	count := 0
+	primes := make([]int, 0)
+	//isPrime是否是素数，0-是，1-否
+	isPrime := make([]int, n)
+
+	for i := 2; i < n; i++ {
+		if isPrime[i] == 0 {
+			primes = append(primes, i)
+			count += 1
+		}
+		for j := 0; j < count; j++ {
+			if i*primes[j] >= n {
+				break
+			}
+			isPrime[i*primes[j]] = 1
+			//保证每个数只筛选一次
+			if i%primes[j] == 0 {
+				break
+			}
+		}
+	}
+	return primes
+}
+
 func Test035202() {
-	//res := findPrimePairs(10)
-	res := findPrimePairs(5)
+	res := findPrimePairs(10)
+	//res := findPrimePairs(5)
 	//res := findPrimePairs(2)
 	fmt.Println(res)
 
