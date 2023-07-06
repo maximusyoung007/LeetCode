@@ -297,9 +297,10 @@ func main() {
 	//solution.Test0445()
 	//fmt.Println(10/10)
 	//solution.Test2679()
-	solution.Test2600()
+	//solution.Test2600()
+	solution.Test02178()
 }
 
-func t1(a *int) {
-	*a = 2
-}
+//func t1(a *int) {
+//	*a = 2
+//}
