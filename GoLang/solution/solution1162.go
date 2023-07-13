@@ -2,6 +2,7 @@ package solution
 
 import "fmt"
 
+//填海造陆，最后填的就是最远的
 func maxDistance(grid [][]int) int {
 	type pair1162 struct {
 		x, y int
