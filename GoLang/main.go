@@ -307,7 +307,8 @@ func main() {
 	//solution.Test0016()
 	//solution.Test1911()
 	//solution.Test1162()
-	solution.Test0931()
+	//solution.Test0931()
+	solution.Test979()
 }
 
 //func t1(a *int) {
