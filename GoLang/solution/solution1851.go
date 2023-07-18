@@ -6,7 +6,8 @@ import (
 	"sort"
 )
 
-/**
+/*
+*
 All queries are given at one time, so we can solve this problem offline.
 1.  Sort input intervals by their start value;
 2.  Sort input queries in increasing order;
@@ -19,7 +20,6 @@ This solution is correct because for two different queries Q1 < Q2,
 we process Q1 before Q2. All intervals with end values < Q1 must be also < Q2,
 so before processing Q2, we have removed all intervals whose end values < Q1.
 When processing Q2, we remove all intervals with end values in range [Q1, Q2 - 1].
-
 */
 func minInterval(intervals [][]int, queries []int) []int {
 	//方法1 计算intervals中每一个数出现的最小区间，存在map中，再依次比较queries,超时
@@ -82,10 +82,10 @@ func minInterval(intervals [][]int, queries []int) []int {
 		}
 		for len(h) > 0 && h[0].right < qt.q {
 			//如果q大于右区间，说明q不在这个区间内，继续查看下一个堆
-			//如果这个q大于右区间，因为q是单调递增的，所以后面所有的q都大于右区间，所有就可以出堆
-			//如果q在这个区间内，那么根据小根堆的特性，当前的值就是最小的，那么需要把当前这个堆再push回去
+			//如果这个q大于右区间，因为q是单调递增的，所以后面所有的q都大于右区间，所有可以出堆
 			heap.Pop(&h)
 		}
+		//如果q在这个区间内，那么根据小根堆的特性，当前的值就是最小的，那么就把当前值放到结果集中
 		if len(h) > 0 {
 			res[qt.index] = h[0].l
 		}
