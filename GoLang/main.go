@@ -1,6 +1,9 @@
 package main
 
-import "gproject/solution"
+import (
+	"fmt"
+	"gproject/solution"
+)
 
 func main() {
 	// longUrl := "https://leetcode.com/problems/design-tinyurl"
@@ -309,9 +312,25 @@ func main() {
 	//solution.Test1162()
 	//solution.Test0931()
 	//solution.Test979()
-	solution.Test1851()
+	solution.Test874()
+	//TestPair()
 }
 
 //func t1(a *int) {
 //	*a = 2
 //}
+
+func TestPair() {
+	type TestPair struct {
+		x, y int
+	}
+
+	m := make(map[TestPair]int, 0)
+	t := TestPair{1, 1}
+	t2 := TestPair{-1, -1}
+	m[t] = 1
+	_, ok1 := m[TestPair{1, 1}]
+	_, ok2 := m[t2]
+	fmt.Println(ok1)
+	fmt.Println(ok2)
+}
