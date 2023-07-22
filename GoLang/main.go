@@ -314,7 +314,8 @@ func main() {
 	//solution.Test979()
 	//solution.Test874()
 	//TestPair()
-	solution.Test1499()
+	//solution.Test1499()
+	solution.Test0860()
 }
 
 //func t1(a *int) {
