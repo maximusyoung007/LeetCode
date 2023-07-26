@@ -19,9 +19,9 @@ func handleQuery(nums1 []int, nums2 []int, queries [][]int) []int64 {
 					t := queryTree2(tree1, tree2, 1, 0, n-1, querie[1])
 					res = append(res, t)
 					i++
+				} else {
+					queryTree2(tree1, tree2, 1, 0, n-1, querie[1])
 				}
-			} else {
-				queryTree2(tree1, tree2, 1, 0, n-1, querie[1])
 			}
 		}
 		if querie[0] == 1 {
@@ -34,9 +34,9 @@ func handleQuery(nums1 []int, nums2 []int, queries [][]int) []int64 {
 					t := queryTree2(tree1, tree2, 1, 0, n-1, 0)
 					res = append(res, t)
 					i++
+				} else {
+					queryTree1(tree1, 1, int64(querie[1]), int64(querie[2]))
 				}
-			} else {
-				queryTree1(tree1, 1, int64(querie[1]), int64(querie[2]))
 			}
 		}
 		if querie[0] == 3 {
@@ -75,8 +75,8 @@ func queryTree2(tree1 []handleTree, tree2 []handleTree, id int, l int64, r int64
 		if tree2[id].lazy == 2 {
 			tree2[id*2].sum = tree1[id*2].sum*int64(p) + tree2[id*2].sum
 			tree2[id*2+1].sum = tree1[id*2+1].sum*int64(p) + tree2[id*2+1].sum
-			tree2[id].lazy = 2
-			tree2[id].lazy = 2
+			tree2[id*2].lazy = 2
+			tree2[id*2+1].lazy = 2
 			tree2[id].lazy = 0
 		}
 		if r <= mid {
@@ -84,7 +84,7 @@ func queryTree2(tree1 []handleTree, tree2 []handleTree, id int, l int64, r int64
 		} else if l > mid {
 			return queryTree2(tree1, tree2, id*2+1, l, r, p)
 		} else {
-			return queryTree2(tree1, tree2, id*2, l, mid, p) + queryTree2(tree1, tree2, id*2+1, mid, r, p)
+			return queryTree2(tree1, tree2, id*2, l, mid-1, p) + queryTree2(tree1, tree2, id*2+1, mid, r, p)
 		}
 	}
 }
@@ -99,6 +99,13 @@ func update2(tree1 []handleTree, tree2 []handleTree, id int, l int64, r int64, p
 		tree2[id].lazy = 2
 		return
 	} else {
+		if tree2[id].lazy == 2 {
+			tree2[id*2].sum = tree1[id*2].sum*int64(p) + tree2[id*2].sum
+			tree2[id*2+1].sum = tree1[id*2+1].sum*int64(p) + tree2[id*2+1].sum
+			tree2[id*2].lazy = 2
+			tree2[id*2+1].lazy = 2
+			tree2[id].lazy = 0
+		}
 		update2(tree1, tree2, id*2, l, r, p)
 		update2(tree1, tree2, id*2+1, l, r, p)
 		tree2[id].sum = tree2[id*2].sum + tree2[id*2+1].sum
@@ -114,6 +121,13 @@ func update1(tree1 []handleTree, id int, l int64, r int64) {
 		tree1[id].lazy = 1
 		return
 	} else {
+		if tree1[id].lazy == 1 {
+			tree1[id*2].sum = tree1[id*2].right - tree1[id*2].left + 1 - tree1[id*2].sum
+			tree1[id*2+1].sum = tree1[id*2+1].right - tree1[id*2+1].left + 1 - tree1[id*2+1].sum
+			tree1[id*2].lazy = 1
+			tree1[id*2+1].lazy = 1
+			tree1[id].lazy = 0
+		}
 		update1(tree1, id*2, l, r)
 		update1(tree1, id*2+1, l, r)
 		tree1[id].sum = tree1[id*2].sum + tree1[id*2+1].sum
@@ -131,8 +145,8 @@ func queryTree1(tree1 []handleTree, id int, l int64, r int64) int64 {
 		if tree1[id].lazy == 1 {
 			tree1[id*2].sum = tree1[id*2].right - tree1[id*2].left + 1 - tree1[id*2].sum
 			tree1[id*2+1].sum = tree1[id*2+1].right - tree1[id*2+1].left + 1 - tree1[id*2+1].sum
-			tree1[id].lazy = 1
-			tree1[id].lazy = 1
+			tree1[id*2].lazy = 1
+			tree1[id*2+1].lazy = 1
 			tree1[id].lazy = 0
 		}
 		if r <= mid {
@@ -140,7 +154,7 @@ func queryTree1(tree1 []handleTree, id int, l int64, r int64) int64 {
 		} else if l > mid {
 			return queryTree1(tree1, id*2+1, l, r)
 		} else {
-			return queryTree1(tree1, id*2, l, mid) + queryTree1(tree1, id*2+1, mid, r)
+			return queryTree1(tree1, id*2, l, mid-1) + queryTree1(tree1, id*2+1, mid, r)
 		}
 	}
 }
@@ -161,8 +175,23 @@ func Test2569() {
 	//nums1 := []int{1, 0, 1}
 	//nums2 := []int{0, 0, 0}
 	//queries := [][]int{{1, 1, 1}, {2, 1, 0}, {3, 0, 0}}
-	nums1 := []int{1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0}
-	nums2 := []int{48, 2, 32, 25, 30, 37, 32, 18, 48, 39, 34, 19, 46, 43, 30, 22, 20, 35, 28, 3, 5, 45, 39, 21, 46, 45, 12, 15}
-	queries := [][]int{{3, 0, 0}, {2, 3, 0}, {1, 10, 26}, {2, 4, 0}, {2, 18, 0}}
+	//nums1 := []int{1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0}
+	//nums2 := []int{48, 2, 32, 25, 30, 37, 32, 18, 48, 39, 34, 19, 46, 43, 30, 22, 20, 35, 28, 3, 5, 45, 39, 21, 46, 45, 12, 15}
+	//queries := [][]int{{3, 0, 0}, {2, 3, 0}, {1, 10, 26}, {2, 4, 0}, {2, 18, 0}}
+	//nums1 := []int{1, 0, 1}
+	//nums2 := []int{44, 28, 35}
+	//queries := [][]int{{1, 0, 1}, {2, 10, 0}, {2, 2, 0}, {2, 7, 0}, {3, 0, 0}, {3, 0, 0}, {1, 2, 2}, {1, 1, 2}, {2, 1, 0}, {1, 0, 2},
+	//	{1, 2, 2}, {1, 0, 2}, {3, 0, 0}, {1, 1, 2}, {3, 0, 0}, {1, 0, 1}, {2, 21, 0}, {1, 0, 1}, {2, 26, 0}, {1, 1, 1}}
+	//nums1 := []int{0, 1, 0, 0, 0, 0}
+	//nums2 := []int{14, 4, 13, 13, 47, 18}
+	//queries := [][]int{{3, 0, 0}, {1, 4, 4}, {1, 1, 4}, {1, 3, 4}, {3, 0, 0}, {2, 5, 0}, {1, 1, 3}, {2, 16, 0}, {2, 10, 0}, {3, 0, 0}, {3, 0, 0}, {2, 6, 0}}
+	//nums1 := []int{0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1}
+	//nums2 := []int{6, 10, 9, 14, 32, 15, 18, 26, 8, 25, 44, 8, 19, 47, 37, 19, 5, 28, 40}
+	//queries := [][]int{{1, 12, 15}, {1, 13, 18}, {2, 15, 0},
+	//	{1, 11, 15}, {2, 3, 0}, {1, 3, 11}, {1, 17, 17}, {3, 0, 0}, {2, 30, 0}, {2, 6, 0}, {2, 14, 0}, {1, 7, 14}, {2, 30, 0}, {3, 0, 0}, {1, 11, 18}, {3, 0, 0}, {3, 0, 0}}
+	nums1 := []int{1, 1, 1, 1, 0, 1, 1, 0, 0, 0}
+	nums2 := []int{33, 13, 13, 5, 34, 7, 47, 2, 14, 6}
+	queries := [][]int{{2, 14, 0}, {1, 8, 8}, {3, 0, 0}, {1, 3, 6}, {1, 3, 9}, {1, 8, 8}, {3, 0, 0}, {1, 8, 9}, {3, 0, 0}, {2, 28, 0}, {3, 0, 0},
+		{2, 22, 0}, {2, 21, 0}, {3, 0, 0}, {3, 0, 0}, {1, 5, 7}, {1, 0, 3}, {2, 7, 0}, {3, 0, 0}, {3, 0, 0}}
 	fmt.Println(handleQuery(nums1, nums2, queries))
 }
