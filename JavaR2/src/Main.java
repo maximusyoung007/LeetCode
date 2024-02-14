@@ -12,9 +12,14 @@ public class Main {
 		//g = [1,2,3], s = [1,1]
 //		int[] g = new int[] {1,2,3};
 //		int[] s = new int[] {1,1};
-		int[] g = new int[] {1,2};
-		int[] s = new int[] {1,2,3};
-		Solution0455 solution0455 = new Solution0455();
-		System.out.println(solution0455.findContentChildren(g, s));
+//		int[] g = new int[] {1,2};
+//		int[] s = new int[] {1,2,3};
+//		Solution0455 solution0455 = new Solution0455();
+//		System.out.println(solution0455.findContentChildren(g, s));
+
+		Solution0605 solution0605 = new Solution0605();
+//		int[] arr = new int[] {1, 0, 0, 0, 1};
+		int[] arr = new int[] {0};
+		System.out.println(solution0605.canPlaceFlowers(arr, 2));
 	}
 }
