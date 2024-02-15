@@ -21,6 +21,9 @@ func main() {
 	//intervals := [][]int{{1, 2}, {2, 4}, {1, 3}}
 	//intervals := [][]int{{1, 2}, {2, 3}, {3, 4}, {1, 3}}
 	//intervals := [][]int{{1, 2}, {1, 2}, {1, 2}}
-	intervals := [][]int{{0, 2}, {1, 3}, {2, 4}, {3, 5}, {4, 6}}
-	println(solution.EraseOverlapIntervals(intervals))
+	//intervals := [][]int{{0, 2}, {1, 3}, {2, 4}, {3, 5}, {4, 6}}
+	//println(solution.EraseOverlapIntervals(intervals))
+	//solution.PartitionLabels("aaa")
+	s := "ababcbacadefegdehijhklij"
+	fmt.Println(solution.PartitionLabels(s))
 }
