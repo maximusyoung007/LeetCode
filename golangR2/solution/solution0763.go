@@ -8,20 +8,16 @@ func PartitionLabels(s string) []int {
 		m[string(s[i])] = i
 	}
 
-	j := 0
-	for i := 0; i < length && j < length; {
-		if m[string(s[i])] != i {
-			i++
+	end, lastNum := 0, 0
+	res := make([]int, 0)
+	for i := 0; i < length; i++ {
+		//至少要到第end位
+		if m[string(s[i])] > end {
+			end = m[string(s[i])]
 		}
-		if m[string(s[i])] == i {
-			j = i + 1
-			for j < length && m[string(s[j])] == j {
-				j++
-			}
-			j--
-			res = append(res, j-lastNum+1)
-			lastNum = j + 1
-			i = j
+		if i == end {
+			res = append(res, i-lastNum+1)
+			lastNum = i + 1
 		}
 	}
 	return res

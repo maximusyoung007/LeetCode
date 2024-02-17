@@ -24,6 +24,9 @@ func main() {
 	//intervals := [][]int{{0, 2}, {1, 3}, {2, 4}, {3, 5}, {4, 6}}
 	//println(solution.EraseOverlapIntervals(intervals))
 	//solution.PartitionLabels("aaa")
-	s := "ababcbacadefegdehijhklij"
-	fmt.Println(solution.PartitionLabels(s))
+	//s := "ababcbacadefegdehijhklij"
+	//s := "eccbbbbdec"
+	//fmt.Println(solution.PartitionLabels(s))
+	prices := []int{7, 1, 5, 3, 6, 4}
+	print(solution.MaxProfit(prices))
 }
