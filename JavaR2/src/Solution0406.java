@@ -1,5 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Solution0406 {
 	public int[][] reconstructQueue(int[][] people) {
@@ -13,6 +15,12 @@ public class Solution0406 {
 				}
 			}
 		});
-		return people;
+
+		List<int[]> res = new LinkedList<>();
+		for (int[] p : people) {
+			res.add(p[1], p);
+		}
+
+		return res.toArray(new int[0][]);
 	}
 }
