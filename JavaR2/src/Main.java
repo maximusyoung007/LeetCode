@@ -53,10 +53,17 @@ public class Main {
 //		int[] nums1 = new int[] {1,2,3,0,0,0}, nums2 = new int[] {2,5,6};
 //		int m = 3, n = 3;
 		//nums1 = [1], m = 1, nums2 = [], n = 0
-		int[] nums1 = new int[] {0}, nums2 = new int[] {1};
-		int m = 0, n = 1;
-		Solution0088 solution0088 = new Solution0088();
-		solution0088.merge(nums1, m, nums2, n);
+//		int[] nums1 = new int[] {0}, nums2 = new int[] {1};
+//		int m = 0, n = 1;
+//		Solution0088 solution0088 = new Solution0088();
+//		solution0088.merge(nums1, m, nums2, n);
+
+		Solution0076 solution0076 = new Solution0076();
+//		String s = "ADOBECODEBANC", t = "ABC";
+//		String s = "a", t = "a";
+//		String s = "a", t = "aa";
+		String s = "aaabc", t = "abc";
+		System.out.println(solution0076.minWindow(s, t));
 		System.out.println("end");
 	}
 }
