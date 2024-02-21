@@ -27,6 +27,21 @@ func main() {
 	//s := "ababcbacadefegdehijhklij"
 	//s := "eccbbbbdec"
 	//fmt.Println(solution.PartitionLabels(s))
-	prices := []int{7, 1, 5, 3, 6, 4}
-	print(solution.MaxProfit(prices))
+	//prices := []int{7, 1, 5, 3, 6, 4}
+	//print(solution.MaxProfit(prices))
+	//println(solution.JudgeSquareSum(5))
+	//println(solution.JudgeSquareSum(3))
+	//println(solution.JudgeSquareSum(4))
+	//println(solution.JudgeSquareSum(2))
+	//fmt.Println(solution.ValidPalindrome("bbabcdabb"))
+	//fmt.Println(solution.ValidPalindrome("bbabcabb"))
+	//fmt.Println(solution.ValidPalindrome("aba"))
+	//fmt.Println(solution.ValidPalindrome("abca"))
+	//fmt.Println(solution.ValidPalindrome("abc"))
+	//s = "abpcplea", dictionary = ["ale","apple","monkey","plea"]
+	s := "abpcplea"
+	//dictionary := []string{"ale", "apple", "monkey", "plea"}
+	dictionary := []string{"d", "b", "c"}
+	fmt.Println(solution.FindLongestWord(s, dictionary))
+
 }
