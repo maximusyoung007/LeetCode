@@ -63,6 +63,8 @@ func main() {
 	//fmt.Println(solution.SearchRange(nums, 6))
 	//nums := []int{5, 8, 8, 8, 8, 10}
 	//fmt.Println(solution.SearchRange(nums, 8))
-	nums := []int{}
-	fmt.Println(solution.SearchRange(nums, 0))
+	//nums := []int{}
+	//fmt.Println(solution.SearchRange(nums, 0))
+	nums := []int{1}
+	fmt.Println(solution.SearchRange(nums, 1))
 }
