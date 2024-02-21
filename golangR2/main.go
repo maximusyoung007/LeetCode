@@ -39,9 +39,30 @@ func main() {
 	//fmt.Println(solution.ValidPalindrome("abca"))
 	//fmt.Println(solution.ValidPalindrome("abc"))
 	//s = "abpcplea", dictionary = ["ale","apple","monkey","plea"]
-	s := "abpcplea"
+	//s := "abpcplea"
 	//dictionary := []string{"ale", "apple", "monkey", "plea"}
-	dictionary := []string{"d", "b", "c"}
-	fmt.Println(solution.FindLongestWord(s, dictionary))
+	//dictionary := []string{"d", "b", "c"}
+	//fmt.Println(solution.FindLongestWord(s, dictionary))
 
+	//println(solution.MySqrt(8))
+	//println(solution.MySqrt(4))
+	//println(solution.MySqrt(9))
+	//println(solution.MySqrt(10))
+	//println(solution.MySqrt(11))
+	//println(solution.MySqrt(12))
+	//println(solution.MySqrt(13))
+	//println(solution.MySqrt(14))
+	//println(solution.MySqrt(15))
+	//println(solution.MySqrt(16))
+	//println(solution.MySqrt(17))
+	//println(solution.MySqrt(1))
+
+	//nums = [5,7,7,8,8,10], target = 8
+
+	//nums := []int{5, 5, 7, 7, 8, 8, 10}
+	//fmt.Println(solution.SearchRange(nums, 6))
+	//nums := []int{5, 8, 8, 8, 8, 10}
+	//fmt.Println(solution.SearchRange(nums, 8))
+	nums := []int{}
+	fmt.Println(solution.SearchRange(nums, 0))
 }
