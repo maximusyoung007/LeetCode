@@ -103,6 +103,9 @@ public class Main {
 
 		Solution0540 solution0540 = new Solution0540();
 //		System.out.println(solution0540.singleNonDuplicate(new int[]{1, 2, 2, 3, 3}));
-		System.out.println(solution0540.singleNonDuplicate(new int[]{1,1,2,3,3,4,4,8,8}));
+//		System.out.println(solution0540.singleNonDuplicate(new int[]{1,1,2,3,3,4,4,8,8}));
+//		System.out.println(solution0540.singleNonDuplicate(new int[]{3,3,7,7,10,11,11}));
+//		System.out.println(solution0540.singleNonDuplicate(new int[]{1}));
+		System.out.println(solution0540.singleNonDuplicate(new int[]{1, 1, 2}));
 	}
 }

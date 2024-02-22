@@ -18,12 +18,16 @@ public class Solution0540 {
 		while (left <= right) {
 			mid = (left + right) / 2;
 
+			if (mid == nums.length - 1) {
+				break;
+			}
+
 			if (nums[mid] != nums[mid^1]) {
 				right = mid - 1;
 			} else {
 				left = mid + 1;
 			}
 		}
-		return left;
+		return nums[left];
 	}
 }
