@@ -11,7 +11,7 @@ func SearchRange(nums []int, target int) []int {
 		end = findTarget(nums, target, false) - 1
 	}
 	if start != -1 && end == -2 {
-		//start找到了，但是end没有找到，说明没有比target大的，那么最后以为就是最大的
+		//start找到了，但是end没有找到，说明没有比target大的，那么最后一位就是最大的
 		end = len(nums) - 1
 	}
 	return []int{start, end}

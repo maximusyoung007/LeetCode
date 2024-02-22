@@ -58,12 +58,51 @@ public class Main {
 //		Solution0088 solution0088 = new Solution0088();
 //		solution0088.merge(nums1, m, nums2, n);
 
-		Solution0076 solution0076 = new Solution0076();
+//		Solution0076 solution0076 = new Solution0076();
 //		String s = "ADOBECODEBANC", t = "ABC";
 //		String s = "a", t = "a";
 //		String s = "a", t = "aa";
-		String s = "aaabc", t = "abc";
-		System.out.println(solution0076.minWindow(s, t));
-		System.out.println("end");
+//		String s = "aaabc", t = "abc";
+//		System.out.println(solution0076.minWindow(s, t));
+//		System.out.println("end");
+
+//		Solution0033 solution0033 = new Solution0033();
+//		int[] nums = new int[] {4,5,6,7,0,1,2};
+//		System.out.println(solution0033.search(nums, 4));
+//		System.out.println(solution0033.search(nums, 5));
+//		System.out.println(solution0033.search(nums, 6));
+//		System.out.println(solution0033.search(nums, 7));
+//		System.out.println(solution0033.search(nums, 0));
+//		System.out.println(solution0033.search(nums, 1));
+//		System.out.println(solution0033.search(nums, 2));
+//		System.out.println(solution0033.search(nums, 9));
+//		System.out.println(solution0033.search(nums, 3));
+
+//		int[] nums = new int[] {1, 3};
+//		System.out.println(solution0033.search(nums, 1));
+//		System.out.println(solution0033.search(nums, 0));
+
+//		int[] nums = new int[] {1};
+//		System.out.println(solution0033.search(nums, 0));
+//		System.out.println(solution0033.search(nums, 1));
+
+//		int[] nums = new int[] {3, 1};
+//		System.out.println(solution0033.search(nums, 1));
+
+//		Solution0153 solution0153 = new Solution0153();
+//		int[] nums = new int[] {4,5,6,7,0,1,2};
+//		int[] nums = new int[] {3,4,5,1,2};
+//		int[] nums = new int[] {11,13,15,17};
+//		System.out.println(solution0153.findMin(nums));
+
+//		Solution0154 solution0154 = new Solution0154();
+//		System.out.println(solution0154.findMin(new int[]{2, 2, 2, 0, 1}));
+//		System.out.println(solution0154.findMin(new int[]{2, 0, 1, 2, 2, 2}));
+//		System.out.println(solution0154.findMin(new int[]{2, 1, 2, 2, 2}));
+//		System.out.println(solution0154.findMin(new int[]{2, 0, 0, 1, 2}));
+
+		Solution0540 solution0540 = new Solution0540();
+//		System.out.println(solution0540.singleNonDuplicate(new int[]{1, 2, 2, 3, 3}));
+		System.out.println(solution0540.singleNonDuplicate(new int[]{1,1,2,3,3,4,4,8,8}));
 	}
 }
