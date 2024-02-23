@@ -65,6 +65,14 @@ func main() {
 	//fmt.Println(solution.SearchRange(nums, 8))
 	//nums := []int{}
 	//fmt.Println(solution.SearchRange(nums, 0))
-	nums := []int{1}
-	fmt.Println(solution.SearchRange(nums, 1))
+	//nums := []int{1}
+	//fmt.Println(solution.SearchRange(nums, 1))
+	//nums := []int{3, 2, 1, 5, 6, 4}
+	nums := []int{3, 2, 3, 1, 2, 4, 5, 5, 6}
+	print(solution.FindKthLargest(nums, 1))
+	print(solution.FindKthLargest(nums, 2))
+	print(solution.FindKthLargest(nums, 3))
+	print(solution.FindKthLargest(nums, 4))
+	print(solution.FindKthLargest(nums, 5))
+	print(solution.FindKthLargest(nums, 6))
 }
