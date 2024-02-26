@@ -101,8 +101,12 @@ public class Main {
 //		System.out.println(solution0154.findMin(new int[]{2, 1, 2, 2, 2}));
 //		System.out.println(solution0154.findMin(new int[]{2, 0, 0, 1, 2}));
 
-		Solution0540 solution0540 = new Solution0540();
+//		Solution0540 solution0540 = new Solution0540();
 //		System.out.println(solution0540.singleNonDuplicate(new int[]{1, 2, 2, 3, 3}));
-		System.out.println(solution0540.singleNonDuplicate(new int[]{1,1,2,3,3,4,4,8,8}));
+//		System.out.println(solution0540.singleNonDuplicate(new int[]{1,1,2,3,3,4,4,8,8}));
+
+		Solution0695 solution0695 = new Solution0695();
+		int[][] grid = new int[][] {{0,1}, {1,1}};
+		System.out.println(solution0695.maxAreaOfIsland(grid));
 	}
 }
