@@ -68,11 +68,29 @@ func main() {
 	//nums := []int{1}
 	//fmt.Println(solution.SearchRange(nums, 1))
 	//nums := []int{3, 2, 1, 5, 6, 4}
-	nums := []int{3, 2, 3, 1, 2, 4, 5, 5, 6}
-	print(solution.FindKthLargest(nums, 1))
-	print(solution.FindKthLargest(nums, 2))
-	print(solution.FindKthLargest(nums, 3))
-	print(solution.FindKthLargest(nums, 4))
-	print(solution.FindKthLargest(nums, 5))
-	print(solution.FindKthLargest(nums, 6))
+	//nums := []int{3, 2, 3, 1, 2, 4, 5, 5, 6}
+	//print(solution.FindKthLargest(nums, 1))
+	//print(solution.FindKthLargest(nums, 2))
+	//print(solution.FindKthLargest(nums, 3))
+	//print(solution.FindKthLargest(nums, 4))
+	//print(solution.FindKthLargest(nums, 5))
+	//print(solution.FindKthLargest(nums, 6))
+
+	//nums1 := []int{1, 2, 3}
+	//nums2 := []int{1, 3}
+	//nums1 := []int{1, 2}
+	//nums2 := []int{3, 4}
+	//println(solution.FindMedianSortedArrays(nums1, nums2))
+	//nums := []int{1, 1, 1, 2, 2, 3}
+	//fmt.Println(solution.TopKFrequent(nums, 2))
+	//nums := []int{1}
+	//fmt.Println(solution.TopKFrequent(nums, 1))
+	//nums := []int{-1, -1}
+	//fmt.Println(solution.TopKFrequent(nums, 1))
+	//nums := []int{1, 2}
+	//fmt.Println(solution.TopKFrequent(nums, 2))
+	nums := []int{2, 0, 2, 1, 1, 0}
+	//nums := []int{2, 0, 1}
+	solution.SortColors(nums)
+	fmt.Println(nums)
 }

@@ -7,26 +7,27 @@ func FindKthLargest(nums []int, k int) int {
 func quickSort(nums []int, left int, right int, k int) int {
 	i, j := left, right
 
+	n := len(nums)
 	mid := (left + right) / 2
 	nums[left], nums[mid] = nums[mid], nums[left]
 
 	base := nums[i]
 	for i < j {
-		for i < j && nums[j] <= base {
+		for i < j && nums[j] >= base {
 			j--
 		}
 		nums[i] = nums[j]
 
-		for i < j && nums[i] >= base {
+		for i < j && nums[i] <= base {
 			i++
 		}
 		nums[j] = nums[i]
 	}
 	nums[i] = base
 
-	if i == k-1 {
+	if i == n-k {
 		return nums[i]
-	} else if i > k-1 {
+	} else if i > n-k {
 		return quickSort(nums, left, i, k)
 	} else {
 		return quickSort(nums, i+1, right, k)

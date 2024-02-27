@@ -15,8 +15,8 @@ public class Solution0417 {
 	public List<List<Integer>> pacificAtlantic(int[][] heights) {
 		int m = heights.length, n = heights[0].length;
 
-		//count初始化为0,可以流向大西洋+1,可以流向太平洋再+1,等于2的则为节点
 		int[][] counts = new int[m][n];
+		int[][] counts2 = new int[m][n];
 		boolean[][] visited;
 
 		//从边界开始向里递归
@@ -26,14 +26,14 @@ public class Solution0417 {
 				if (i == 0 || j == 0) {
 					//一个节点可能从不同的路径流向太平洋，每次都是1条新的路径，因此重置visited数组
 					visited = new boolean[m][n];
-					dfs1(i, j, -1, -1, heights, counts, visited, true);
+					dfs(i, j, -1, -1, heights, counts, counts2, visited, true);
 
 				}
 
 				//大西洋流入
 				if (i == m - 1 || j == n - 1) {
 					visited = new boolean[m][n];
-					dfs1(i, j, -1, -1, heights, counts, visited, false);
+					dfs(i, j, -1, -1, heights, counts, counts2, visited, false);
 				}
 			}
 		}
@@ -41,7 +41,7 @@ public class Solution0417 {
 		List<List<Integer>> res = new ArrayList<>();
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
-				if (counts[i][j] == 2) {
+				if (counts[i][j] == 1 && counts2[i][j] == 1) {
 					res.add(Arrays.asList(new Integer[] {i, j}));
 				}
 			}
@@ -50,17 +50,15 @@ public class Solution0417 {
 		return res;
 	}
 
-	private void dfs1(int i, int j, int oldI, int oldJ, int[][] heights, int[][] counts, boolean[][] visited, boolean isPacific) {
+	private void dfs(int i, int j, int oldI, int oldJ, int[][] heights, int[][] counts, int[][] counts2, boolean[][] visited, boolean isPacific) {
 		if (i < 0 || i >= heights.length || j < 0 || j >= heights[0].length) {
 			return;
 		}
 
-		//已经访问过的节点不再访问
+		//已经确定是可以流到节点不用再流
 		if (visited[i][j]) {
 			return;
 		}
-
-		visited[i][j] = true;
 
 		//oldI==-1 && oldJ==-1表示在边界上，一定满足
 		if (oldI == -1 && oldJ == -1) {
@@ -69,10 +67,11 @@ public class Solution0417 {
 					counts[i][j]++;
 				}
 			} else {
-				if (counts[i][j] == 1) {
-					counts[i][j]++;
+				if (counts2[i][j] == 0) {
+					counts2[i][j]++;
 				}
 			}
+			visited[i][j] = true;
 		} else {
 			//否则要比较大小
 			if (heights[i][j] >= heights[oldI][oldJ]) {
@@ -81,10 +80,11 @@ public class Solution0417 {
 						counts[i][j]++;
 					}
 				} else {
-					if (counts[i][j] == 1) {
-						counts[i][j]++;
+					if (counts2[i][j] == 0) {
+						counts2[i][j]++;
 					}
 				}
+				visited[i][j] = true;
 			} else {
 				return;
 			}
@@ -94,7 +94,7 @@ public class Solution0417 {
 			int nextI = i + nextMove[0];
 			int nextJ = j + nextMove[1];
 
-			dfs1(nextI, nextJ, i, j, heights, counts, visited, isPacific);
+			dfs(nextI, nextJ, i, j, heights, counts, counts2, visited, isPacific);
 
 		}
 		return;
