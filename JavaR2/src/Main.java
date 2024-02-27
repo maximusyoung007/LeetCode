@@ -105,8 +105,50 @@ public class Main {
 //		System.out.println(solution0540.singleNonDuplicate(new int[]{1, 2, 2, 3, 3}));
 //		System.out.println(solution0540.singleNonDuplicate(new int[]{1,1,2,3,3,4,4,8,8}));
 
-		Solution0695 solution0695 = new Solution0695();
-		int[][] grid = new int[][] {{0,1}, {1,1}};
-		System.out.println(solution0695.maxAreaOfIsland(grid));
+//		Solution0695 solution0695 = new Solution0695();
+//		int[][] grid = new int[][] {
+//			{0,0,1,0,0,0,0,1,0,0,0,0,0},
+//			{0,0,0,0,0,0,0,1,1,1,0,0,0},
+//			{0,1,1,0,1,0,0,0,0,0,0,0,0},
+//			{0,1,0,0,1,1,0,0,1,0,1,0,0},
+//			{0,1,0,0,1,1,0,0,1,1,1,0,0},
+//			{0,0,0,0,0,0,0,0,0,0,1,0,0},
+//			{0,0,0,0,0,0,0,1,1,1,0,0,0},
+//			{0,0,0,0,0,0,0,1,1,0,0,0,0}};
+//		int[][] grid = new int[][] {{0,0,0,0,0,0,0,0}};
+//		int[][] grid = new int[][] {{1}};
+//		int[][] grid = new int[][] {{1,1,1,1,1,1,1,1}};
+//		System.out.println(solution0695.maxAreaOfIsland(grid));
+
+		//[[1,1,0],[1,1,0],[0,0,1]]
+//		Solution0547 solution0547 = new Solution0547();
+//		int[][] isConnected = new int[][] {
+//			{1,1,0},{1,1,0},{0,0,1}
+//		};
+//		int[][] isConnected = new int[][] {{1,0,0},{0,1,0},{0,0,1}};
+//		System.out.println(solution0547.findCircleNum(isConnected));
+
+		Solution0417 solution0417 = new Solution0417();
+//		int[][] heights = new int[][] {
+//			{1,2,2,3,5},
+//			{3,2,3,4,4},
+//			{2,4,5,3,1},
+//			{6,7,1,4,5},
+//			{5,1,1,2,4}
+//		};
+		//[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]
+//		System.out.println(solution0417.pacificAtlantic(heights));
+//		int [][] heights = new int[][] {
+//			{2,1},
+//			{1,2}
+//		};
+		int[][] heights = new int[][] {
+			{3,3,3},
+			{3,1,3},
+			{0,2,4}
+		};
+		System.out.println(solution0417.pacificAtlantic(heights));
+
+
 	}
 }
