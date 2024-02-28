@@ -237,18 +237,20 @@ public class Main {
 //		System.out.println(solution0079.exist(board, "ABCB"));
 //		System.out.println(solution0079.exist(board, "ABCESEEEFS"));
 
-		int[][] grid = new int[][] {
-			{0,1,0},
-			{0,0,0},
-			{0,0,1}
-		};
+//		int[][] grid = new int[][] {
+//			{0,1,0},
+//			{0,0,0},
+//			{0,0,1}
+//		};
 
-		int[][] grid2 = new int[][] {
+		int[][] grid = new int[][] {
 			{1,1,1,1,1},
 			{1,0,0,0,1},
 			{1,0,1,0,1},
 			{1,0,0,0,1},
 			{1,1,1,1,1}
 		};
+		Solution0934 solution0934 = new Solution0934();
+		System.out.println(solution0934.shortestBridge(grid));
 	}
 }
