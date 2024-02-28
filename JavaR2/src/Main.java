@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * <pre>
  * Modify Information:
@@ -187,11 +189,66 @@ public class Main {
 //		System.out.println(heights[23][2]);
 //		System.out.println(solution0417.pacificAtlantic(heights));
 
-		Solution0451 solution0451 = new Solution0451();
-		System.out.println(solution0451.frequencySort("tree"));
-		System.out.println(solution0451.frequencySort("cccaaa"));
-		System.out.println(solution0451.frequencySort("Aabb"));
-		System.out.println(solution0451.frequencySort("a"));
+//		Solution0451 solution0451 = new Solution0451();
+//		System.out.println(solution0451.frequencySort("tree"));
+//		System.out.println(solution0451.frequencySort("cccaaa"));
+//		System.out.println(solution0451.frequencySort("Aabb"));
+//		System.out.println(solution0451.frequencySort("a"));
 
+//		Solution0046 solution0046 = new Solution0046();
+//		List<List<Integer>> res = solution0046.permute(new int[] {1,2,3});
+//		List<List<Integer>> res = solution0046.permute(new int[] {1});
+//		for (List<Integer> pr : res) {
+//			for (Integer in : pr) {
+//				System.out.print(in);
+//			}
+//			System.out.println();
+//		}
+
+//		Solution0077 solution0077 = new Solution0077();
+//		List<List<Integer>> res = solution0077.combine(4, 2);
+//		List<List<Integer>> res = solution0077.combine(1, 1);
+//		for (List<Integer> pr : res) {
+//			for (Integer in : pr) {
+//				System.out.print(in);
+//			}
+//			System.out.println();
+//		}
+
+//		Solution0079 solution0079 = new Solution0079();
+//		char[][] board = new char[][] {
+//			{'A','B','C','E'},
+//			{'S','F','C','S'},
+//			{'A','D','E','E'}
+//		};
+		//["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]
+//		System.out.println(solution0079.exist(board, "ABCCED"));
+//		System.out.println(solution0079.exist(board, "SEE"));
+//		char[][] board = new char[][] {
+//			{'A', 'B'},
+//			{'C', 'D'}
+//		};
+//
+//		char[][] board = new char[][] {
+//			{'A','B','C','E'},
+//			{'S','F','E','S'},
+//			{'A','D','E','E'}
+//		};
+//		System.out.println(solution0079.exist(board, "ABCB"));
+//		System.out.println(solution0079.exist(board, "ABCESEEEFS"));
+
+		int[][] grid = new int[][] {
+			{0,1,0},
+			{0,0,0},
+			{0,0,1}
+		};
+
+		int[][] grid2 = new int[][] {
+			{1,1,1,1,1},
+			{1,0,0,0,1},
+			{1,0,1,0,1},
+			{1,0,0,0,1},
+			{1,1,1,1,1}
+		};
 	}
 }
