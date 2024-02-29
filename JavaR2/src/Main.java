@@ -196,14 +196,14 @@ public class Main {
 //		System.out.println(solution0451.frequencySort("a"));
 
 //		Solution0046 solution0046 = new Solution0046();
-//		List<List<Integer>> res = solution0046.permute(new int[] {1,2,3});
+//		List<List<Integer>> res = solution0046.permute(new int[] {1,1,1});
 //		List<List<Integer>> res = solution0046.permute(new int[] {1});
 //		for (List<Integer> pr : res) {
 //			for (Integer in : pr) {
 //				System.out.print(in);
 //			}
 //			System.out.println();
-//		}
+		}
 
 //		Solution0077 solution0077 = new Solution0077();
 //		List<List<Integer>> res = solution0077.combine(4, 2);
@@ -243,14 +243,34 @@ public class Main {
 //			{0,0,1}
 //		};
 
-		int[][] grid = new int[][] {
-			{1,1,1,1,1},
-			{1,0,0,0,1},
-			{1,0,1,0,1},
-			{1,0,0,0,1},
-			{1,1,1,1,1}
-		};
-		Solution0934 solution0934 = new Solution0934();
-		System.out.println(solution0934.shortestBridge(grid));
+//		int[][] grid = new int[][] {
+//			{1,1,1,1,1},
+//			{1,0,0,0,1},
+//			{1,0,1,0,1},
+//			{1,0,0,0,1},
+//			{1,1,1,1,1}
+//		};
+//		Solution0934 solution0934 = new Solution0934();
+//		System.out.println(solution0934.shortestBridge(grid));
+
+//		Solution0130 solution0130 = new Solution0130();
+//		char[][] board = new char[][] {
+//			{'X','X','X','X'},
+//			{'X','O','O','X'},
+//			{'X','X','O','X'},
+//			{'X','O','X','X'}
+//		};
+//		solution0130.solve(board);
+
+//		Solution0257 solution0257 = new Solution0257();
+//		TreeNode node4 = new TreeNode(4, null, null);
+//		TreeNode node3 = new TreeNode(3, null, null);
+//		TreeNode node2 = new TreeNode(2, node4, null);
+//		TreeNode node1 = new TreeNode(1, node2, node3);
+//		List<String> res = solution0257.binaryTreePaths(node1);
+//		for (String s : res) {
+//			System.out.println(s);
+//		}
+		System.out.println("exit");
 	}
 }
