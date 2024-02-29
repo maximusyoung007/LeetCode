@@ -26,9 +26,17 @@ public class Solution0047 {
 				continue;
 			}
 
+			//两个数相同的情况：
 			//和前一个数相等且前一个数没有访问，则表示是从后一个数开始遍历的
 			//这两个数相同，第一轮已经从第一个数遍历过了，因此从第二个数遍历就不需要了
-			if (i > 1 && nums[i] == nums[i-1] && !isVisited[i-1]) {
+			//多于两个数同理
+			boolean finished = false;
+			for (int j = 0; j < i; j++) {
+				if (nums[j] == nums[i] && !isVisited[j]) {
+					finished = true;
+				}
+			}
+			if (finished) {
 				continue;
 			}
 

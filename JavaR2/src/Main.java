@@ -11,6 +11,19 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
+		Solution0047 solution0047 = new Solution0047();
+//		List<List<Integer>> res = solution0047.permuteUnique(new int[] {1,1,1});
+//		List<List<Integer>> res = solution0047.permuteUnique(new int[] {1,2,3});
+		List<List<Integer>> res = solution0047.permuteUnique(new int[] {1,1,2});
+		for (List<Integer> pr : res) {
+			for (Integer in : pr) {
+				System.out.print(in);
+			}
+			System.out.println();
+		}
+		System.out.println("exit");
+	}
+
 		//g = [1,2,3], s = [1,1]
 //		int[] g = new int[] {1,2,3};
 //		int[] s = new int[] {1,1};
@@ -203,7 +216,7 @@ public class Main {
 //				System.out.print(in);
 //			}
 //			System.out.println();
-		}
+}
 
 //		Solution0077 solution0077 = new Solution0077();
 //		List<List<Integer>> res = solution0077.combine(4, 2);
@@ -221,7 +234,7 @@ public class Main {
 //			{'S','F','C','S'},
 //			{'A','D','E','E'}
 //		};
-		//["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]
+	//["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]
 //		System.out.println(solution0079.exist(board, "ABCCED"));
 //		System.out.println(solution0079.exist(board, "SEE"));
 //		char[][] board = new char[][] {
@@ -271,6 +284,6 @@ public class Main {
 //		for (String s : res) {
 //			System.out.println(s);
 //		}
-		System.out.println("exit");
-	}
-}
+//		System.out.println("exit");
+
+//}
