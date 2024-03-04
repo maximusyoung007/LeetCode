@@ -11,17 +11,36 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0047 solution0047 = new Solution0047();
+//		Solution0047 solution0047 = new Solution0047();
 //		List<List<Integer>> res = solution0047.permuteUnique(new int[] {1,1,1});
 //		List<List<Integer>> res = solution0047.permuteUnique(new int[] {1,2,3});
-		List<List<Integer>> res = solution0047.permuteUnique(new int[] {1,1,2});
-		for (List<Integer> pr : res) {
-			for (Integer in : pr) {
-				System.out.print(in);
-			}
-			System.out.println();
-		}
-		System.out.println("exit");
+//		List<List<Integer>> res = solution0047.permuteUnique(new int[] {1,1,2});
+//		for (List<Integer> pr : res) {
+//			for (Integer in : pr) {
+//				System.out.print(in);
+//			}
+//			System.out.println();
+//		}
+//		System.out.println("exit");
+//		Solution0040 solution0040 = new Solution0040();
+//		int[] candidates = new int[]{10,1,2,7,6,1,5};
+//		int[] candidates = new int[]{2,5,2,1,2};
+//		int[] candidates = new int[] {14,6,25,9,30,20,33,34,28,30,16,12,31,9,9,12,34,16,25,32,8,7,30,12,33,
+//			20,21,29,24,17
+//			,27,34,11,17,30,6,32,21,27,17,16,8,24,12,12,28,11,33,10,32,22,13,34,18,12};
+//		int target = 27;
+//		int target = 8;
+//		List<List<Integer>> res = solution0040.combinationSum2(candidates, target);
+//		for (List<Integer> pr : res) {
+//			for (Integer in : pr) {
+//				System.out.print(in + " ");
+//			}
+//			System.out.println();
+		Solution0310 solution0310 = new Solution0310();
+		int[][] edges = new int[][] {
+			{3,0},{3,1},{3,2},{3,4},{5,4}
+		};
+		System.out.println(solution0310.findMinHeightTrees(6, edges));
 	}
 
 		//g = [1,2,3], s = [1,1]
