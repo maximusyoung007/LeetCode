@@ -36,11 +36,23 @@ public class Main {
 //				System.out.print(in + " ");
 //			}
 //			System.out.println();
+
 		Solution0310 solution0310 = new Solution0310();
 		int[][] edges = new int[][] {
 			{3,0},{3,1},{3,2},{3,4},{5,4}
 		};
+//		int[][] edges = new int[][] {
+//			{1,0}, {1,2}, {1,3}
+//		};
+//		int[][] edges = new int[][] {
+//
+//		};
+//		int[][] edges = new int[][] {
+//			{1,0}
+//		};
 		System.out.println(solution0310.findMinHeightTrees(6, edges));
+//		System.out.println(solution0310.findMinHeightTrees(4, edges));
+//		System.out.println(solution0310.findMinHeightTrees(2, edges));
 	}
 
 		//g = [1,2,3], s = [1,1]
