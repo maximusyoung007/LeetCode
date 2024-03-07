@@ -8,6 +8,10 @@ import (
 func main() {
 	fmt.Println("leetcode goLang round2")
 
+	//nums := []int{1, 2, 3, 1}
+	nums := []int{2, 7, 9, 3, 1}
+	fmt.Println(solution.Rob(nums))
+
 	//maxHeight := []int{5, 3, 4, 1, 1}
 	//maxHeight := []int{6, 5, 3, 9, 2, 7}
 	//maxHeight := []int{3, 2, 5, 5, 2, 3}
@@ -89,8 +93,11 @@ func main() {
 	//fmt.Println(solution.TopKFrequent(nums, 1))
 	//nums := []int{1, 2}
 	//fmt.Println(solution.TopKFrequent(nums, 2))
-	nums := []int{2, 0, 2, 1, 1, 0}
+	//nums := []int{2, 0, 2, 1, 1, 0}
 	//nums := []int{2, 0, 1}
-	solution.SortColors(nums)
-	fmt.Println(nums)
+	//solution.SortColors(nums)
+	//fmt.Println(nums)
+	//fmt.Println(solution.ClimbStairs(2))
+	//fmt.Println(solution.ClimbStairs(3))
+	//fmt.Println(solution.ClimbStairs(4))
 }
