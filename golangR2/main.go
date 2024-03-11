@@ -8,9 +8,15 @@ import (
 func main() {
 	fmt.Println("leetcode goLang round2")
 
+	//nums := []int{1, 2, 3, 4}
+	nums := []int{-1, -2, -3}
+	//nums := []int{1, 2, 3, 4, 5}
+	//nums := []int{1, 2}
+	fmt.Println(solution.NumberOfArithmeticSlices(nums))
+
 	//nums := []int{1, 2, 3, 1}
-	nums := []int{2, 7, 9, 3, 1}
-	fmt.Println(solution.Rob(nums))
+	//nums := []int{2, 7, 9, 3, 1}
+	//fmt.Println(solution.Rob(nums))
 
 	//maxHeight := []int{5, 3, 4, 1, 1}
 	//maxHeight := []int{6, 5, 3, 9, 2, 7}
