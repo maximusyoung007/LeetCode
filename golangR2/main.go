@@ -8,41 +8,12 @@ import (
 func main() {
 	fmt.Println("leetcode goLang round2")
 
-	//221
-	matrix := [][]byte{
-		{'1', '0', '1', '0', '0'},
-		{'1', '0', '1', '1', '1'},
-		{'1', '1', '1', '1', '1'},
-		{'1', '0', '0', '1', '0'}}
-	fmt.Println(solution.MaximalSquare(matrix))
+	//nums := []int{1, 2, 3, 4}
+	nums := []int{-1, -2, -3}
+	//nums := []int{1, 2, 3, 4, 5}
+	//nums := []int{1, 2}
+	fmt.Println(solution.NumberOfArithmeticSlices(nums))
 
-	//542
-	//grid := [][]int{{0, 0, 0}, {0, 1, 0}, {0, 0, 0}}
-	//grid := [][]int{{0, 0, 0}, {0, 1, 0}, {1, 1, 1}}
-	//grid := [][]int{{0, 0, 0}, {0, 1, 0}, {1, 1, 1}}
-	/**
-	1 1 0
-	0 1 0
-	1 1 1
-	*/
-	//g := solution.UpdateMatrix(grid)
-	//for i := 0; i < len(g); i++ {
-	//	for j := 0; j < len(g[0]); j++ {
-	//		fmt.Print(g[i][j], " ")
-	//	}
-	//	fmt.Println()
-	//}
-
-	//64
-	//grid := [][]int{{1, 3, 1}, {1, 5, 1}, {4, 2, 1}}
-	//grid := [][]int{{1, 4, 8, 6, 2, 2, 1, 7},
-	//	{4, 7, 3, 1, 4, 5, 5, 1},
-	//	{8, 8, 2, 1, 1, 8, 0, 1},
-	//	{8, 9, 2, 9, 8, 0, 8, 9},
-	//	{5, 7, 5, 7, 1, 8, 5, 5},
-	//	{7, 0, 9, 4, 5, 6, 5, 6},
-	//	{4, 9, 9, 7, 9, 1, 9, 0}}
-	//fmt.Println(solution.MinPathSum(grid))
 	//nums := []int{1, 2, 3, 1}
 	//nums := []int{2, 7, 9, 3, 1}
 	//fmt.Println(solution.Rob(nums))
