@@ -8,11 +8,15 @@ import (
 func main() {
 	fmt.Println("leetcode goLang round2")
 
+	//matrix := [][]byte{{'1', '0', '1', '0', '0'}, {'1', '0', '1', '1', '1'}, {'1', '1', '1', '1', '1'}, {'1', '0', '0', '1', '0'}}
+	matrix := [][]byte{{'0', '1'}, {'1', '0'}}
+	fmt.Println(solution.MaximalSquare(matrix))
+
 	//nums := []int{1, 2, 3, 4}
-	nums := []int{-1, -2, -3}
+	//nums := []int{-1, -2, -3}
 	//nums := []int{1, 2, 3, 4, 5}
 	//nums := []int{1, 2}
-	fmt.Println(solution.NumberOfArithmeticSlices(nums))
+	//fmt.Println(solution.NumberOfArithmeticSlices(nums))
 
 	//nums := []int{1, 2, 3, 1}
 	//nums := []int{2, 7, 9, 3, 1}

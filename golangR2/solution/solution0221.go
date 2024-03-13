@@ -29,7 +29,7 @@ func MaximalSquare(matrix [][]byte) int {
 			}
 		}
 	}
-	return maxValue
+	return maxValue * maxValue
 }
 
 func getMinValue(i int, j int, g [][]int) int {
