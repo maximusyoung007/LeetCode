@@ -8,9 +8,29 @@ import (
 func main() {
 	fmt.Println("leetcode goLang round2")
 
+	nums := []int{10, 9, 2, 5, 3, 7, 101, 18}
+	fmt.Println(solution.LengthOfLIS(nums))
+	//s := "leetcod"
+	//wordDict := []string{"leet", "code"}
+	//s := "applepenapple"
+	//wordDict := []string{"apple", "pen"}
+	//s := "catsandog"
+	//wordDict := []string{"cats", "dog", "sand", "and", "cat"}
+	//fmt.Println(solution.WordBreak(s, wordDict))
+
+	//fmt.Println(solution.NumSquares(12))
+	//fmt.Println(solution.NumSquares(13))
+	//fmt.Println(solution.NumDecodings("11"))
+	//fmt.Println(solution.NumDecodings("12"))
+	//fmt.Println(solution.NumDecodings("226"))
+	//fmt.Println(solution.NumDecodings("06"))
+	//fmt.Println(solution.NumDecodings("2261"))
+	//fmt.Println(solution.NumDecodings("27"))
+	//fmt.Println(solution.NumDecodings("1201234"))
+
 	//matrix := [][]byte{{'1', '0', '1', '0', '0'}, {'1', '0', '1', '1', '1'}, {'1', '1', '1', '1', '1'}, {'1', '0', '0', '1', '0'}}
-	matrix := [][]byte{{'0', '1'}, {'1', '0'}}
-	fmt.Println(solution.MaximalSquare(matrix))
+	//matrix := [][]byte{{'0', '1'}, {'1', '0'}}
+	//fmt.Println(solution.MaximalSquare(matrix))
 
 	//nums := []int{1, 2, 3, 4}
 	//nums := []int{-1, -2, -3}
