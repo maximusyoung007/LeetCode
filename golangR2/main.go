@@ -8,8 +8,25 @@ import (
 func main() {
 	fmt.Println("leetcode goLang round2")
 
-	nums := []int{10, 9, 2, 5, 3, 7, 101, 18}
-	fmt.Println(solution.LengthOfLIS(nums))
+	//strs := []string{"10", "0001", "111001", "1", "0"}
+	//m := 5
+	//n := 3
+	strs := []string{"10", "0", "1"}
+	m := 1
+	n := 1
+	fmt.Println(solution.FindMaxForm(strs, m, n))
+	//nums := []int{1, 5, 11, 5}
+	//nums := []int{1, 2, 3, 5}
+	//fmt.Println(solution.CanPartition(nums))
+	//text1 := "abcde"
+	//text2 := "ace"
+	//text1 := "abc"
+	//text2 := "abc"
+	//text1 := "abc"
+	//text2 := "def"
+	//fmt.Println(solution.LongestCommonSubsequence(text1, text2))
+	//nums := []int{10, 9, 2, 5, 3, 7, 101, 18}
+	//fmt.Println(solution.LengthOfLIS(nums))
 	//s := "leetcod"
 	//wordDict := []string{"leet", "code"}
 	//s := "applepenapple"
