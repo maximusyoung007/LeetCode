@@ -2,7 +2,8 @@
 using namespace std;
 
 int main() {
-    cout << "hello world" << endl;
+    cout << "leetcode c++ Round2" << endl;
+    
     return 0;
 }
 
