@@ -1,3 +1,6 @@
 .vscode
 main.exe
 .idea
+main.dSYM
+main
+target
