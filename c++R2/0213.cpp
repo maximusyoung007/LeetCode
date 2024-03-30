@@ -1,4 +1,5 @@
 #include<vector>
+#include<cstring>
 using namespace std;
 
 //dp[n]表示抢到了第n家，可以抢，也可以不抢，
@@ -10,8 +11,12 @@ int rob(vector<int>& nums) {
     int n = nums.size();
     int dp[n];
 
+    memset(dp, 0, n);
+
     if (n == 1) {
         return nums[0];
+    } else if (n == 2) {
+        return max(nums[0], nums[1]);
     }
 
     int res = 0;
@@ -27,14 +32,12 @@ int rob(vector<int>& nums) {
 
     dp[0] = 0;
     dp[1] = nums[1];
-    if (nums[2] > nums[1]) {
-        dp[2] = nums[2];
-    } else {
-        dp[2] = nums[1];
-    }
+    dp[2] = max(nums[1], nums[2]);
 
-    for (int i = 3; i < n; i++) {
-        dp[i] = max(dp[i-1], dp[i-2] + nums[i]);
+    if (n > 3) {
+        for (int i = 3; i < n; i++) {
+            dp[i] = max(dp[i-1], dp[i-2] + nums[i]);
+        }
     }
 
     if (dp[n-1] > res) {
