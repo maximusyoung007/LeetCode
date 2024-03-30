@@ -5,6 +5,7 @@
 // #include"0121.cpp"
 #include"0309.cpp"
 #include"0213.cpp"
+#include"0053.cpp"
 using namespace std;
 
 int main() {
@@ -12,8 +13,9 @@ int main() {
     // vector<int> v = {2, 3,2};
     // vector<int> v = {1,2,3,1};
     // vector<int> v = {1,2,3};
-    vector<int> v = {1,2};
-    cout << rob(v) << endl;
+    // vector<int> v = {1,2};
+    vector<int> v = {-2,1,-3,4,-1,2,1,-5,4};
+    cout << maxSubArray(v) << endl;
     // vector<int> v = {7,1,5,3,6,4};
     // vector<int> v = {1,2,3,0,2};
     // cout << maxProfit(v) << endl;
