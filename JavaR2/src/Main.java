@@ -8,8 +8,21 @@ import java.util.List;
  * maximus         2024/2/6      create
  */
 public class Main {
+	public static void tes(int a) {
+		a = a + 1;
+	}
+
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
+
+		int a = 1;
+		tes(a);
+		System.out.println(a);
+
+		int[] nums = new int[] {1,1,1,1,1};
+		int target = 3;
+		Solution0494 solution0494 = new Solution0494();
+		System.out.println(solution0494.findTargetSumWays(nums, target));
 
 //		Solution0047 solution0047 = new Solution0047();
 //		List<List<Integer>> res = solution0047.permuteUnique(new int[] {1,1,1});
@@ -37,10 +50,10 @@ public class Main {
 //			}
 //			System.out.println();
 
-		Solution0310 solution0310 = new Solution0310();
-		int[][] edges = new int[][] {
-			{3,0},{3,1},{3,2},{3,4},{5,4}
-		};
+//		Solution0310 solution0310 = new Solution0310();
+//		int[][] edges = new int[][] {
+//			{3,0},{3,1},{3,2},{3,4},{5,4}
+//		};
 //		int[][] edges = new int[][] {
 //			{1,0}, {1,2}, {1,3}
 //		};
@@ -50,7 +63,7 @@ public class Main {
 //		int[][] edges = new int[][] {
 //			{1,0}
 //		};
-		System.out.println(solution0310.findMinHeightTrees(6, edges));
+//		System.out.println(solution0310.findMinHeightTrees(6, edges));
 //		System.out.println(solution0310.findMinHeightTrees(4, edges));
 //		System.out.println(solution0310.findMinHeightTrees(2, edges));
 	}
