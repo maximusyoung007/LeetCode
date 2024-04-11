@@ -13,19 +13,26 @@
 #include"0646.cpp"
 #include"0376.cpp"
 #include"0494.cpp"
+#include"0714.cpp"
 using namespace std;
 
 int main() {
     cout << "leetcode c++ Round2" << endl;
 
+    // vector<int> prices = {1,3,2,8,4,9};
+    // int fee = 2;
+    vector<int> prices = {1,3,7,5,10,3};
+    int fee = 3;
+    cout << maxProfit(prices, fee) << endl;
+
     // int nums[5] = {1,1,1,1,1};
-    vector<int> nums = {1,1,1,1,1};
-    int target = 3;
+    // vector<int> nums = {1,1,1,1,1};
+    // int target = 3;
     // vector<int> nums = {1};
     // int target = 2;
     // vector<int> nums = {1,0};
     // int target = 1;
-    cout << findTargetSumWays(nums, target) << endl;
+    // cout << findTargetSumWays(nums, target) << endl;
 
     // vector<int> nums = {1,7,4,9,2,5};
     // vector<int> nums = {1,17,5,10,13,15,10,5,16,8};
