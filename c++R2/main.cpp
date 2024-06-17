@@ -14,16 +14,25 @@
 #include"0376.cpp"
 #include"0494.cpp"
 #include"0714.cpp"
+#include"0241.cpp"
 using namespace std;
 
 int main() {
     cout << "leetcode c++ Round2" << endl;
 
+    // string expression = "2*3-4*5";
+    // string expression = "2-1-1";
+    string expression = "11";
+    vector<int> res = diffWaysToCompute(expression);
+    for (int i = 0; i < res.size(); i++) {
+        cout << res[i] << endl;
+    } 
+
     // vector<int> prices = {1,3,2,8,4,9};
     // int fee = 2;
-    vector<int> prices = {1,3,7,5,10,3};
-    int fee = 3;
-    cout << maxProfit(prices, fee) << endl;
+    // vector<int> prices = {1,3,7,5,10,3};
+    // int fee = 3;
+    // cout << maxProfit(prices, fee) << endl;
 
     // int nums[5] = {1,1,1,1,1};
     // vector<int> nums = {1,1,1,1,1};
