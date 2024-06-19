@@ -6,20 +6,20 @@
  * maximus         2024/2/20      create
  */
 public class Solution0169 {
-	public int[] twoSum(int[] numbers, int target) {
-		int i = 0, j = numbers.length - 1;
+	public int majorityElement(int[] nums) {
+		int candidate = 0, count = 0;
 
-		int sum = 0;
-		while (i < j) {
-			sum = numbers[i] + numbers[j];
-			if (sum < target) {
-				i++;
-			} else if (sum > target) {
-				j--;
+		for (int num : nums) {
+			if (count == 0) {
+				candidate = num;
+			}
+
+			if (num == candidate) {
+				count++;
 			} else {
-				break;
+				count--;
 			}
 		}
-		return new int[] {i+1, j+1};
+		return candidate;
 	}
 }

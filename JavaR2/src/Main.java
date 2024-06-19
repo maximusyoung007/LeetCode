@@ -15,6 +15,17 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
+		int[] nums = new int[]  {2,2,1,1,1,2,2};
+		Solution0169 solution0169 = new Solution0169();
+		System.out.println(solution0169.majorityElement(nums));
+//		Solution0462 solution0462 = new Solution0462();
+//		int[] a = new int[] {1,2,3};
+//		int[] b = new int[] {1,10,2,9};
+//		int[] c = new int[] {1,0,0,8,6};
+//		System.out.println(solution0462.minMoves2(a));
+//		System.out.println(solution0462.minMoves2(b));
+//		System.out.println(solution0462.minMoves2(c));
+
 //		int a = 1;
 //		tes(a);
 //		System.out.println(a);
@@ -24,11 +35,11 @@ public class Main {
 //		Solution0494 solution0494 = new Solution0494();
 //		System.out.println(solution0494.findTargetSumWays(nums, target));
 
-		Solution0241 solution0241 = new Solution0241();
-		List<Integer> result = solution0241.diffWaysToCompute("2-1-1");
-		for (Integer res : result) {
-			System.out.println(res);
-		}
+//		Solution0241 solution0241 = new Solution0241();
+//		List<Integer> result = solution0241.diffWaysToCompute("2-1-1");
+//		for (Integer res : result) {
+//			System.out.println(res);
+//		}
 
 //		Solution0047 solution0047 = new Solution0047();
 //		List<List<Integer>> res = solution0047.permuteUnique(new int[] {1,1,1});
