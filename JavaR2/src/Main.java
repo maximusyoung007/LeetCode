@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -15,14 +16,24 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		int a = 1;
-		tes(a);
-		System.out.println(a);
+		Solution0238 solution0238 = new Solution0238();
+//		int[] res = solution0238.productExceptSelf(new int[] {1,2,3,4});
+		int[] res = solution0238.productExceptSelf(new int[] {-1,1,0,-3,3});
+		System.out.println(Arrays.toString(res));
 
-		int[] nums = new int[] {1,1,1,1,1};
-		int target = 3;
-		Solution0494 solution0494 = new Solution0494();
-		System.out.println(solution0494.findTargetSumWays(nums, target));
+//		Solution0067 solution0067 = new Solution0067();
+//		System.out.println(solution0067.addBinary("11", "1"));
+//		System.out.println(solution0067.addBinary("1010", "1011"));
+//		System.out.println(solution0067.addBinary("1111", "1111"));
+
+//		int a = 1;
+//		tes(a);
+//		System.out.println(a);
+//
+//		int[] nums = new int[] {1,1,1,1,1};
+//		int target = 3;
+//		Solution0494 solution0494 = new Solution0494();
+//		System.out.println(solution0494.findTargetSumWays(nums, target));
 
 //		Solution0047 solution0047 = new Solution0047();
 //		List<List<Integer>> res = solution0047.permuteUnique(new int[] {1,1,1});
