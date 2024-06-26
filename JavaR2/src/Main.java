@@ -16,10 +16,16 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0238 solution0238 = new Solution0238();
+		Solution0461 solution0461 = new Solution0461();
+		System.out.println(solution0461.hammingDistance(1, 4));
+		System.out.println(solution0461.hammingDistance(1, 3));
+//		Solution0202 solution0202 = new Solution0202();
+//		System.out.println(solution0202.isHappy(19));
+////		System.out.println(solution0202.isHappy(3)3);
+//		Solution0238 solution0238 = new Solution0238();
 //		int[] res = solution0238.productExceptSelf(new int[] {1,2,3,4});
-		int[] res = solution0238.productExceptSelf(new int[] {-1,1,0,-3,3});
-		System.out.println(Arrays.toString(res));
+//		int[] res = solution0238.productExceptSelf(new int[] {-1,1,0,-3,3});
+//		System.out.println(Arrays.toString(res));
 
 //		Solution0067 solution0067 = new Solution0067();
 //		System.out.println(solution0067.addBinary("11", "1"));
