@@ -16,9 +16,19 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0461 solution0461 = new Solution0461();
-		System.out.println(solution0461.hammingDistance(1, 4));
-		System.out.println(solution0461.hammingDistance(1, 3));
+		Solution0318 solution0318 = new Solution0318();
+//		String[] words = new String[] {"abcw","baz","foo","bar","xtfn","abcdef"};
+//		String[] words = new String[] {"a","ab","abc","d","cd","bcd","abcd"};
+//		String[] words = new String[] {"a","aa","aaa","aaaa"};
+		String[] words = new String[] {"a","ab","abc","d","cd","bcd","abcd"};
+		System.out.println(solution0318.maxProduct(words));
+//		Solution0136 solution0136 = new Solution0136();
+//		int[] nums = new int[] {2,2,1};
+//		int[] nums = new int[] {4,1,2,2,1};
+//		System.out.println(solution0136.singleNumber(nums));
+//		Solution0461 solution0461 = new Solution0461();
+//		System.out.println(solution0461.hammingDistance(1, 4));
+//		System.out.println(solution0461.hammingDistance(1, 3));
 //		Solution0202 solution0202 = new Solution0202();
 //		System.out.println(solution0202.isHappy(19));
 ////		System.out.println(solution0202.isHappy(3)3);
