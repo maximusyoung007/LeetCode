@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -15,22 +16,31 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		System.out.println("202406201740101015928313855".length());
+		Solution0318 solution0318 = new Solution0318();
+//		String[] words = new String[] {"abcw","baz","foo","bar","xtfn","abcdef"};
+//		String[] words = new String[] {"a","ab","abc","d","cd","bcd","abcd"};
+//		String[] words = new String[] {"a","aa","aaa","aaaa"};
+		String[] words = new String[] {"a","ab","abc","d","cd","bcd","abcd"};
+		System.out.println(solution0318.maxProduct(words));
+//		Solution0136 solution0136 = new Solution0136();
+//		int[] nums = new int[] {2,2,1};
+//		int[] nums = new int[] {4,1,2,2,1};
+//		System.out.println(solution0136.singleNumber(nums));
+//		Solution0461 solution0461 = new Solution0461();
+//		System.out.println(solution0461.hammingDistance(1, 4));
+//		System.out.println(solution0461.hammingDistance(1, 3));
+//		Solution0202 solution0202 = new Solution0202();
+//		System.out.println(solution0202.isHappy(19));
+////		System.out.println(solution0202.isHappy(3)3);
+//		Solution0238 solution0238 = new Solution0238();
+//		int[] res = solution0238.productExceptSelf(new int[] {1,2,3,4});
+//		int[] res = solution0238.productExceptSelf(new int[] {-1,1,0,-3,3});
+//		System.out.println(Arrays.toString(res));
 
-		Solution0190 solution0190 = new Solution0190();
-		System.out.println(solution0190.reverseBits(43261596));
-		System.out.println(solution0190.reverseBits(-3));
-//		4294967293
-//		int[] nums = new int[]  {2,2,1,1,1,2,2};
-//		Solution0169 solution0169 = new Solution0169();
-//		System.out.println(solution0169.majorityElement(nums));
-//		Solution0462 solution0462 = new Solution0462();
-//		int[] a = new int[] {1,2,3};
-//		int[] b = new int[] {1,10,2,9};
-//		int[] c = new int[] {1,0,0,8,6};
-//		System.out.println(solution0462.minMoves2(a));
-//		System.out.println(solution0462.minMoves2(b));
-//		System.out.println(solution0462.minMoves2(c));
+//		Solution0067 solution0067 = new Solution0067();
+//		System.out.println(solution0067.addBinary("11", "1"));
+//		System.out.println(solution0067.addBinary("1010", "1011"));
+//		System.out.println(solution0067.addBinary("1111", "1111"));
 
 //		int a = 1;
 //		tes(a);
@@ -40,12 +50,6 @@ public class Main {
 //		int target = 3;
 //		Solution0494 solution0494 = new Solution0494();
 //		System.out.println(solution0494.findTargetSumWays(nums, target));
-
-//		Solution0241 solution0241 = new Solution0241();
-//		List<Integer> result = solution0241.diffWaysToCompute("2-1-1");
-//		for (Integer res : result) {
-//			System.out.println(res);
-//		}
 
 //		Solution0047 solution0047 = new Solution0047();
 //		List<List<Integer>> res = solution0047.permuteUnique(new int[] {1,1,1});
@@ -352,4 +356,5 @@ public class Main {
 //			System.out.println(s);
 //		}
 //		System.out.println("exit");
+
 //}
