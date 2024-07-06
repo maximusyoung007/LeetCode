@@ -16,12 +16,38 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0318 solution0318 = new Solution0318();
+		Solution0260 solution0260 = new Solution0260();
+		int[] nums = new int[] {1,2,1,3,2,5};
+//		int[] nums = new int[] {-1,0};
+//		int[] nums = new int[] {1,0};
+		int[] res = solution0260.singleNumber(nums);
+		for (int r : res) {
+			System.out.println(r);
+		}
+
+//		Solution0693 solution0693 = new Solution0693();
+
+//		Solution0476 solution0476 = new Solution0476();
+//		System.out.println(solution0476.findComplement(5));
+//		System.out.println(solution0476.findComplement(1));
+//		System.out.println(solution0693.hasAlternatingBits(5));
+//		System.out.println(solution0693.hasAlternatingBits(7));
+//		System.out.println(solution0693.hasAlternatingBits(11));
+//
+//		Solution0268 solution0268 = new Solution0268();
+//		System.out.println(solution0268.missingNumber(new int[]{3, 0, 1}));
+//		System.out.println(solution0268.missingNumber(new int[]{9,6,4,2,3,5,7,0,1}));
+//		Solution0338 solution0338 = new Solution0338();
+//		int[] res = solution0338.countBits(5);
+//		for (int i : res) {
+//			System.out.println(i);
+//		}
+//		Solution0318 solution0318 = new Solution0318();
 //		String[] words = new String[] {"abcw","baz","foo","bar","xtfn","abcdef"};
 //		String[] words = new String[] {"a","ab","abc","d","cd","bcd","abcd"};
 //		String[] words = new String[] {"a","aa","aaa","aaaa"};
-		String[] words = new String[] {"a","ab","abc","d","cd","bcd","abcd"};
-		System.out.println(solution0318.maxProduct(words));
+//		String[] words = new String[] {"a","ab","abc","d","cd","bcd","abcd"};
+//		System.out.println(solution0318.maxProduct(words));
 //		Solution0136 solution0136 = new Solution0136();
 //		int[] nums = new int[] {2,2,1};
 //		int[] nums = new int[] {4,1,2,2,1};
