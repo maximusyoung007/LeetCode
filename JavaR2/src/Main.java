@@ -16,15 +16,18 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0048 solution0048 = new Solution0048();
-		int[][] matrix = new int[][] {{1,2,3},{4,5,6},{7,8,9}};
-		solution0048.rotate(matrix);
-		for (int[] ints : matrix) {
-			for (int anInt : ints) {
-				System.out.print(anInt);
-			}
-			System.out.println();
-		}
+		Solution0769 solution0769 = new Solution0769();
+		System.out.println(solution0769.maxChunksToSorted(new int[]{1, 0, 2, 3, 4}));
+		System.out.println(solution0769.maxChunksToSorted(new int[]{1, 2, 0, 3, 4}));
+//		Solution0048 solution0048 = new Solution0048();
+//		int[][] matrix = new int[][] {{1,2,3},{4,5,6},{7,8,9}};
+//		solution0048.rotate(matrix);
+//		for (int[] ints : matrix) {
+//			for (int anInt : ints) {
+//				System.out.print(anInt);
+//			}
+//			System.out.println();
+//		}
 //		Solution0260 solution0260 = new Solution0260();
 //		Solution0448 solution0448 = new Solution0448();
 //		int[] nums = new int[] {4,3,2,7,8,2,3,1};
