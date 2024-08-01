@@ -19,14 +19,23 @@
  *   内层，7，9，19，17相互替换了位置
  *
  *   可以看到，外层循环到3，内层循环到8， 所有的数就已经完成了替换，即循环到 n/2即可
- *   1： (0，0)
- *   5： (0， n-0)
- *   25: (n-0,n-0)
- *   21: (n-0, 0)
- *	其他位置，替换为i,j
+ *   1： (i，j)
+ *   5： (j， n-i)
+ *   25: (n-i,n-j)
+ *   21: (n-j, i)
+ *
  */
 public class Solution0048 {
 	public void rotate(int[][] matrix) {
-
+		int n = matrix.length - 1;
+		for (int i = 0; i <= n / 2; i++) {
+			for (int j = i; j < n - i; j++) {
+				int temp = matrix[i][j];
+				matrix[i][j] = matrix[n-j][i];
+				matrix[n-j][i] = matrix[n-i][n-j];
+				matrix[n-i][n-j] = matrix[j][n-i];
+				matrix[j][n-i] = temp;
+			}
+		}
 	}
 }

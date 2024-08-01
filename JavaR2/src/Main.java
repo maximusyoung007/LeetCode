@@ -16,14 +16,23 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-//		Solution0260 solution0260 = new Solution0260();
-		Solution0448 solution0448 = new Solution0448();
-//		int[] nums = new int[] {4,3,2,7,8,2,3,1};
-		int[] nums = new int[] {1,1,1};
-		List<Integer> res = solution0448.findDisappearedNumbers(nums);
-		for (Integer i : res) {
-			System.out.println(i);
+		Solution0048 solution0048 = new Solution0048();
+		int[][] matrix = new int[][] {{1,2,3},{4,5,6},{7,8,9}};
+		solution0048.rotate(matrix);
+		for (int[] ints : matrix) {
+			for (int anInt : ints) {
+				System.out.print(anInt);
+			}
+			System.out.println();
 		}
+//		Solution0260 solution0260 = new Solution0260();
+//		Solution0448 solution0448 = new Solution0448();
+//		int[] nums = new int[] {4,3,2,7,8,2,3,1};
+//		int[] nums = new int[] {1,1,1};
+//		List<Integer> res = solution0448.findDisappearedNumbers(nums);
+//		for (Integer i : res) {
+//			System.out.println(i);
+//		}
 //		int[] nums = new int[] {-1,0};
 //		int[] nums = new int[] {1,0};
 //		int[] res = solution0260.singleNumber(nums);
