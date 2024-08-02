@@ -9,16 +9,28 @@ import java.util.List;
  * maximus         2024/2/6      create
  */
 public class Main {
-	public static void tes(int a) {
-		a = a + 1;
-	}
 
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0769 solution0769 = new Solution0769();
-		System.out.println(solution0769.maxChunksToSorted(new int[]{1, 0, 2, 3, 4}));
-		System.out.println(solution0769.maxChunksToSorted(new int[]{1, 2, 0, 3, 4}));
+		Solution0739 solution0739 = new Solution0739();
+//		int[] temperatures = new int[] {73,74,75,71,69,72,76,73};
+		int[] temperatures = new int[] {89,62,70,58,47,47,46,76,100,70};
+
+		int[] res = solution0739.dailyTemperatures(temperatures);
+		for (int re : res) {
+			System.out.print( re);
+		}
+
+//		Solution0020 solution0020 = new Solution0020();
+//		System.out.println(solution0020.isValid("()[]{}"));
+//		Solution0155 solution0155 = new Solution0155();
+//		solution0155.testMinStack();
+//		Solution0232 solution0232 = new Solution0232();
+//		solution0232.testQueue();
+//		Solution0769 solution0769 = new Solution0769();
+//		System.out.println(solution0769.maxChunksToSorted(new int[]{1, 0, 2, 3, 4}));
+//		System.out.println(solution0769.maxChunksToSorted(new int[]{1, 2, 0, 3, 4}));
 //		Solution0048 solution0048 = new Solution0048();
 //		int[][] matrix = new int[][] {{1,2,3},{4,5,6},{7,8,9}};
 //		solution0048.rotate(matrix);
