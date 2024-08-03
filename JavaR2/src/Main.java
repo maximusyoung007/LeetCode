@@ -13,14 +13,40 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0739 solution0739 = new Solution0739();
-//		int[] temperatures = new int[] {73,74,75,71,69,72,76,73};
-		int[] temperatures = new int[] {89,62,70,58,47,47,46,76,100,70};
+		ListNode23 node1 = new ListNode23(-2);
+		ListNode23 node2 = new ListNode23(-1);
+		ListNode23 node3 = new ListNode23(-1);
+		ListNode23 node4 = new ListNode23(-1);
+		node1.next = node2;
+		node2.next = node3;
+		node3.next = node4;
 
-		int[] res = solution0739.dailyTemperatures(temperatures);
-		for (int re : res) {
-			System.out.print( re);
+		ListNode23 node5 = new ListNode23();
+
+		ListNode23[] list = new ListNode23[2];
+		list[0] = node1;
+		list[1] = null;
+
+		Solution0023 solution0023 = new Solution0023();
+		ListNode23 res = solution0023.mergeKLists(list);
+		while (res != null) {
+			System.out.println(res.val);
+			res = res.next;
 		}
+
+		System.out.println("end");
+
+//		Solution0023 solution0023 = new Solution0023();
+
+
+//		Solution0739 solution0739 = new Solution0739();
+//		int[] temperatures = new int[] {73,74,75,71,69,72,76,73};
+//		int[] temperatures = new int[] {89,62,70,58,47,47,46,76,100,70};
+
+//		int[] res = solution0739.dailyTemperatures(temperatures);
+//		for (int re : res) {
+//			System.out.print( re);
+//		}
 
 //		Solution0020 solution0020 = new Solution0020();
 //		System.out.println(solution0020.isValid("()[]{}"));
