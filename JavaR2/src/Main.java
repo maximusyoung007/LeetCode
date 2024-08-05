@@ -13,12 +13,17 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0239 solution0239 = new Solution0239();
-		int[] nums = new int[] {1,3,-1,-3,5,3,6,7};
-		int[] res = solution0239.maxSlidingWindow(nums, 3);
-		for (int re : res) {
-			System.out.print(re + " ");
-		}
+		int[] nums = new int[] {100, 4, 200, 1, 3, 2};
+//		int[] nums = new int[] {0,3,7,2,5,8,4,6,0,1};
+		Solution0128 solution0128 = new Solution0128();
+		System.out.println(solution0128.longestConsecutive(nums));
+
+//		Solution0239 solution0239 = new Solution0239();
+//		int[] nums = new int[] {1,3,-1,-3,5,3,6,7};
+//		int[] res = solution0239.maxSlidingWindow(nums, 3);
+//		for (int re : res) {
+//			System.out.print(re + " ");
+//		}
 //		Solution0739 solution0739 = new Solution0739();
 //		int[] temperatures = new int[] {73,74,75,71,69,72,76,73};
 //		int[] temperatures = new int[] {89,62,70,58,47,47,46,76,100,70};

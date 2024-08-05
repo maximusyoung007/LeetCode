@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
@@ -24,27 +23,25 @@ public class Solution0239 {
 		List<Integer> l = new ArrayList<>();
 		Deque<Integer> queue = new LinkedList<>();
 
-		int left = 0, right = k - 1;
 		for (int i = 0; i < nums.length; i++) {
 
-			//如果第一个元素不在滑动窗口了，出队
-			while (!queue.isEmpty() && queue.peekFirst() < left) {
+			//如果第一个元素不在滑动窗口中了，且还在双端队列中，出队，
+			// 如i=3,此时出队的应该是i=0, i=4,出队的是i=1，以此类推
+			while (!queue.isEmpty() && queue.peekFirst() == i - k) {
 				queue.pollFirst();
 			}
 
-
-			if (i >= left && i <= right) {
-				//如果队尾小于要插入的，队尾出队
-				while (!queue.isEmpty() && nums[queue.peekLast()] < nums[i]) {
-					queue.pollLast();
-				}
-				//当前元素入队
-				queue.addLast(i);
+			//如果队尾小于要插入的，队尾出队
+			while (!queue.isEmpty() && nums[queue.peekLast()] < nums[i]) {
+				queue.pollLast();
 			}
+			//当前元素入队
+			queue.addLast(i);
 
-			if (i == right) {
-				left++;
-				right++;
+
+			//i到达k-1后，即满足了一个滑动窗口，后续的每一次循环，都会得到一个新的滑动窗口
+			// 将这个新的滑动窗口的最大值加入到结果list中
+			if (i >= k - 1) {
 				l.add(nums[queue.peekFirst()]);
 			}
 		}
