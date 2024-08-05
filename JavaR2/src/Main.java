@@ -13,10 +13,13 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		int[] nums = new int[] {100, 4, 200, 1, 3, 2};
+		Solution0149 solution0149 = new Solution0149();
+		int[][] points = new int[][] {{1,1}, {3,2}, {5,3}, {4,1}, {2,3}, {1,4}};
+		System.out.println(solution0149.maxPoints(points));
+//		int[] nums = new int[] {100, 4, 200, 1, 3, 2};
 //		int[] nums = new int[] {0,3,7,2,5,8,4,6,0,1};
-		Solution0128 solution0128 = new Solution0128();
-		System.out.println(solution0128.longestConsecutive(nums));
+//		Solution0128 solution0128 = new Solution0128();
+//		System.out.println(solution0128.longestConsecutive(nums));
 
 //		Solution0239 solution0239 = new Solution0239();
 //		int[] nums = new int[] {1,3,-1,-3,5,3,6,7};
