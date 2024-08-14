@@ -14,19 +14,39 @@ public class Main {
 		System.out.println("Java Round 2");
 
 		Solution0149 solution0149 = new Solution0149();
-		int[][] points = new int[][] {{1,1}, {3,2}, {5,3}, {4,1}, {2,3}, {1,4}};
-		System.out.println(solution0149.maxPoints(points));
-//		int[] nums = new int[] {100, 4, 200, 1, 3, 2};
-//		int[] nums = new int[] {0,3,7,2,5,8,4,6,0,1};
-//		Solution0128 solution0128 = new Solution0128();
-//		System.out.println(solution0128.longestConsecutive(nums));
-
-//		Solution0239 solution0239 = new Solution0239();
-//		int[] nums = new int[] {1,3,-1,-3,5,3,6,7};
-//		int[] res = solution0239.maxSlidingWindow(nums, 3);
-//		for (int re : res) {
-//			System.out.print(re + " ");
+		//points = [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]]
+		//(1,4) (2,3) (3,2) (4,1)
+		int[][] point = new int[][] {
+			{1,1}, {3,2}, {5,3}, {4,1}, {2,3}, {1,4}
+		};
+		int res = solution0149.maxPoints(point);
+		System.out.println(res);
+//		ListNode23 node1 = new ListNode23(-2);
+//		ListNode23 node2 = new ListNode23(-1);
+//		ListNode23 node3 = new ListNode23(-1);
+//		ListNode23 node4 = new ListNode23(-1);
+//		node1.next = node2;
+//		node2.next = node3;
+//		node3.next = node4;
+//
+//		ListNode23 node5 = new ListNode23();
+//
+//		ListNode23[] list = new ListNode23[2];
+//		list[0] = node1;
+//		list[1] = null;
+//
+//		Solution0023 solution0023 = new Solution0023();
+//		ListNode23 res = solution0023.mergeKLists(list);
+//		while (res != null) {
+//			System.out.println(res.val);
+//			res = res.next;
 //		}
+
+		System.out.println("end");
+
+//		Solution0023 solution0023 = new Solution0023();
+
+
 //		Solution0739 solution0739 = new Solution0739();
 //		int[] temperatures = new int[] {73,74,75,71,69,72,76,73};
 //		int[] temperatures = new int[] {89,62,70,58,47,47,46,76,100,70};

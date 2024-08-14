@@ -1,5 +1,3 @@
-import javafx.util.Pair;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,6 +12,7 @@ public class Solution0149 {
 	public int maxPoints(int[][] points) {
 		Map<String, Integer> slopeMap = new HashMap<>();
 
+		int maxn = 0;
 		for (int i = 0; i < points.length; i++) {
 			int[] point = points[i];
 			int x = point[0];
@@ -35,17 +34,19 @@ public class Solution0149 {
 					slope = (a / k) + "_" + (b / k);
 				}
 
-
 				slopeMap.put(slope, slopeMap.getOrDefault(slope, 0) + 1);
+
+				//因为每次都是计算从i点出发的最大的点，所以计算最大值的点要放在i的循环里
+				for (Map.Entry<String, Integer> entry : slopeMap.entrySet()) {
+					if (entry.getValue() > maxn) {
+						maxn = entry.getValue();
+					}
+				}
 			}
+			//从i出发所有的j循环完了，要清空map
+			slopeMap.clear();
 		}
 
-		int maxn = 0;
-		for (Map.Entry<String, Integer> entry : slopeMap.entrySet()) {
-			if (entry.getValue() > maxn) {
-				maxn = entry.getValue();
-			}
-		}
 		return maxn + 1;
 	}
 
