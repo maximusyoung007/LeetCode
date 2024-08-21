@@ -14,7 +14,16 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0332 solution0332 = new Solution0332();
+		Solution0560 solution0560 = new Solution0560();
+//		int[] nums = new int[] {1, 1, 1};
+//		int k = 2;
+		int[] nums = new int[] {1, 1};
+		int k = 0;
+//		int[] nums = new int[] {1,2,6};
+//		int k = 6;
+		System.out.println(solution0560.subarraySum(nums, k));
+//		Solution0332 solution0332 = new S
+//		olution0332();
 //		List<List<String>> list = new ArrayList<>();
 //
 //		List<String> t1 = new ArrayList<>();
@@ -37,32 +46,32 @@ public class Main {
 //		t4.add("JFK");
 //		list.add(t4);
 
-		List<List<String>> list = new ArrayList<>();
-
-		List<String> t1 = new ArrayList<>();
-		t1.add("MUC");
-		t1.add("LHR");
-		list.add(t1);
-
-		List<String> t2 = new ArrayList<>();
-		t2.add("JFK");
-		t2.add("MUC");
-		list.add(t2);
-
-		List<String> t3 = new ArrayList<>();
-		t3.add("SFO");
-		t3.add("SJC");
-		list.add(t3);
-
-		List<String> t4 = new ArrayList<>();
-		t4.add("LHR");
-		t4.add("SFO");
-		list.add(t4);
-		List<String> res = solution0332.findItinerary(list);
-
-		for (String re : res) {
-			System.out.println(re);
-		}
+//		List<List<String>> list = new ArrayList<>();
+//
+//		List<String> t1 = new ArrayList<>();
+//		t1.add("MUC");
+//		t1.add("LHR");
+//		list.add(t1);
+//
+//		List<String> t2 = new ArrayList<>();
+//		t2.add("JFK");
+//		t2.add("MUC");
+//		list.add(t2);
+//
+//		List<String> t3 = new ArrayList<>();
+//		t3.add("SFO");
+//		t3.add("SJC");
+//		list.add(t3);
+//
+//		List<String> t4 = new ArrayList<>();
+//		t4.add("LHR");
+//		t4.add("SFO");
+//		list.add(t4);
+//		List<String> res = solution0332.findItinerary(list);
+//
+//		for (String re : res) {
+//			System.out.println(re);
+//		}
 
 //		Solution0149 solution0149 = new Solution0149();
 		//points = [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]]
