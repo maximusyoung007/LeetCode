@@ -14,14 +14,28 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0560 solution0560 = new Solution0560();
+		Solution0503 solution0503 = new Solution0503();
+//		int[] nums = new int[] {1,2,3,4,4,3};
+//		int[] nums = new int[] {1,1,1,1,1};
+		int[] nums = new int[] {100,1,11,1,120,111,123,1,-1,-100};
+		int[] res = solution0503.nextGreaterElements(nums);
+		for (int re : res) {
+			System.out.println(re);
+		}
+
+//		Solution0566 solution0566 = new Solution0566();
+//		int[][] mat = new int[][] {{1,2},{3,4}};
+//		int r = 4, c = 1;
+//		int [][] res = solution0566.matrixReshape(mat, r, c);
+
+//		Solution0560 solution0560 = new Solution0560();
 //		int[] nums = new int[] {1, 1, 1};
 //		int k = 2;
-		int[] nums = new int[] {1, 1};
-		int k = 0;
+//		int[] nums = new int[] {1, 1};
+//		int k = 0;
 //		int[] nums = new int[] {1,2,6};
 //		int k = 6;
-		System.out.println(solution0560.subarraySum(nums, k));
+//		System.out.println(solution0560.subarraySum(nums, k));
 //		Solution0332 solution0332 = new S
 //		olution0332();
 //		List<List<String>> list = new ArrayList<>();
