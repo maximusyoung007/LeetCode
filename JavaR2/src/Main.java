@@ -14,14 +14,19 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0503 solution0503 = new Solution0503();
+//		int[] nums = new int[] {1,3,4,2,2};
+		//3,4,2,3,
+		int[] nums = new int[] {3,1,3,4,2};
+		Solution0287 solution0287 = new Solution0287();
+		System.out.println(solution0287.findDuplicate(nums));
+//		Solution0503 solution0503 = new Solution0503();
 //		int[] nums = new int[] {1,2,3,4,4,3};
 //		int[] nums = new int[] {1,1,1,1,1};
-		int[] nums = new int[] {100,1,11,1,120,111,123,1,-1,-100};
-		int[] res = solution0503.nextGreaterElements(nums);
-		for (int re : res) {
-			System.out.println(re);
-		}
+//		int[] nums = new int[] {100,1,11,1,120,111,123,1,-1,-100};
+//		int[] res = solution0503.nextGreaterElements(nums);
+//		for (int re : res) {
+//			System.out.println(re);
+//		}
 
 //		Solution0566 solution0566 = new Solution0566();
 //		int[][] mat = new int[][] {{1,2},{3,4}};
