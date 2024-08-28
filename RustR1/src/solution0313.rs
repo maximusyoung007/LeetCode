@@ -11,13 +11,14 @@ pub fn nth_super_ugly_number(n: i32, primes: Vec<i32>) -> i32 {
 
     let mut s = HashSet::new();
     let mut heap = BinaryHeap::new();
-    let (mut t, mut min_t) = (0, 0);
+    let mut t : i64 = 0;
+    let mut min_t : i64 = 0;
     s.insert(1);
     heap.push(Reverse(1));
     for _i in 0..n {
         min_t = heap.pop().unwrap().0;
         for prime in &primes {
-            t = prime * min_t;
+            t = (*prime as i64) * min_t;
             if !s.contains(&t) {
                 s.insert(t);
                 heap.push(Reverse(t))
@@ -25,5 +26,5 @@ pub fn nth_super_ugly_number(n: i32, primes: Vec<i32>) -> i32 {
         }
     }
 
-    min_t
+    min_t as i32
 }
