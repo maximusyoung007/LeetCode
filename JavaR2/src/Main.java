@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,14 +14,92 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0149 solution0149 = new Solution0149();
+//		int[] nums = new int[] {1,3,4,2,2};
+		//3,4,2,3,
+		int[] nums = new int[] {3,1,3,4,2};
+		Solution0287 solution0287 = new Solution0287();
+		System.out.println(solution0287.findDuplicate(nums));
+//		Solution0503 solution0503 = new Solution0503();
+//		int[] nums = new int[] {1,2,3,4,4,3};
+//		int[] nums = new int[] {1,1,1,1,1};
+//		int[] nums = new int[] {100,1,11,1,120,111,123,1,-1,-100};
+//		int[] res = solution0503.nextGreaterElements(nums);
+//		for (int re : res) {
+//			System.out.println(re);
+//		}
+
+//		Solution0566 solution0566 = new Solution0566();
+//		int[][] mat = new int[][] {{1,2},{3,4}};
+//		int r = 4, c = 1;
+//		int [][] res = solution0566.matrixReshape(mat, r, c);
+
+//		Solution0560 solution0560 = new Solution0560();
+//		int[] nums = new int[] {1, 1, 1};
+//		int k = 2;
+//		int[] nums = new int[] {1, 1};
+//		int k = 0;
+//		int[] nums = new int[] {1,2,6};
+//		int k = 6;
+//		System.out.println(solution0560.subarraySum(nums, k));
+//		Solution0332 solution0332 = new S
+//		olution0332();
+//		List<List<String>> list = new ArrayList<>();
+//
+//		List<String> t1 = new ArrayList<>();
+//		t1.add("JFK");
+//		t1.add("AAA");
+//		list.add(t1);
+//
+//		List<String> t2 = new ArrayList<>();
+//		t2.add("JFK");
+//		t2.add("BBB");
+//		list.add(t2);
+//
+//		List<String> t3 = new ArrayList<>();
+//		t3.add("BBB");
+//		t3.add("JFK");
+//		list.add(t3);
+
+//		List<String> t4 = new ArrayList<>();
+//		t4.add("AAA");
+//		t4.add("JFK");
+//		list.add(t4);
+
+//		List<List<String>> list = new ArrayList<>();
+//
+//		List<String> t1 = new ArrayList<>();
+//		t1.add("MUC");
+//		t1.add("LHR");
+//		list.add(t1);
+//
+//		List<String> t2 = new ArrayList<>();
+//		t2.add("JFK");
+//		t2.add("MUC");
+//		list.add(t2);
+//
+//		List<String> t3 = new ArrayList<>();
+//		t3.add("SFO");
+//		t3.add("SJC");
+//		list.add(t3);
+//
+//		List<String> t4 = new ArrayList<>();
+//		t4.add("LHR");
+//		t4.add("SFO");
+//		list.add(t4);
+//		List<String> res = solution0332.findItinerary(list);
+//
+//		for (String re : res) {
+//			System.out.println(re);
+//		}
+
+//		Solution0149 solution0149 = new Solution0149();
 		//points = [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]]
 		//(1,4) (2,3) (3,2) (4,1)
-		int[][] point = new int[][] {
-			{1,1}, {3,2}, {5,3}, {4,1}, {2,3}, {1,4}
-		};
-		int res = solution0149.maxPoints(point);
-		System.out.println(res);
+//		int[][] point = new int[][] {
+//			{1,1}, {3,2}, {5,3}, {4,1}, {2,3}, {1,4}
+//		};
+//		int res = solution0149.maxPoints(point);
+//		System.out.println(res);
 //		ListNode23 node1 = new ListNode23(-2);
 //		ListNode23 node2 = new ListNode23(-1);
 //		ListNode23 node3 = new ListNode23(-1);
