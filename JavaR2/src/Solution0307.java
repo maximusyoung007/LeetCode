@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 
 public class Solution0307 {
 	/**
@@ -38,6 +40,8 @@ public class Solution0307 {
 		System.out.println(numArray.sumRange(4, 4));
 		numArray.update(3,8);
 		System.out.println(numArray.sumRange(0, 4));
+		Map<String, Object> map = new HashMap<>();
+		map.get
 //		System.out.println(numArray.up(4, 1));
 //		int[] d = numArray.getD();
 //		for (int i : d) {
