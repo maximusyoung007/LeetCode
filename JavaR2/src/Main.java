@@ -14,12 +14,15 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
+		Solution0647 solution0647 = new Solution0647();
+//		System.out.println(solution0647.countSubstrings("abc"));
+		System.out.println(solution0647.countSubstrings("fdsklf"));
 //		int[] nums = new int[] {1,3,4,2,2};
 		//3,4,2,3,
 //		int[] nums = new int[] {3,1,3,4,2};
-		int[] nums = new int[] {0,9,5,7,3};
-		Solution0287 solution0287 = new Solution0287();
-		System.out.println(solution0287.findDuplicate(nums));
+//		int[] nums = new int[] {0,9,5,7,3};
+//		Solution0287 solution0287 = new Solution0287();
+//		System.out.println(solution0287.findDuplicate(nums));
 //		Solution0503 solution0503 = new Solution0503();
 //		int[] nums = new int[] {1,2,3,4,4,3};
 //		int[] nums = new int[] {1,1,1,1,1};
