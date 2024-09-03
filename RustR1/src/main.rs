@@ -8,10 +8,11 @@
 // use crate::solution0870::advantage_count;
 
 // mod solution0242;
-mod solution0205;
+// mod solution0205;
+// mod solution0696;
 
 // use crate::solution0242::is_anagram;
-use crate::solution0205::is_isomorphic;
+// use crate::solution0205::is_isomorphic;
 
 // mod solution0697;
 // mod solution0594;
@@ -20,16 +21,23 @@ use crate::solution0205::is_isomorphic;
 // mod solution0242;
 // mod solution0217;
 
+use crate::solution0696::count_binary_substrings;
+
+mod solution0696;
+
 fn main() {
     println!("Hello, world!");
 
+    // let s = String::from("00110011");
+    let s = String::from("10101");
+    println!("{}", count_binary_substrings(s));
     // let s1 = String::from("egg");
     // let s2 = String::from("add");
     // let s1 = String::from("foo");
     // let s2 = String::from("bar");
-    let s1 = String::from("badc");
-    let s2 = String::from("baba");
-    println!("{}", is_isomorphic(s1, s2));
+    // let s1 = String::from("badc");
+    // let s2 = String::from("baba");
+    // println!("{}", is_isomorphic(s1, s2));
     // let s1 = String::from("abc");
     // let s2 = String::from("cba");
     // println!("{}", is_anagram(s1, s2))

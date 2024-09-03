@@ -14,9 +14,13 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0647 solution0647 = new Solution0647();
+		Solution0227 solution0227 = new Solution0227();
+//		String s = "3+5 / 2";
+		String s = "42";
+		System.out.println(solution0227.calculate(s));
+//		Solution0647 solution0647 = new Solution0647();
 //		System.out.println(solution0647.countSubstrings("abc"));
-		System.out.println(solution0647.countSubstrings("fdsklf"));
+//		System.out.println(solution0647.countSubstrings("fdsklf"));
 //		int[] nums = new int[] {1,3,4,2,2};
 		//3,4,2,3,
 //		int[] nums = new int[] {3,1,3,4,2};
