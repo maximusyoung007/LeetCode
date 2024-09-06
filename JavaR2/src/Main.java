@@ -10,14 +10,19 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0003 solution0003 = new Solution0003();
-		System.out.println(solution0003.lengthOfLongestSubstring("abcabcbb"));
-		System.out.println(solution0003.lengthOfLongestSubstring("bbbbb"));
-		System.out.println(solution0003.lengthOfLongestSubstring("pwwkew"));
-		System.out.println(solution0003.lengthOfLongestSubstring("a"));
-		System.out.println(solution0003.lengthOfLongestSubstring("aa"));
-		System.out.println(solution0003.lengthOfLongestSubstring("ab"));
-		System.out.println(solution0003.lengthOfLongestSubstring("abba"));
+		Solution0772 solution0772 = new Solution0772();
+		System.out.println(solution0772.calculate("2*(5+5*2)/3+(6/2+8)"));
+		System.out.println(solution0772.calculate("1+1"));
+		System.out.println(solution0772.calculate("6-4/2"));
+		System.out.println(solution0772.calculate("((((1*10)-(3*8))*3)*1)"));
+//		Solution0003 solution0003 = new Solution0003();
+//		System.out.println(solution0003.lengthOfLongestSubstring("abcabcbb"));
+//		System.out.println(solution0003.lengthOfLongestSubstring("bbbbb"));
+//		System.out.println(solution0003.lengthOfLongestSubstring("pwwkew"));
+//		System.out.println(solution0003.lengthOfLongestSubstring("a"));
+//		System.out.println(solution0003.lengthOfLongestSubstring("aa"));
+//		System.out.println(solution0003.lengthOfLongestSubstring("ab"));
+//		System.out.println(solution0003.lengthOfLongestSubstring("abba"));
 //		Solution0409 solution0409 = new Solution0409();
 //		solution0409
 //		System.out.println(solution0409.longestPalindrome("abccccdd"));
