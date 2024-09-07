@@ -10,10 +10,66 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0005 solution0005 = new Solution0005();
-		System.out.println(solution0005.longestPalindrome("babad"));
-		System.out.println(solution0005.longestPalindrome("cbbd"));
-		System.out.println(solution0005.longestPalindrome("babaabaa"));
+		Solution0234 solution0234 = new Solution0234();
+		Solution0234.ListNode node = new Solution0234.ListNode(1);
+		Solution0234.ListNode node2 = new Solution0234.ListNode(3);
+		Solution0234.ListNode node3 = new Solution0234.ListNode(2);
+		Solution0234.ListNode node4 = new Solution0234.ListNode(3);
+		Solution0234.ListNode node5= new Solution0234.ListNode(1);
+		node.next = node2;
+		node2.next = node3;
+		node3.next = node4;
+//		node4.next = node5;
+		System.out.println(solution0234.isPalindrome(node));
+//		Solution0024 solution0024 = new Solution0024();
+//		Solution0024.ListNode node = new Solution0024.ListNode(1);
+//		Solution0024.ListNode node1 = new Solution0024.ListNode(2);
+//		Solution0024.ListNode node2 = new Solution0024.ListNode(3);
+//		Solution0024.ListNode node3 = new Solution0024.ListNode(4);
+//		node.next = node1;
+//		node1.next = node2;
+//		node2.next = node3;
+//		Solution0024.ListNode res = solution0024.swapPairs(node);
+//		while (res != null) {
+//			System.out.println(res.val);
+//			res = res.next;
+//		}
+//		Solution0021 solution0021 = new Solution0021();
+//		Solution0021.ListNode n1 = new Solution0021.ListNode(1);
+//		Solution0021.ListNode n2 = new Solution0021.ListNode(2);
+//		Solution0021.ListNode n3 = new Solution0021.ListNode(4);
+//		n1.next = n2;
+//		n2.next = n3;
+//		Solution0021.ListNode l1 = new Solution0021.ListNode(1);
+//		Solution0021.ListNode l2 = new Solution0021.ListNode(3);
+//		Solution0021.ListNode l3 = new Solution0021.ListNode(4);
+//		l1.next = l2;
+//		l2.next = l3;
+//
+//		Solution0021.ListNode res = solution0021.mergeTwoLists(n1, l1);
+//		while (res != null) {
+//			System.out.println(res.val);
+//			res = res.next;
+//		}
+//		Solution0206 solution0206 = new Solution0206();
+//		Solution0206.ListNode node = new Solution0206.ListNode(1);
+//		Solution0206.ListNode node1 = new Solution0206.ListNode(2);
+//		Solution0206.ListNode node2 = new Solution0206.ListNode(3);
+//		Solution0206.ListNode node3 = new Solution0206.ListNode(4);
+//		Solution0206.ListNode node4 = new Solution0206.ListNode(5);
+//		node.next = node1;
+//		node1.next = node2;
+//		node2.next = node3;
+//		node3.next = node4;
+//		Solution0206.ListNode res = solution0206.reverseList(node);
+//		while (res != null) {
+//			System.out.println(res.val);
+//			res = res.next;
+//		}
+//		Solution0005 solution0005 = new Solution0005();
+//		System.out.println(solution0005.longestPalindrome("babad"));
+//		System.out.println(solution0005.longestPalindrome("cbbd"));
+//		System.out.println(solution0005.longestPalindrome("babaabaa"));
 //		Solution0772 solution0772 = new Solution0772();
 //		System.out.println(solution0772.calculate("2*(5+5*2)/3+(6/2+8)"));
 //		System.out.println(solution0772.calculate("1+1"));
