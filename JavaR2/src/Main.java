@@ -1,7 +1,3 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * <pre>
  * Modify Information:
@@ -14,11 +10,41 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
+		Solution0772 solution0772 = new Solution0772();
+		System.out.println(solution0772.calculate("2*(5+5*2)/3+(6/2+8)"));
+		System.out.println(solution0772.calculate("1+1"));
+		System.out.println(solution0772.calculate("6-4/2"));
+		System.out.println(solution0772.calculate("((((1*10)-(3*8))*3)*1)"));
+//		Solution0003 solution0003 = new Solution0003();
+//		System.out.println(solution0003.lengthOfLongestSubstring("abcabcbb"));
+//		System.out.println(solution0003.lengthOfLongestSubstring("bbbbb"));
+//		System.out.println(solution0003.lengthOfLongestSubstring("pwwkew"));
+//		System.out.println(solution0003.lengthOfLongestSubstring("a"));
+//		System.out.println(solution0003.lengthOfLongestSubstring("aa"));
+//		System.out.println(solution0003.lengthOfLongestSubstring("ab"));
+//		System.out.println(solution0003.lengthOfLongestSubstring("abba"));
+//		Solution0409 solution0409 = new Solution0409();
+//		solution0409
+//		System.out.println(solution0409.longestPalindrome("abccccdd"));
+//		Solution0028 solution0028 = new Solution0028();
+//		String s1 = "sadbutsad";
+//		String s2 = "sad";
+//		String s1 = "aabaabaaf";
+//		String s2 = "aabaaf";
+//		System.out.println(solution0028.strStr(s1, s2));
+//		Solution0227 solution0227 = new Solution0227();
+//		String s = "3+5 / 2";
+//		String s = "42";
+//		System.out.println(solution0227.calculate(s));
+//		Solution0647 solution0647 = new Solution0647();
+//		System.out.println(solution0647.countSubstrings("abc"));
+//		System.out.println(solution0647.countSubstrings("fdsklf"));
 //		int[] nums = new int[] {1,3,4,2,2};
 		//3,4,2,3,
-		int[] nums = new int[] {3,1,3,4,2};
-		Solution0287 solution0287 = new Solution0287();
-		System.out.println(solution0287.findDuplicate(nums));
+//		int[] nums = new int[] {3,1,3,4,2};
+//		int[] nums = new int[] {0,9,5,7,3};
+//		Solution0287 solution0287 = new Solution0287();
+//		System.out.println(solution0287.findDuplicate(nums));
 //		Solution0503 solution0503 = new Solution0503();
 //		int[] nums = new int[] {1,2,3,4,4,3};
 //		int[] nums = new int[] {1,1,1,1,1};
