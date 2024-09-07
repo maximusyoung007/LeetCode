@@ -10,11 +10,15 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0772 solution0772 = new Solution0772();
-		System.out.println(solution0772.calculate("2*(5+5*2)/3+(6/2+8)"));
-		System.out.println(solution0772.calculate("1+1"));
-		System.out.println(solution0772.calculate("6-4/2"));
-		System.out.println(solution0772.calculate("((((1*10)-(3*8))*3)*1)"));
+		Solution0005 solution0005 = new Solution0005();
+		System.out.println(solution0005.longestPalindrome("babad"));
+		System.out.println(solution0005.longestPalindrome("cbbd"));
+		System.out.println(solution0005.longestPalindrome("babaabaa"));
+//		Solution0772 solution0772 = new Solution0772();
+//		System.out.println(solution0772.calculate("2*(5+5*2)/3+(6/2+8)"));
+//		System.out.println(solution0772.calculate("1+1"));
+//		System.out.println(solution0772.calculate("6-4/2"));
+//		System.out.println(solution0772.calculate("((((1*10)-(3*8))*3)*1)"));
 //		Solution0003 solution0003 = new Solution0003();
 //		System.out.println(solution0003.lengthOfLongestSubstring("abcabcbb"));
 //		System.out.println(solution0003.lengthOfLongestSubstring("bbbbb"));
