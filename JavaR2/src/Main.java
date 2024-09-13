@@ -10,6 +10,23 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
+		Solution0543.TreeNode node1 = new Solution0543.TreeNode(3);
+		Solution0543.TreeNode node2 = new Solution0543.TreeNode(9);
+		Solution0543.TreeNode node3 = new Solution0543.TreeNode(20);
+		Solution0543.TreeNode node4 = new Solution0543.TreeNode(15);
+		Solution0543.TreeNode node5 = new Solution0543.TreeNode(7);
+		node1.left = node2;
+//		node1.right = node3;
+//		node3.left = node4;
+//		node3.right = node5;
+
+		Solution0543 solution0543 = new Solution0543();
+		System.out.println(solution0543.diameterOfBinaryTree(node1));
+//		Solution0110 solution0110 = new Solution0110();
+//		System.out.println(solution0110.isBalanced(node1));
+//		Solution0104 solution0104 = new Solution0104();
+//		System.out.println(solution0104.maxDepth(node1));
+
 //		Solution0083 solution0083 = new Solution0083();
 //		Solution0083.ListNode node = new Solution0083.ListNode(1);
 //		Solution0083.ListNode node2 = new Solution0083.ListNode(1);
@@ -54,26 +71,26 @@ public class Main {
 //		node3.next = node4
 //		;
 //		Solution0019.ListNode res = solution0019.removeNthFromEnd(node, 1);
-		Solution0148 solution0148 = new Solution0148();
+//		Solution0148 solution0148 = new Solution0148();
 //		Solution0148.ListNode node1 = new Solution0148.ListNode(4);
 //		Solution0148.ListNode node2 = new Solution0148.ListNode(2);
 //		Solution0148.ListNode node3 = new Solution0148.ListNode(1);
 //		Solution0148.ListNode node4 = new Solution0148.ListNode(3);
 //		Solution0148.ListNode node5 = new Solution0148.ListNode(3);
-		Solution0148.ListNode node1 = new Solution0148.ListNode(3);
-		Solution0148.ListNode node2 = new Solution0148.ListNode(4);
-		Solution0148.ListNode node3 = new Solution0148.ListNode(1);
+//		Solution0148.ListNode node1 = new Solution0148.ListNode(3);
+//		Solution0148.ListNode node2 = new Solution0148.ListNode(4);
+//		Solution0148.ListNode node3 = new Solution0148.ListNode(1);
 //		Solution0148.ListNode node4 = new Solution0148.ListNode(4);
 //		Solution0148.ListNode node5 = new Solution0148.ListNode(0);
-		node1.next = node2;
-		node2.next = node3;
+//		node1.next = node2;
+//		node2.next = node3;
 //		node3.next = node4;
 //		node4.next = node5;
-		Solution0148.ListNode res = solution0148.sortList(node1);
-		while (res != null) {
-			System.out.println(res.val);
-			res = res.next;
-		}
+//		Solution0148.ListNode res = solution0148.sortList(node1);
+//		while (res != null) {
+//			System.out.println(res.val);
+//			res = res.next;
+//		}
 //		Solution0234 solution0234 = new Solution0234();
 //		Solution0234.ListNode node = new Solution0234.ListNode(1);
 //		Solution0234.ListNode node2 = new Solution0234.ListNode(3);
