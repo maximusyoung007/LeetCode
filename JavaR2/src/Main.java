@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * <pre>
  * Modify Information:
@@ -10,18 +12,79 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0543.TreeNode node1 = new Solution0543.TreeNode(3);
-		Solution0543.TreeNode node2 = new Solution0543.TreeNode(9);
-		Solution0543.TreeNode node3 = new Solution0543.TreeNode(20);
-		Solution0543.TreeNode node4 = new Solution0543.TreeNode(15);
-		Solution0543.TreeNode node5 = new Solution0543.TreeNode(7);
-		node1.left = node2;
+		Solution0105 solution0105 = new Solution0105();
+//		int[] preorder = new int[] {3,9,20,15,7};
+//		int[] inorder = new int[] {9,3,15,20,7};
+		int[] preorder = new int[] {-1};
+		int[] inorder = new int[] {-1};
+		TreeNode res = solution0105.buildTree(preorder, inorder);
+//		TreeNode node1 = new TreeNode(3);
+//		TreeNode node2 = new TreeNode(9);
+//		TreeNode node3 = new TreeNode(20);
+//		TreeNode node4 = new TreeNode(15);
+//		TreeNode node5 = new TreeNode(7);
+//		node1.left = node2;
 //		node1.right = node3;
 //		node3.left = node4;
 //		node3.right = node5;
+//
+//		Solution0637 solution0637 = new Solution0637();
+//		List<Double> res = solution0637.averageOfLevels(node1);
+//		for (Double re : res) {
+//			System.out.println(re);
+//		}
+//		Solution1110.TreeNode node1 = new Solution1110.TreeNode(1);
+//		Solution1110.TreeNode node2 = new Solution1110.TreeNode(2);
+//		Solution1110.TreeNode node3 = new Solution1110.TreeNode(3);
+//		Solution1110.TreeNode node4 = new Solution1110.TreeNode(4);
+//		Solution1110.TreeNode node5 = new Solution1110.TreeNode(5);
+//		Solution1110.TreeNode node6 = new Solution1110.TreeNode(6);
+//		Solution1110.TreeNode node7 = new Solution1110.TreeNode(7);
+//		node1.left = node2;
+//		node1.right = node3;
+//		node2.left = node4;
+//		node2.right = node5;
+//		node3.left = node6;
+//		node3.right = node7;
+//		node1.left = node2;
+//		node1.right = node3;
+//		node3.right = node4;
+//		Solution1110 solution0110 = new Solution1110();
+//		List<Solution1110.TreeNode> res = solution0110.delNodes(node1, new int[] {2, 1});
 
-		Solution0543 solution0543 = new Solution0543();
-		System.out.println(solution0543.diameterOfBinaryTree(node1));
+//		Solution0437.TreeNode node1 = new Solution0437.TreeNode(10);
+//		Solution0437.TreeNode node2 = new Solution0437.TreeNode(5);
+//		Solution0437.TreeNode node3 = new Solution0437.TreeNode(-3);
+//		Solution0437.TreeNode node4 = new Solution0437.TreeNode(3);
+//		Solution0437.TreeNode node5 = new Solution0437.TreeNode(2);
+//		Solution0437.TreeNode node6 = new Solution0437.TreeNode(11);
+//		Solution0437.TreeNode node7 = new Solution0437.TreeNode(3);
+//		Solution0437.TreeNode node8 = new Solution0437.TreeNode(-2);
+//		Solution0437.TreeNode node9 = new Solution0437.TreeNode(1);
+		//[1000000000,1000000000,null,294967296,null,1000000000,null,1000000000,null,1000000000]
+//		System.out.println(-(long)2000000000 - (long)294967296);
+//		Solution0437.TreeNode node1 = new Solution0437.TreeNode(1000000000);
+//		Solution0437.TreeNode node2 = new Solution0437.TreeNode(1000000000);
+//		Solution0437.TreeNode node3 = new Solution0437.TreeNode(294967296);
+//		Solution0437.TreeNode node4 = new Solution0437.TreeNode(1000000000);
+//		Solution0437.TreeNode node5 = new Solution0437.TreeNode(1000000000);
+//		Solution0437.TreeNode node6 = new Solution0437.TreeNode(1000000000);
+////		node1.left = node2;
+//		node1.right = node3;
+//		node2.left = node4;
+//		node2.right = node5;
+//		node3.right = node6;
+//		node4.left = node7;
+//		node4.right = node8;
+//		node5.right = node9;
+//		node1.left = node2;
+//		node2.left = node3;
+//		node3.left = node4;
+//		node4.left = node5;
+//		node5.left = node6;
+//
+//		Solution0437 solution0437 = new Solution0437();
+//		System.out.println(solution0437.pathSum(node1, 0));
 //		Solution0110 solution0110 = new Solution0110();
 //		System.out.println(solution0110.isBalanced(node1));
 //		Solution0104 solution0104 = new Solution0104();

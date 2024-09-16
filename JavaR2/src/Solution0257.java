@@ -8,18 +8,6 @@ import java.util.List;
  * ============ ============= ============================
  * maximus         2024/2/29      create
  */
-class TreeNode {
-int val;
-	TreeNode left;
-	TreeNode right;
-	TreeNode() {}
-	TreeNode(int val) { this.val = val; }
-	TreeNode(int val, TreeNode left, TreeNode right) {
-		this.val = val;
-		this.left = left;
-		this.right = right;
-	}
-}
 public class Solution0257 {
 	public List<String> binaryTreePaths(TreeNode root) {
 		List<String> res = new ArrayList<>();
@@ -41,6 +29,19 @@ public class Solution0257 {
 		}
 		if (root.right != null) {
 			dfs(root.right, s, res);
+		}
+	}
+
+	static class TreeNode {
+		int val;
+		TreeNode left;
+		TreeNode right;
+		TreeNode() {}
+		TreeNode(int val) { this.val = val; }
+		TreeNode(int val, TreeNode left, TreeNode right) {
+			this.val = val;
+			this.left = left;
+			this.right = right;
 		}
 	}
 }
