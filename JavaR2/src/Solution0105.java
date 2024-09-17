@@ -11,8 +11,13 @@ public class Solution0105 {
 		if (preorder.length < 3) {
 			TreeNode t = new TreeNode(preorder[0]);
 			if (preorder.length == 2) {
-				TreeNode left = new TreeNode(preorder[1]);
-				t.left = left;
+				if (preorder[0] == inorder[1]) {
+					TreeNode left = new TreeNode(preorder[1]);
+					t.left = left;
+				} else if (preorder[0] == inorder[0]) {
+					TreeNode right = new TreeNode(preorder[1]);
+					t.right = right;
+				}
 			}
 			if (preorder.length == 3) {
 				TreeNode right = new TreeNode(preorder[2]);
