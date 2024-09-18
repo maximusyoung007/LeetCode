@@ -12,12 +12,50 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		Solution0105 solution0105 = new Solution0105();
+		TreeNode node1 = new TreeNode(3);
+		TreeNode node2 = new TreeNode(4);
+		TreeNode node3 = new TreeNode(5);
+		TreeNode node4 = new TreeNode(1);
+		TreeNode node5 = new TreeNode(2);
+		TreeNode node6 = new TreeNode(0);
+		node1.left = node2;
+		node1.right = node3;
+		node2.left = node4;
+		node2.right = node5;
+//		node5.left = node6;
+
+		TreeNode l1 = new TreeNode(4);
+		TreeNode l2 = new TreeNode(1);
+		TreeNode l3 = new TreeNode(2);
+//		TreeNode l4 = new TreeNode(4);
+//		TreeNode l5 = new TreeNode(7);
+		l1.left = l2;
+		l1.right = l3;
+		Solution0572 solution0572 = new Solution0572();
+		System.out.println(solution0572.isSubtree(node1, l1));
+
+//		Solution0226 solution0226 = new Solution0226();
+//		TreeNode node1 = new TreeNode(4);
+//		TreeNode node2 = new TreeNode(2);
+//		TreeNode node3 = new TreeNode(7);
+//		TreeNode node4 = new TreeNode(1);
+//		TreeNode node5 = new TreeNode(3);
+//		TreeNode node6 = new TreeNode(6);
+//		TreeNode node7 = new TreeNode(9);
+//		node1.left = node2;
+//		node1.right = node3;
+//		node2.left = node4;
+//		node2.right = node5;
+//		node3.left = node6;
+//		node3.right = node7;
+//		TreeNode res = solution0226.invertTree(node1);
+
+//		Solution0105 solution0105 = new Solution0105();
 //		int[] preorder = new int[] {3,9,20,15,7};
 //		int[] inorder = new int[] {9,3,15,20,7};
-		int[] preorder = new int[] {-1};
-		int[] inorder = new int[] {-1};
-		TreeNode res = solution0105.buildTree(preorder, inorder);
+//		int[] preorder = new int[] {-1};
+//		int[] inorder = new int[] {-1};
+//		TreeNode res = solution0105.buildTree(preorder, inorder);
 //		TreeNode node1 = new TreeNode(3);
 //		TreeNode node2 = new TreeNode(9);
 //		TreeNode node3 = new TreeNode(20);
