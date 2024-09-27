@@ -8,13 +8,23 @@ import (
 func main() {
 	fmt.Println("leetcode goLang round2")
 
+	n1 := solution.TreeNode{Val: 236}
+	n2 := solution.TreeNode{Val: 104}
+	n3 := solution.TreeNode{Val: 701}
+	n4 := solution.TreeNode{Val: 227}
+	n5 := solution.TreeNode{Val: 911}
+	n1.Left = &n2
+	n1.Right = &n3
+	n2.Right = &n4
+	n3.Right = &n5
+	fmt.Println(solution.GetMinimumDifference(&n1))
 	//strs := []string{"10", "0001", "111001", "1", "0"}
 	//m := 5
 	//n := 3
-	strs := []string{"10", "0", "1"}
-	m := 1
-	n := 1
-	fmt.Println(solution.FindMaxForm(strs, m, n))
+	//strs := []string{"10", "0", "1"}
+	//m := 1
+	//n := 1
+	//fmt.Println(solution.FindMaxForm(strs, m, n))
 	//nums := []int{1, 5, 11, 5}
 	//nums := []int{1, 2, 3, 5}
 	//fmt.Println(solution.CanPartition(nums))

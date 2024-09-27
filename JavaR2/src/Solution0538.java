@@ -2,33 +2,23 @@
  * @author maximusyoung
  */
 public class Solution0538 {
+	int t = 0;
 	public TreeNode convertBST(TreeNode root) {
-		recursion(root, 0, false);
+		recursion(root);
 		return root;
 	}
 
-
-	public int recursion(TreeNode root, int parent, boolean isLeft) {
+	public void recursion(TreeNode root) {
 		if (root == null) {
-			return 0;
+			return;
 		}
 
-		int res = root.val + parent;
+		recursion(root.right);
 
-		if (root.right != null) {
-			res += recursion(root.right, 0, false);
-		}
+		t += root.val;
+		root.val = t;
 
-		root.val = res;
+		recursion(root.left);
 
-		int t = 0;
-		if (root.left != null) {
-			t = recursion(root.left, res, true);
-		}
-
-		if (!isLeft) {
-			return res;
-		}
-		return t;
 	}
 }
