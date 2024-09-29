@@ -8,16 +8,38 @@ import (
 func main() {
 	fmt.Println("leetcode goLang round2")
 
-	n1 := solution.TreeNode{Val: 236}
-	n2 := solution.TreeNode{Val: 104}
-	n3 := solution.TreeNode{Val: 701}
-	n4 := solution.TreeNode{Val: 227}
-	n5 := solution.TreeNode{Val: 911}
-	n1.Left = &n2
-	n1.Right = &n3
-	n2.Right = &n4
-	n3.Right = &n5
-	fmt.Println(solution.GetMinimumDifference(&n1))
+	inorder := []int{9, 3, 15, 20, 7}
+	postorder := []int{9, 15, 7, 20, 3}
+	t := solution.BuildTree(inorder, postorder)
+	fmt.Println(t)
+	//n1 := solution.TreeNode{Val: 1}
+	//n2 := solution.TreeNode{Val: 2}
+	//n3 := solution.TreeNode{Val: 3}
+	//n4 := solution.TreeNode{Val: 4}
+	//n5 := solution.TreeNode{Val: 5}
+	//n6 := solution.TreeNode{Val: 6}
+	//n7 := solution.TreeNode{Val: 7}
+	//n1.Left = &n2
+	//n1.Right = &n3
+	//n2.Left = &n4
+	//n2.Right = &n5
+	//n3.Left = &n6
+	//n3.Right = &n7
+	//preorder := []int{1, 2, 4, 5, 3, 6, 7}
+	//postorder := []int{4, 5, 2, 6, 7, 3, 1}
+	//t := solution.ConstructFromPrePost(preorder, postorder)
+	//
+	//fmt.Println(t)
+	//n1 := solution.TreeNode{Val: 236}
+	//n2 := solution.TreeNode{Val: 104}
+	//n3 := solution.TreeNode{Val: 701}
+	//n4 := solution.TreeNode{Val: 227}
+	//n5 := solution.TreeNode{Val: 911}
+	//n1.Left = &n2
+	//n1.Right = &n3
+	//n2.Right = &n4
+	//n3.Right = &n5
+	//fmt.Println(solution.GetMinimumDifference(&n1))
 	//strs := []string{"10", "0001", "111001", "1", "0"}
 	//m := 5
 	//n := 3
