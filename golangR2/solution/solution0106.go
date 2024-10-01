@@ -4,6 +4,11 @@ func BuildTree(inorder []int, postorder []int) *TreeNode {
 	var bf func(inorder []int, postorder []int) *TreeNode
 	bf = func(inorder []int, postorder []int) *TreeNode {
 		var root TreeNode
+
+		if len(inorder) == 0 {
+			return nil
+		}
+
 		if len(inorder) == 1 {
 			return &TreeNode{Val: inorder[0]}
 		}
@@ -17,15 +22,6 @@ func BuildTree(inorder []int, postorder []int) *TreeNode {
 				l := TreeNode{Val: postorder[0]}
 				root.Left = &l
 			}
-			return &root
-		}
-
-		if len(inorder) == 3 {
-			root = TreeNode{Val: postorder[2]}
-			l := TreeNode{Val: postorder[0]}
-			r := TreeNode{Val: postorder[1]}
-			root.Left = &l
-			root.Right = &r
 			return &root
 		}
 
