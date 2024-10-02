@@ -8,15 +8,19 @@ import (
 func main() {
 	fmt.Println("leetcode goLang round2")
 
+	n1 := solution.TreeNode{Val: 1}
+	n2 := solution.TreeNode{Val: 2}
+	n3 := solution.TreeNode{Val: 3}
+	n1.Right = &n2
+	n2.Left = &n3
+	res := solution.PostorderTraversal(&n1)
+	fmt.Println(res)
 	//inorder := []int{9, 3, 15, 20, 7}
 	//postorder := []int{9, 15, 7, 20, 3}
-	inorder := []int{3, 2, 1}
-	postorder := []int{3, 2, 1}
-	t := solution.BuildTree(inorder, postorder)
-	fmt.Println(t)
-	//n1 := solution.TreeNode{Val: 1}
-	//n2 := solution.TreeNode{Val: 2}
-	//n3 := solution.TreeNode{Val: 3}
+	//inorder := []int{3, 2, 1}
+	//postorder := []int{3, 2, 1}
+	//t := solution.BuildTree(inorder, postorder)
+	//fmt.Println(t)
 	//n4 := solution.TreeNode{Val: 4}
 	//n5 := solution.TreeNode{Val: 5}
 	//n6 := solution.TreeNode{Val: 6}
