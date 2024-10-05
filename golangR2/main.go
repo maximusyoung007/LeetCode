@@ -8,27 +8,51 @@ import (
 func main() {
 	fmt.Println("leetcode goLang round2")
 
-	n1 := solution.TreeNode{Val: 5}
-	n2 := solution.TreeNode{Val: 3}
-	n3 := solution.TreeNode{Val: 6}
-	n4 := solution.TreeNode{Val: 2}
-	n5 := solution.TreeNode{Val: 4}
-	n6 := solution.TreeNode{Val: 7}
+	n1 := solution.TreeNode{Val: 1}
+	n2 := solution.TreeNode{Val: 2}
+	//n3 := solution.TreeNode{Val: 6}
+	//n4 := solution.TreeNode{Val: 2}
+	//n5 := solution.TreeNode{Val: 4}
+	//n6 := solution.TreeNode{Val: 7}
+	n1.Right = &n2
+	//n1.Right = &n3
+	//n2.Left = &n4
+	//n2.Right = &n5
+	//n3.Right = &n6
+	res := solution.DeleteNode(&n1, 1)
+	//n1 := solution.ListNode{Val: -10}
+	//n2 := solution.ListNode{Val: -3}
+	//n3 := solution.ListNode{Val: 0}
+	//n4 := solution.ListNode{Val: 5}
+	//n5 := solution.ListNode{Val: 9}
+	//n1.Next = &n2
+	//n2.Next = &n3
+	//n3.Next = &n4
+	//n4.Next = &n5
+	//res := solution.SortedListToBST(&n1)
+	//
+	fmt.Println(res)
+	//n1 := solution.TreeNode{Val: 5}
+	//n2 := solution.TreeNode{Val: 3}
+	//n3 := solution.TreeNode{Val: 6}
+	//n4 := solution.TreeNode{Val: 2}
+	//n5 := solution.TreeNode{Val: 4}
+	//n6 := solution.TreeNode{Val: 7}
 	//n7 := solution.TreeNode{Val: 1}
 	//n8 := solution.TreeNode{Val: 7}
 	//n9 := solution.TreeNode{Val: 9}
 
-	n1.Left = &n2
-	n1.Right = &n3
-	n2.Left = &n4
-	n2.Right = &n5
+	//n1.Left = &n2
+	//n1.Right = &n3
+	//n2.Left = &n4
+	//n2.Right = &n5
 	//n3.Left = &n6
-	n3.Right = &n6
+	//n3.Right = &n6
 	//n4.Left = &n7
 	//n6.Left = &n8
 	//n6.Right = &n9
-	res := solution.FindTarget(&n1, 9)
-	fmt.Println(res)
+	//res := solution.FindTarget(&n1, 9)
+	//fmt.Println(res)
 	//inorder := []int{9, 3, 15, 20, 7}
 	//postorder := []int{9, 15, 7, 20, 3}
 	//inorder := []int{3, 2, 1}
