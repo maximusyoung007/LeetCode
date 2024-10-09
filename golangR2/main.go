@@ -8,18 +8,41 @@ import (
 func main() {
 	fmt.Println("leetcode goLang round2")
 
-	n1 := solution.TreeNode{Val: 1}
-	n2 := solution.TreeNode{Val: 2}
+	graph := make([][]int, 5)
+	//for i := 0; i < len(graph); i++ {
+	//	graph[i] = make([]int, 0)
+	//}
+	//graph[0] = []int{1, 2, 3}
+	//graph[1] = []int{0, 2}
+	//graph[2] = []int{0, 1, 3}
+	//graph[3] = []int{0, 2}
+	//graph[0] = []int{1, 3}
+	//graph[1] = []int{0, 2}
+	//graph[2] = []int{1, 3}
+	//graph[3] = []int{0, 2}
+	//graph[0] = []int{4, 1}
+	//graph[1] = []int{0, 2}
+	//graph[2] = []int{1, 3}
+	//graph[3] = []int{2, 4}
+	//graph[4] = []int{3, 0}
+	graph[0] = []int{1, 4}
+	graph[1] = []int{0, 2}
+	graph[2] = []int{1}
+	graph[3] = []int{4}
+	graph[4] = []int{3, 0}
+	fmt.Println(solution.IsBipartite(graph))
+	//n1 := solution.TreeNode{Val: 1}
+	//n2 := solution.TreeNode{Val: 2}
 	//n3 := solution.TreeNode{Val: 6}
 	//n4 := solution.TreeNode{Val: 2}
 	//n5 := solution.TreeNode{Val: 4}
 	//n6 := solution.TreeNode{Val: 7}
-	n1.Right = &n2
+	//n1.Right = &n2
 	//n1.Right = &n3
 	//n2.Left = &n4
 	//n2.Right = &n5
 	//n3.Right = &n6
-	res := solution.DeleteNode(&n1, 1)
+	//res := solution.DeleteNode(&n1, 1)
 	//n1 := solution.ListNode{Val: -10}
 	//n2 := solution.ListNode{Val: -3}
 	//n3 := solution.ListNode{Val: 0}
@@ -31,7 +54,7 @@ func main() {
 	//n4.Next = &n5
 	//res := solution.SortedListToBST(&n1)
 	//
-	fmt.Println(res)
+	//fmt.Println(res)
 	//n1 := solution.TreeNode{Val: 5}
 	//n2 := solution.TreeNode{Val: 3}
 	//n3 := solution.TreeNode{Val: 6}
