@@ -8,7 +8,7 @@ import (
 func main() {
 	fmt.Println("leetcode goLang round2")
 
-	graph := make([][]int, 5)
+	graph := make([][]int, 4)
 	//for i := 0; i < len(graph); i++ {
 	//	graph[i] = make([]int, 0)
 	//}
@@ -25,11 +25,16 @@ func main() {
 	//graph[2] = []int{1, 3}
 	//graph[3] = []int{2, 4}
 	//graph[4] = []int{3, 0}
-	graph[0] = []int{1, 4}
+	//graph[0] = []int{1, 4}
+	//graph[1] = []int{0, 2}
+	//graph[2] = []int{1}
+	//graph[3] = []int{4}
+	//graph[4] = []int{3, 0}
+	graph[0] = []int{1, 2, 3}
 	graph[1] = []int{0, 2}
-	graph[2] = []int{1}
-	graph[3] = []int{4}
-	graph[4] = []int{3, 0}
+	graph[2] = []int{0, 1, 3}
+	graph[3] = []int{0, 2}
+	//graph[4] = []int{3, 0}
 	fmt.Println(solution.IsBipartite(graph))
 	//n1 := solution.TreeNode{Val: 1}
 	//n2 := solution.TreeNode{Val: 2}
