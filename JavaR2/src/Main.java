@@ -1,4 +1,7 @@
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * <pre>
@@ -12,19 +15,75 @@ public class Main {
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
 
-		TreeNode node1 = new TreeNode(1);
-		TreeNode node2 = new TreeNode(2);
-		TreeNode node3 = new TreeNode(3);
+		int[][] edges = new int[][] {
+			{0,1}, {0,3}, {1,2}, {2,1}
+		};
+		int n = 4;
+		int source = 0;
+		int destination = 3;
+
+//		int[][] edges = new int[][] {
+//			{0,1}, {0,2}
+//		};
+//		int n = 3;
+//		int source = 0;
+//		int destination = 2;
+//
+//		int[][] edges = new int[][] {
+//			{0,1}, {0,2}, {1,3}, {2,3}
+//		};
+//		int n = 4;
+//		int source = 0;
+//		int destination = 3;
+
+//		int[][] edges = new int[][] {
+//			{0,1}, {1,1}
+//		};
+//		int n = 2;
+//		int source = 0;
+//		int destination = 1;
+
+		Solution1059 solution1059 = new Solution1059();
+		System.out.println(solution1059.leadsToDestination(n, edges, source, destination));
+
+//		int[][] pre = new int[][] {
+//			{1,0}
+//		};
+//		int numCourses = 2;
+//		int[][] pre = new int[][] {
+//
+//		};
+//		int numCourses = 2;
+
+//		Solution0210 solution0210 = new Solution0210();
+//		int[] res = solution0210.findOrder(numCourses, pre);
+//		for (int re : res) {
+//			System.out.println(re);
+//		}
+
+//		Set<String> s1 = new HashSet<>();
+//		s1.add("hello");
+//		TestSet ts1 = new TestSet();
+//		TestSet ts2 = new TestSet();
+//
+//		ts1.setSetTest(s1);
+//		ts2.setSetTest(new HashSet<>(Arrays.asList("hello")));
+//
+//		System.out.println();
+
+//		TreeNode node1 = new TreeNode(1);
+//		TreeNode node2 = new TreeNode(2);
+//		TreeNode node3 = new TreeNode(3);
 //		TreeNode node4 = new TreeNode(0);
 //		TreeNode node5 = new TreeNode(2);
 //		TreeNode node6 = new TreeNode(5);
 //		TreeNode node7 = new TreeNode(7);
 //		TreeNode node8 = new TreeNode(3);
 //		TreeNode node9 = new TreeNode(8);
-		node1.right = node2;
-		node2.left = node3;
-		Solution0094 solution0094 = new Solution0094();
-		List<Integer> res = solution0094.inorderTraversal(node1);
+//		node1.right = node2;
+//		node2.left = node3;
+//		Solution0094 solution0094 = new Solution0094();
+//		List<Integer> res = solution0094.inorderTraversal(node1);
 //		node2.left = node4;
 //		node2.right = node5;
 //		node3.left = node6;
@@ -759,7 +818,6 @@ public class Main {
 //			}
 //			System.out.println();
 }
-
 //		Solution0077 solution0077 = new Solution0077();
 //		List<List<Integer>> res = solution0077.combine(4, 2);
 //		List<List<Integer>> res = solution0077.combine(1, 1);
