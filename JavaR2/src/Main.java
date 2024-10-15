@@ -1,8 +1,3 @@
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 /**
  * <pre>
  * Modify Information:
@@ -14,13 +9,41 @@ public class Main {
 
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
-
 		int[][] edges = new int[][] {
-			{0,1}, {0,3}, {1,2}, {2,1}
+			{1,2}, {2,3}, {3,4}, {1,4}, {1,5}
 		};
-		int n = 4;
-		int source = 0;
-		int destination = 3;
+//		Solution0684 solution0684 = new Solution0684();
+//		int[][] edges = new int[][] {
+//			{1,2}, {1,3}, {2,3}
+//		};
+		Solution0684 solution0684 = new Solution0684();
+		int[] res = solution0684.findRedundantConnection(edges);
+		for (int re : res) {
+			System.out.println(re);
+		}
+
+//		int n = 4;
+//		int[][] connections = new int[][] {
+//			{1,2,3},
+//			{3,4,4}
+//		};
+
+//		int n = 3;
+//		int[][] connections = new int[][] {
+//			{1,2,5},
+//			{1,3,6},
+//			{2,3,1}
+//		};
+//
+//		Solution1135_prim solution1135 = new Solution1135_prim();
+//		System.out.println(solution1135.minimumCost(n, connections));
+
+//		int[][] edges = new int[][] {
+//			{0,1}, {0,3}, {1,2}, {2,1}
+//		};
+//		int n = 4;
+//		int source = 0;
+//		int destination = 3;
 
 //		int[][] edges = new int[][] {
 //			{0,1}, {0,2}
@@ -43,8 +66,8 @@ public class Main {
 //		int source = 0;
 //		int destination = 1;
 
-		Solution1059 solution1059 = new Solution1059();
-		System.out.println(solution1059.leadsToDestination(n, edges, source, destination));
+//		Solution1059 solution1059 = new Solution1059();
+//		System.out.println(solution1059.leadsToDestination(n, edges, source, destination));
 
 //		int[][] pre = new int[][] {
 //			{1,0}
