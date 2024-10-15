@@ -35,7 +35,7 @@ public class Main {
 //			{2,3,1}
 //		};
 //
-//		Solution1135_prim solution1135 = new Solution1135_prim();
+//		Solution1135Prim solution1135 = new Solution1135Prim();
 //		System.out.println(solution1135.minimumCost(n, connections));
 
 //		int[][] edges = new int[][] {

@@ -12,7 +12,7 @@ import java.util.Set;
  * ============ ============= ============================
  * maximus         2024/10/15      create
  */
-public class Solution1135_prim {
+public class Solution1135Prim {
 	public int minimumCost(int n, int[][] connections) {
 		int minCost = 0;
 		PriorityQueue<Integer[]> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
