@@ -16,17 +16,17 @@ public class Main {
 //		int[][] edges = new int[][] {
 //			{1,2}, {1,3}, {2,3}
 //		};
-		Solution0684 solution0684 = new Solution0684();
-		int[] res = solution0684.findRedundantConnection(edges);
-		for (int re : res) {
-			System.out.println(re);
-		}
+//		Solution0684 solution0684 = new Solution0684();
+//		int[] res = solution0684.findRedundantConnection(edges);
+//		for (int re : res) {
+//			System.out.println(re);
+//		}
 
-//		int n = 4;
-//		int[][] connections = new int[][] {
-//			{1,2,3},
-//			{3,4,4}
-//		};
+		int n = 4;
+		int[][] connections = new int[][] {
+			{1,2,3},
+			{3,4,4}
+		};
 
 //		int n = 3;
 //		int[][] connections = new int[][] {
@@ -34,6 +34,8 @@ public class Main {
 //			{1,3,6},
 //			{2,3,1}
 //		};
+		Solution1135Kruskal solution1135Kruskal = new Solution1135Kruskal();
+		System.out.println(solution1135Kruskal.minimumCost(n, connections));
 //
 //		Solution1135Prim solution1135 = new Solution1135Prim();
 //		System.out.println(solution1135.minimumCost(n, connections));
