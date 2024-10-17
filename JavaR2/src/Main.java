@@ -9,9 +9,51 @@ public class Main {
 
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
-		int[][] edges = new int[][] {
-			{1,2}, {2,3}, {3,4}, {1,4}, {1,5}
-		};
+		Solution0146 solution0146 = new Solution0146();
+		Solution0146.LRUCache lRUCache = new Solution0146.LRUCache(2);
+//		lRUCache.put(1, 1); // 缓存是 {1=1}
+//		lRUCache.put(2, 2); // 缓存是 {1=1, 2=2}
+//		System.out.println(lRUCache.get(1));
+//		lRUCache.put(3, 3); // 该操作会使得关键字 2 作废，缓存是 {1=1, 3=3}
+//		System.out.println(lRUCache.get(2));
+//		lRUCache.put(4, 4); // 该操作会使得关键字 1 作废，缓存是 {4=4, 3=3}
+//		System.out.println(lRUCache.get(1));
+//		System.out.println(lRUCache.get(3));
+//		System.out.println(lRUCache.get(4));
+
+		//test2
+//		lRUCache.put(2,1);
+//		lRUCache.put(1,1);
+//		lRUCache.put(2,3);
+//		lRUCache.put(4,1);
+//		System.out.println(lRUCache.get(1));
+//		System.out.println(lRUCache.get(2));
+
+		//test3
+//		System.out.println(lRUCache.get(6));
+//		System.out.println(lRUCache.get(8));
+//		lRUCache.put(12,1);
+//		System.out.println(lRUCache.get(2));
+//		lRUCache.put(15,11);
+//		lRUCache.put(5,2);
+//		lRUCache.put(1,15);
+//		lRUCache.put(4,2);
+//		System.out.println(lRUCache.get(4));
+//		lRUCache.put(15,15);
+
+		//test4
+		lRUCache.put(1,1);
+		lRUCache.put(2,2);
+		System.out.println(lRUCache.get(1));
+		lRUCache.put(3,3);
+		System.out.println(lRUCache.get(2));
+		lRUCache.put(4,4);
+		System.out.println(lRUCache.get(1));
+		System.out.println(lRUCache.get(3));
+		System.out.println(lRUCache.get(4));
+//		int[][] edges = new int[][] {
+//			{1,2}, {2,3}, {3,4}, {1,4}, {1,5}
+//		};
 //		Solution0684 solution0684 = new Solution0684();
 //		int[][] edges = new int[][] {
 //			{1,2}, {1,3}, {2,3}
@@ -22,11 +64,11 @@ public class Main {
 //			System.out.println(re);
 //		}
 
-		int n = 4;
-		int[][] connections = new int[][] {
-			{1,2,3},
-			{3,4,4}
-		};
+//		int n = 4;
+//		int[][] connections = new int[][] {
+//			{1,2,3},
+//			{3,4,4}
+//		};
 
 //		int n = 3;
 //		int[][] connections = new int[][] {
@@ -34,8 +76,8 @@ public class Main {
 //			{1,3,6},
 //			{2,3,1}
 //		};
-		Solution1135Kruskal solution1135Kruskal = new Solution1135Kruskal();
-		System.out.println(solution1135Kruskal.minimumCost(n, connections));
+//		Solution1135Kruskal solution1135Kruskal = new Solution1135Kruskal();
+//		System.out.println(solution1135Kruskal.minimumCost(n, connections));
 //
 //		Solution1135Prim solution1135 = new Solution1135Prim();
 //		System.out.println(solution1135.minimumCost(n, connections));
