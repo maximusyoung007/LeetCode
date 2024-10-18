@@ -9,8 +9,26 @@ public class Main {
 
 	public static void main(String[] args) {
 		System.out.println("Java Round 2");
-		Solution0146 solution0146 = new Solution0146();
-		Solution0146.LRUCache lRUCache = new Solution0146.LRUCache(2);
+		Solution0380.RandomizedSet randomizedSet = new Solution0380.RandomizedSet();
+		//test1
+//		System.out.println(randomizedSet.insert(1));
+//		System.out.println(randomizedSet.remove(2));
+//		System.out.println(randomizedSet.insert(2));
+//		System.out.println(randomizedSet.getRandom());
+//		System.out.println(randomizedSet.remove(1));
+//		System.out.println(randomizedSet.insert(2));
+//		System.out.println(randomizedSet.getRandom());
+
+		//test2
+		System.out.println(randomizedSet.insert(0));
+		System.out.println(randomizedSet.insert(1));
+		System.out.println(randomizedSet.remove(0));
+		System.out.println(randomizedSet.insert(2));
+		System.out.println(randomizedSet.remove(1));
+		System.out.println(randomizedSet.getRandom());
+
+//		Solution0146 solution0146 = new Solution0146();
+//		Solution0146.LRUCache lRUCache = new Solution0146.LRUCache(2);
 //		lRUCache.put(1, 1); // 缓存是 {1=1}
 //		lRUCache.put(2, 2); // 缓存是 {1=1, 2=2}
 //		System.out.println(lRUCache.get(1));
@@ -42,15 +60,15 @@ public class Main {
 //		lRUCache.put(15,15);
 
 		//test4
-		lRUCache.put(1,1);
-		lRUCache.put(2,2);
-		System.out.println(lRUCache.get(1));
-		lRUCache.put(3,3);
-		System.out.println(lRUCache.get(2));
-		lRUCache.put(4,4);
-		System.out.println(lRUCache.get(1));
-		System.out.println(lRUCache.get(3));
-		System.out.println(lRUCache.get(4));
+//		lRUCache.put(1,1);
+//		lRUCache.put(2,2);
+//		System.out.println(lRUCache.get(1));
+//		lRUCache.put(3,3);
+//		System.out.println(lRUCache.get(2));
+//		lRUCache.put(4,4);
+//		System.out.println(lRUCache.get(1));
+//		System.out.println(lRUCache.get(3));
+//		System.out.println(lRUCache.get(4));
 //		int[][] edges = new int[][] {
 //			{1,2}, {2,3}, {3,4}, {1,4}, {1,5}
 //		};
