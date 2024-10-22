@@ -5,9 +5,12 @@ import (
 )
 
 func main() {
-	nums := []int {1,1,1,2,2,2,3}
-	res := RemoveDuplicates2(nums)
-	 fmt.Println(res)
+	nums := []int{1, 2, 3, 4, 5, 6, 7}
+	Rotate(nums, 3)
+	fmt.Println(nums)
+	//nums := []int{1, 1, 1, 2, 2, 2, 3}
+	//res := RemoveDuplicates2(nums)
+	//fmt.Println(res)
 	// nums := []int {0,0,1,1,1,2,2,3,3,4}
 	// res := RemoveDuplicates(nums)
 	// fmt.Println(res)
@@ -33,9 +36,9 @@ func main() {
 	// Merge(nums1, m, nums2, n)
 
 	// for _, num := range nums1 {
-		// fmt.Println(num)
+	// fmt.Println(num)
 	// }
-
-
+	//nums := []int{2, 2, 1, 1, 1, 2, 2}
+	//fmt.Println(MajorityElement(nums))
 	fmt.Println("golang round 3")
 }
