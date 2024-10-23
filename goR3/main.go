@@ -5,9 +5,14 @@ import (
 )
 
 func main() {
-	nums := []int{1, 2, 3, 4, 5, 6, 7}
-	Rotate(nums, 3)
-	fmt.Println(nums)
+	// nums := []int {7,1,5,3,6,4}
+	nums := []int {7,6,4,3,1}
+	res := MaxProfit(nums)
+	fmt.Println(res)
+
+	// nums := []int{1, 2, 3, 4, 5, 6, 7}
+	// Rotate(nums, 3)
+	// fmt.Println(nums)
 	//nums := []int{1, 1, 1, 2, 2, 2, 3}
 	//res := RemoveDuplicates2(nums)
 	//fmt.Println(res)
