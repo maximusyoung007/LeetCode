@@ -5,11 +5,14 @@ import (
 )
 
 func main() {
+	// nums := []int {2,3,1,1,4}
+	nums := []int {2,3,0,1,4}
+	fmt.Println(Jump(nums))
 	//nums := []int{2, 3, 1, 1, 4}
 	//nums := []int{3, 2, 1, 0, 4}
 	//nums := []int{0}
-	nums := []int{0, 2, 3}
-	fmt.Println(CanJump(nums))
+	// nums := []int{0, 2, 3}
+	// fmt.Println(CanJump(nums))
 	//prices := []int{7, 1, 5, 3, 6, 4}
 	//prices := []int{1, 2, 3, 4, 5}
 	//res := MaxProfit2(prices)
