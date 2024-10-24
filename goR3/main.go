@@ -5,9 +5,14 @@ import (
 )
 
 func main() {
+	//citations := []int{3, 0, 6, 1, 5}
+	citations := []int{1, 3, 1}
+	//citations := []int{0}
+	//citations := []int{1}
+	fmt.Println(HIndex(citations))
 	// nums := []int {2,3,1,1,4}
-	nums := []int {2,3,0,1,4}
-	fmt.Println(Jump(nums))
+	//nums := []int {2,3,0,1,4}
+	//fmt.Println(Jump(nums))
 	//nums := []int{2, 3, 1, 1, 4}
 	//nums := []int{3, 2, 1, 0, 4}
 	//nums := []int{0}
