@@ -5,11 +5,26 @@ import (
 )
 
 func main() {
+	// gas := []int {1,2,3,4,5}
+	// cost := []int {3,4,5,1,2}
+	gas := []int {2,3,4}
+	cost := []int {3,4,3}
+	fmt.Println(CanCompleteCircuit(gas, cost))
+	// nums := []int {1,2,3,4}
+	// nums := []int {-1,1,0,-3,3}
+	// res := ProductExceptSelf(nums)
+	// for _, v :=range res {
+		// fmt.Println(v)
+	// }
+	// obj := Constructor();
+    // param_1 := obj.Insert(val);
+    // param_2 := obj.Remove(val);
+    // param_3 := obj.GetRandom();
 	//citations := []int{3, 0, 6, 1, 5}
-	citations := []int{1, 3, 1}
+	// citations := []int{1, 3, 1}
 	//citations := []int{0}
 	//citations := []int{1}
-	fmt.Println(HIndex(citations))
+	// fmt.Println(HIndex(citations))
 	// nums := []int {2,3,1,1,4}
 	//nums := []int {2,3,0,1,4}
 	//fmt.Println(Jump(nums))
