@@ -7,8 +7,26 @@ func CanCompleteCircuit(gas []int, cost []int) int {
 	//从k出发，“之前”的剩余油量为0
 	//所以下次直接从j开始继续往下走
 	n := len(gas)
-	for i := 0; i < n; i++ {
-		
-	} 
-	return 0
+	for i := 0; i < n; {
+		rest := 0
+		var j int
+		for j = 0; j < n; j++ {
+			//k表示走到j实际对应的是哪一个加油站，便于计算是否可以往下走
+			k := (i + j) % n
+			//走不到j+1,下一次从j+1开始走
+			if rest+gas[k]-cost[k] < 0 {
+				//i大于n，则表示所有点都考虑过了，可以结束了
+				i = i + j + 1
+				break
+			}
+			//往下一步走剩余的油
+			rest = rest + gas[k] - cost[k]
+		}
+		//j刚好走完一圈
+		if j == n {
+			return i
+		}
+	}
+
+	return -1
 }
