@@ -1,0 +1,46 @@
+package main
+
+//按列求，先取每个位置左边最高的高度，再取每个位置右边最高的高度，取其中的最小值
+//每个位置与最小值的差值即为可以盛水的高度
+func TrapByColumn(height []int) int {
+	res := 0
+	n := len(height)
+	max := -1
+
+	leftHeight := make([]int, n)
+	rightHeight := make([]int, n)
+
+	for i := 0; i < n; i++ {
+		if max > height[i] {
+			leftHeight[i] = max
+		}
+		if height[i] > max {
+			max = height[i]
+		}
+	}
+
+	max = -1
+
+	for i := n-1; i >= 0; i-- {
+		if max > height[i] {
+			rightHeight[i] = max
+		}
+		if height[i] > max {
+			max = height[i]
+		}
+	}
+
+	min := 0
+	for i := 0; i < n; i++ {
+		if leftHeight[i] < rightHeight[i] {
+			min = leftHeight[i]
+		} else {
+			min = rightHeight[i]
+		}
+		if min != 0 {
+			res += min - height[i]
+		}
+	}
+
+	return res
+}

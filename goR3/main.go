@@ -5,11 +5,15 @@ import (
 )
 
 func main() {
+	// height := []int {0,1,0,2,1,0,1,3,2,1,2,1}
+	height := []int {4,2,0,3,2,5}
+	res := TrapByColumn(height)
+	fmt.Println(res)
 	// gas := []int {1,2,3,4,5}
 	// cost := []int {3,4,5,1,2}
-	gas := []int {2,3,4}
-	cost := []int {3,4,3}
-	fmt.Println(CanCompleteCircuit(gas, cost))
+	// gas := []int {2,3,4}
+	// cost := []int {3,4,3}
+	// fmt.Println(CanCompleteCircuit(gas, cost))
 	// nums := []int {1,2,3,4}
 	// nums := []int {-1,1,0,-3,3}
 	// res := ProductExceptSelf(nums)
