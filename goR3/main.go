@@ -5,15 +5,17 @@ import (
 )
 
 func main() {
-	// height := []int {0,1,0,2,1,0,1,3,2,1,2,1}
-	height := []int {4,2,0,3,2,5}
-	res := TrapColumn(height)
+
+	//height := []int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}
+	height := []int{4, 2, 0, 3, 2, 5}
+	//res := TrapTwoPoints(height)
+	res := TrapMonotonicStack(height)
 	fmt.Println(res)
 	// rating := []int{1, 0, 2} //5
 	// rating := []int{1, 2, 2} //4
 	// rating := []int {1,3,2,2,1} //7
 	// rating := []int {1,2,87,87,87,2,1} //13
-	// rating := []int {29,51,87,87,72,12} //12 
+	// rating := []int {29,51,87,87,72,12} //12
 	// rating := []int {1,3,4,5,2} //11
 	// rating := []int {1,2,3,1,0} //9
 	// rating := []int {1,2,3,5,4,3,2,1,4,3,2,1,3,2,1,1,2,3,4}
