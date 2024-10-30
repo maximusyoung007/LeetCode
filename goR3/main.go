@@ -5,7 +5,13 @@ import (
 )
 
 func main() {
-
+	s := "   fly me   to   the moon  "
+	fmt.Println(LengthOfLastWord(s))
+	//num := 3749
+	//num := 58
+	//num := 1994
+	//res := IntToRoman(num)
+	//fmt.Println(res)
 	//height := []int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1}
 	// height := []int{4, 2, 0, 3, 2, 5}
 	//res := TrapTwoPoints(height)
@@ -14,9 +20,9 @@ func main() {
 	// s := "IV"
 	// s := "IX"
 	// s := "LVIII"
-	s := "MCMXCIV"
-	res := RomanToInt(s)
-	fmt.Println(res)
+	//s := "MCMXCIV"
+	//res := RomanToInt(s)
+	//fmt.Println(res)
 	// rating := []int{1, 0, 2} //5
 	// rating := []int{1, 2, 2} //4
 	// rating := []int {1,3,2,2,1} //7
