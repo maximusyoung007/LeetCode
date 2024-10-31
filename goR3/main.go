@@ -5,8 +5,13 @@ import (
 )
 
 func main() {
-	s := "   fly me   to   the moon  "
-	fmt.Println(LengthOfLastWord(s))
+	
+	// strs := []string {"flower","flow","flight"}
+	// strs := []string {"dog","racecar","car"}
+	// res := LongestCommonPrefix(strs)
+	// fmt.Println(res)
+	// s := "   fly me   to   the moon  "
+	 //fmt.Println(LengthOfLastWord(s))
 	//num := 3749
 	//num := 58
 	//num := 1994
