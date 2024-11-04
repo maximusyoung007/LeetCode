@@ -5,13 +5,27 @@ import (
 )
 
 func main() {
-	
+	//haystack := "sadbutsad"
+	//needle := "sad"
+	//res := StrStr(haystack, needle)
+	//haystack := "mississippi"
+	//needle := "issip"
+	//res := StrStr(haystack, needle)
+	haystack := "leetcode"
+	needle := "leeto"
+	res := StrStr(haystack, needle)
+	fmt.Println(res)
+	//res := Convert("PAYPALISHIRING", 4)
+	//res := Convert("A", 1)
+	//res := Convert("PAYPALISHIRING", 4)
+	//res := Convert("AB", 1)
+	//fmt.Println(res)
 	// strs := []string {"flower","flow","flight"}
 	// strs := []string {"dog","racecar","car"}
 	// res := LongestCommonPrefix(strs)
 	// fmt.Println(res)
 	// s := "   fly me   to   the moon  "
-	 //fmt.Println(LengthOfLastWord(s))
+	//fmt.Println(LengthOfLastWord(s))
 	//num := 3749
 	//num := 58
 	//num := 1994
