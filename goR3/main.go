@@ -5,7 +5,12 @@ import (
 )
 
 func main() {
-	
+	words := []string {"This", "is", "an", "example", "of", "text", "justification."} 
+	maxWidth := 16
+	res := FullJustify(words, maxWidth)
+	for _, s := range res {
+		fmt.Println(s)
+	}
 	// strs := []string {"flower","flow","flight"}
 	// strs := []string {"dog","racecar","car"}
 	// res := LongestCommonPrefix(strs)
