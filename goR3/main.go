@@ -5,8 +5,15 @@ import (
 )
 
 func main() {
-	words := []string {"This", "is", "an", "example", "of", "text", "justification."} 
-	maxWidth := 16
+	//words := []string{"This", "is", "an", "example", "of", "text", "justification."}
+	//words := []string{"This", "is", "an", "example", "of", "text"}
+	//maxWidth := 16
+	//words := []string{"What", "must", "be", "acknowledgment", "shall", "be"}
+	//maxWidth := 16
+
+	words := []string{"Science", "is", "what", "we", "understand", "well", "enough", "to", "explain", "to", "a",
+		"computer.", "Art", "is", "everything", "else", "we", "do"}
+	maxWidth := 20
 	res := FullJustify(words, maxWidth)
 	for _, s := range res {
 		fmt.Println(s)
@@ -16,7 +23,7 @@ func main() {
 	// res := LongestCommonPrefix(strs)
 	// fmt.Println(res)
 	// s := "   fly me   to   the moon  "
-	 //fmt.Println(LengthOfLastWord(s))
+	//fmt.Println(LengthOfLastWord(s))
 	//num := 3749
 	//num := 58
 	//num := 1994

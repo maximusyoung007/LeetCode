@@ -1,4 +1,8 @@
-package main 
+package main
+
+import (
+	"strings"
+)
 
 func FullJustify(words []string, maxWidth int) []string {
 	//用来记录每一行字母个数
@@ -7,66 +11,52 @@ func FullJustify(words []string, maxWidth int) []string {
 	spaceNum := 0
 	//每行单词个数
 	wordNum := 0
+	//如果单词数大于一个，则依次遍历每两个单词中间的位置，空格数+1，直到空格数耗尽
+	//如果单词数等于一个，则单词直接加上空格数即可
 	j := 0
 	res := make([]string, 0)
-    for i := 0; i < len(words); i++ { 
+	for i := 0; i < len(words); i++ {
 		word := words[i]
-		if lineLength + len(word) + 1 <= maxWidth {
+		if lineLength+len(word)+1 <= maxWidth || lineLength+len(word) <= maxWidth {
 			lineLength = lineLength + len(word) + 1
 			wordNum++
-			if i == len(words) - 1 {
+			//如果是最后一个
+			if i == len(words)-1 {
 				spaceNum = maxWidth - lineLength + wordNum
-				//每个单词中间应该有多少个空格
-				eachLength := 0
-				if wordNum > 1 {
-					eachLength = spaceNum / (wordNum-1)
-				} else {
-					eachLength = spaceNum
-				}
-				//空格是否可以均匀分布
-				if eachLength * (wordNum-1) == spaceNum {
-					t := i
-					ts := ""
-					if wordNum > 1 {
-						wordNum--
-					}
-					for j <= t {
-						ts = ts + words[j]
-						if wordNum > 0 {
-							for e := 0; e < eachLength; e++ {
-								ts = ts + " "
-							}
-							wordNum--
-						}
-						j++
+
+				//如果一行只有一个单词
+				if wordNum == 1 {
+					ts := words[i]
+					for s := 0; s < spaceNum; s++ {
+						ts = ts + " "
 					}
 					res = append(res, ts)
-					
-					lineLength = 0
-					spaceNum = 0
-					wordNum = 0
-					j = i
 				} else {
-					left := spaceNum - eachLength * (wordNum-1)
 					t := i
 					ts := ""
-					if wordNum > 1 {
-						wordNum -= 2
-					}
+					tsArray := make([]string, wordNum)
+
+					k := 0
 					for j <= t {
-						ts = ts + words[j]
-						if wordNum > 0 {
-							for e := 0; e < eachLength; e++ {
-								ts = ts + " "
-							}
-							wordNum--
-						} else if wordNum == 0 {
-							for e := 0; e < left; e++ {
-								ts = ts + " "
-							} 
-							wordNum--
-						}
+						tsArray[k] = words[j]
+						k++
 						j++
+					}
+
+					for k = 0; k < len(tsArray)-1; k++ {
+						if spaceNum <= 0 {
+							break
+						} else {
+							tsArray[k] = tsArray[k] + " "
+							if k == len(tsArray)-2 {
+								k = -1
+							}
+							spaceNum--
+						}
+					}
+
+					for _, s := range tsArray {
+						ts = ts + s
 					}
 					res = append(res, ts)
 
@@ -78,60 +68,45 @@ func FullJustify(words []string, maxWidth int) []string {
 			}
 		} else {
 			spaceNum = maxWidth - lineLength + wordNum
-			//每个单词中间应该有多少个空格
-			eachLength := 0
-			if wordNum > 1 {
-				eachLength = spaceNum / (wordNum-1)
-			} else {
-				eachLength = spaceNum
-			}
-			//空格是否可以均匀分布
-			if eachLength * (wordNum-1) == spaceNum {
-				t := i-1
-				ts := ""
-				if wordNum > 1 {
-					wordNum--
-				}
-				for j <= t {
-					ts = ts + words[j]
-					if wordNum > 0 {
-						for e := 0; e < eachLength; e++ {
-							ts = ts + " "
-						}
-						wordNum--
-					}
-					j++
+
+			//如果一行只有一个单词
+			if wordNum == 1 {
+				ts := words[i-1]
+				for s := 0; s < spaceNum; s++ {
+					ts = ts + " "
 				}
 				res = append(res, ts)
-				
 				lineLength = 0
 				spaceNum = 0
 				wordNum = 0
 				j = i
 				i--
 			} else {
-				left := spaceNum - eachLength * (wordNum-1)
-				t := i-1
+				t := i - 1
 				ts := ""
-				if wordNum > 1 {
-					wordNum -= 2
-				}
-				spaceArray := make([]int, wordNum)
+				tsArray := make([]string, wordNum)
 
+				k := 0
 				for j <= t {
-					ts = ts + words[j]
-					if wordNum > 0 {
-						for e := 0; e < eachLength; e++ {
-							ts = ts + " "
-						}
-						wordNum--
-					} else if wordNum == 0 {
-						for e := 0; e < left; e++ {
-							ts = ts + " "
-						} 
-						wordNum--
-					}
+					tsArray[k] = words[j]
+					k++
 					j++
+				}
+
+				for k = 0; k < len(tsArray)-1; k++ {
+					if spaceNum <= 0 {
+						break
+					} else {
+						tsArray[k] = tsArray[k] + " "
+						if k == len(tsArray)-2 {
+							k = -1
+						}
+						spaceNum--
+					}
+				}
+
+				for _, s := range tsArray {
+					ts = ts + s
 				}
 				res = append(res, ts)
 
@@ -143,6 +118,19 @@ func FullJustify(words []string, maxWidth int) []string {
 			}
 		}
 	}
+
+	//最后一行特殊处理
+	lastLine := res[len(res)-1]
+	w := strings.Fields(lastLine)
+	// 用单个空格连接单词，并在末尾添加四个空格
+	newString := strings.Join(w, " ")
+	sub := maxWidth - len(newString)
+
+	for i := 0; i < sub; i++ {
+		newString = newString + " "
+	}
+
+	res[len(res)-1] = newString
 
 	return res
 
