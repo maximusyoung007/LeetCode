@@ -5,19 +5,23 @@ import (
 )
 
 func main() {
+	s := "A man, a plan, a canal: Panama"
+	// s := "race a car"
+	// s := "0P"
+	fmt.Println(IsPalindrome(s))
 	//words := []string{"This", "is", "an", "example", "of", "text", "justification."}
 	//words := []string{"This", "is", "an", "example", "of", "text"}
 	//maxWidth := 16
 	//words := []string{"What", "must", "be", "acknowledgment", "shall", "be"}
 	//maxWidth := 16
 
-	words := []string{"Science", "is", "what", "we", "understand", "well", "enough", "to", "explain", "to", "a",
-		"computer.", "Art", "is", "everything", "else", "we", "do"}
-	maxWidth := 20
-	res := FullJustify(words, maxWidth)
-	for _, s := range res {
-		fmt.Println(s)
-	}
+	// words := []string{"Science", "is", "what", "we", "understand", "well", "enough", "to", "explain", "to", "a",
+		// "computer.", "Art", "is", "everything", "else", "we", "do"}
+	// maxWidth := 20
+	// res := FullJustify(words, maxWidth)
+	// for _, s := range res {
+		// fmt.Println(s)
+	// }
 	// strs := []string {"flower","flow","flight"}
 	// strs := []string {"dog","racecar","car"}
 	// res := LongestCommonPrefix(strs)
