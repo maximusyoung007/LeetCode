@@ -56,6 +56,17 @@ public class Main {
 		System.out.println(solution0071.simplifyPath("/a./"));
 		System.out.println(solution0071.simplifyPath("/./"));
 		System.out.println(solution0071.simplifyPath("/.../a/../b/c/../d/./"));
+		System.out.println(solution0071.simplifyPath("b/../../c/"));
+		System.out.println(solution0071.simplifyPath("/a//b////c/d//././/.."));
+		System.out.println(solution0071.simplifyPath("/."));
+		System.out.println(solution0071.simplifyPath("/.."));
+		System.out.println(solution0071.simplifyPath("/a/.."));
+		System.out.println(solution0071.simplifyPath("/..."));
+		System.out.println(solution0071.simplifyPath("/hello../world"));
+		System.out.println(solution0071.simplifyPath("/hello./world"));
+		System.out.println(solution0071.simplifyPath("/./qvzVS/oBx/vIN///../lyLw////"));
+		System.out.println(solution0071.simplifyPath("/a//b.."));
+		System.out.println(solution0071.simplifyPath("/a//b."));
 
 		System.out.println("Java R3");
 	}

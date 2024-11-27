@@ -2,6 +2,9 @@ package solution;
 
 import java.util.Stack;
 
+/**
+ * @author maximusyoung
+ */
 public class Solution0071 {
 	public String simplifyPath(String path) {
 		/**
@@ -24,7 +27,30 @@ public class Solution0071 {
 			char c = path.charAt(i);
 
 			if (c == '.') {
-				stack.push('.');
+				if (i == path.length() - 1 && stack.size() > 0) {
+					if (stack.peek() == '/') {
+						if (stack.size() > 1) {
+							stack.pop();
+						}
+					} else if (stack.peek() == '.') {
+						stack.pop();
+						if (!stack.isEmpty() && stack.peek() != '/') {
+							stack.push('.');
+							stack.push('.');
+						} else {
+							if (stack.peek() == '/' && stack.size() > 1) {
+								stack.pop();
+							}
+							while (!stack.isEmpty() && stack.peek() != '/') {
+								stack.pop();
+							}
+						}
+					} else {
+						stack.push('.');
+					}
+				} else {
+					stack.push('.');
+				}
 			} else if (c == '/') {
 				if (stack.isEmpty()) {
 					stack.push('/');
@@ -35,10 +61,10 @@ public class Solution0071 {
 					stack.push(c);
 				} else if (stack.peek() == '.') {
 					int t = 3;
-					char t2 = ' ', t3 = ' ';
+					char t1 = ' ', t2 = ' ', t3 = ' ';
 					while (!stack.isEmpty() && t > 0) {
 						if (t == 3) {
-							stack.pop();
+							t1 = stack.pop();
 						}
 						if (t == 2) {
 							t2 = stack.pop();
@@ -50,28 +76,38 @@ public class Solution0071 {
 					}
 
 					//两个..
-					if (t2 == '.' && t3 != '.') {
+					if (t2 == '.' && t3 == '/') {
 						while (!stack.isEmpty() && stack.peek() != '/') {
 							stack.pop();
 						}
-						if (stack.size() > 1) {
+						if (stack.size() > 0) {
 							stack.pop();
 						}
 //						stack.push(t3);
 						stack.push(c);
 					} else if (t2 != '.') {
-						//一个.
-						stack.push(t3);
-						stack.push(t2);
-						while (stack.size() > 1 && stack.peek() == '/') {
-							stack.pop();
+						if (t2 == '/') {
+							//一个.
+							if (t3 != ' ') {
+								stack.push(t3);
+							}
+							if (t2 != ' ') {
+								stack.push(t2);
+							}
+							while (stack.size() > 0 && stack.peek() == '/') {
+								stack.pop();
+							}
+						} else {
+							stack.push(t3);
+							stack.push(t2);
+							stack.push(t1);
 						}
 						stack.push(c);
-					} else if (t2 == '.' && t3 == '.') {
+					} else if (t2 == '.') {
 						//三个或者三个以上. 可以作为路径名称
-						stack.push('.');
-						stack.push('.');
-						stack.push('.');
+						stack.push(t3);
+						stack.push(t2);
+						stack.push(t1);
 						stack.push(c);
 					}
 				} else {
