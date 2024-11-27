@@ -1,6 +1,6 @@
 package main
 
-func isSubsequence(s string, t string) bool {
+func IsSubsequence(s string, t string) bool {
 	i, j := 0, 0
 
 	for i < len(s) && j < len(t) {
