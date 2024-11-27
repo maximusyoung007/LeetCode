@@ -1,6 +1,8 @@
 import solution.Solution0020;
 import solution.Solution0056;
 import solution.Solution0057;
+import solution.Solution0071;
+import solution.Solution0452;
 
 /**
  * @author maximusyoung
@@ -33,12 +35,27 @@ public class Main {
 //			System.out.print(re[0] + "-" + re[1]);
 //			System.out.println();
 //		}
-		Solution0020 solution0020 = new Solution0020();
-		System.out.println(solution0020.isValid("()[]{}"));
-		System.out.println(solution0020.isValid("(({}))"));
-		System.out.println(solution0020.isValid("(]"));
-		System.out.println(solution0020.isValid("]"));
-		System.out.println(solution0020.isValid(""));
+//		Solution0020 solution0020 = new Solution0020();
+//		System.out.println(solution0020.isValid("()[]{}"));
+//		System.out.println(solution0020.isValid("(({}))"));
+//		System.out.println(solution0020.isValid("(]"));
+//		System.out.println(solution0020.isValid("]"));
+//		System.out.println(solution0020.isValid(""));
+
+//		Solution0452 solution0452 = new Solution0452();
+		//[[1,2],[3,4],[5,6],[7,8]]
+//		int[][] points = new int[][] {{10,16},{2,8},{1,6},{7,12}};
+//		int[][] points = new int[][] {{1,2},{3,4},{5,6},{7,8}};
+//		int[][] points = new int[][] {{1,2},{2,3},{3,4},{4,5}};
+//		System.out.println(solution0452.findMinArrowShots(points));
+		Solution0071 solution0071 = new Solution0071();
+		System.out.println(solution0071.simplifyPath("/home/"));
+		System.out.println(solution0071.simplifyPath("/home//foo/"));
+		System.out.println(solution0071.simplifyPath("/home/user/Documents/../Pictures"));
+		System.out.println(solution0071.simplifyPath("/../"));
+		System.out.println(solution0071.simplifyPath("/a./"));
+		System.out.println(solution0071.simplifyPath("/./"));
+		System.out.println(solution0071.simplifyPath("/.../a/../b/c/../d/./"));
 
 		System.out.println("Java R3");
 	}
