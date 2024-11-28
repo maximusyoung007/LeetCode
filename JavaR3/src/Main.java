@@ -2,6 +2,7 @@ import solution.Solution0020;
 import solution.Solution0056;
 import solution.Solution0057;
 import solution.Solution0071;
+import solution.Solution0155;
 import solution.Solution0452;
 
 /**
@@ -48,25 +49,33 @@ public class Main {
 //		int[][] points = new int[][] {{1,2},{3,4},{5,6},{7,8}};
 //		int[][] points = new int[][] {{1,2},{2,3},{3,4},{4,5}};
 //		System.out.println(solution0452.findMinArrowShots(points));
-		Solution0071 solution0071 = new Solution0071();
-		System.out.println(solution0071.simplifyPath("/home/"));
-		System.out.println(solution0071.simplifyPath("/home//foo/"));
-		System.out.println(solution0071.simplifyPath("/home/user/Documents/../Pictures"));
-		System.out.println(solution0071.simplifyPath("/../"));
-		System.out.println(solution0071.simplifyPath("/a./"));
-		System.out.println(solution0071.simplifyPath("/./"));
-		System.out.println(solution0071.simplifyPath("/.../a/../b/c/../d/./"));
-		System.out.println(solution0071.simplifyPath("b/../../c/"));
-		System.out.println(solution0071.simplifyPath("/a//b////c/d//././/.."));
-		System.out.println(solution0071.simplifyPath("/."));
-		System.out.println(solution0071.simplifyPath("/.."));
-		System.out.println(solution0071.simplifyPath("/a/.."));
-		System.out.println(solution0071.simplifyPath("/..."));
-		System.out.println(solution0071.simplifyPath("/hello../world"));
-		System.out.println(solution0071.simplifyPath("/hello./world"));
-		System.out.println(solution0071.simplifyPath("/./qvzVS/oBx/vIN///../lyLw////"));
-		System.out.println(solution0071.simplifyPath("/a//b.."));
-		System.out.println(solution0071.simplifyPath("/a//b."));
+//		Solution0071 solution0071 = new Solution0071();
+//		System.out.println(solution0071.simplifyPath("/home/"));
+//		System.out.println(solution0071.simplifyPath("/home//foo/"));
+//		System.out.println(solution0071.simplifyPath("/home/user/Documents/../Pictures"));
+//		System.out.println(solution0071.simplifyPath("/../"));
+//		System.out.println(solution0071.simplifyPath("/a./"));
+//		System.out.println(solution0071.simplifyPath("/./"));
+//		System.out.println(solution0071.simplifyPath("/.../a/../b/c/../d/./"));
+//		System.out.println(solution0071.simplifyPath("b/../../c/"));
+//		System.out.println(solution0071.simplifyPath("/a//b////c/d//././/.."));
+//		System.out.println(solution0071.simplifyPath("/."));
+//		System.out.println(solution0071.simplifyPath("/.."));
+//		System.out.println(solution0071.simplifyPath("/a/.."));
+//		System.out.println(solution0071.simplifyPath("/..."));
+//		System.out.println(solution0071.simplifyPath("/hello../world"));
+//		System.out.println(solution0071.simplifyPath("/hello./world"));
+//		System.out.println(solution0071.simplifyPath("/./qvzVS/oBx/vIN///../lyLw////"));
+//		System.out.println(solution0071.simplifyPath("/a//b.."));
+//		System.out.println(solution0071.simplifyPath("/a//b."));
+//		Solution0155.MinStack minStack = new Solution0155.MinStack();
+//		minStack.push(0);
+//		minStack.push(1);
+//		minStack.push(0);
+//		System.out.println(minStack.getMin());
+//		minStack.pop();
+//		System.out.println(minStack.getMin());
+
 
 		System.out.println("Java R3");
 	}

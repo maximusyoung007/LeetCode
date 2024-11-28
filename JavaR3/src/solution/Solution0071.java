@@ -6,7 +6,7 @@ import java.util.Stack;
  * @author maximusyoung
  */
 public class Solution0071 {
-	public String simplifyPath(String path) {
+	public String simplifyPathOld(String path) {
 		/**
 		 * 始终以斜杠 '/' 开头。
 		 * 两个目录名之间必须只有一个斜杠 '/' 。
@@ -83,7 +83,6 @@ public class Solution0071 {
 						if (stack.size() > 0) {
 							stack.pop();
 						}
-//						stack.push(t3);
 						stack.push(c);
 					} else if (t2 != '.') {
 						if (t2 == '/') {
@@ -131,5 +130,36 @@ public class Solution0071 {
 		}
 
 		return res;
+	}
+
+	public String simplifyPath(String path) {
+		String[] paths = path.split("/");
+
+		Stack<String> stack = new Stack<>();
+
+		for (int i = 0; i < paths.length; i++) {
+			String t = paths[i];
+
+			if (".".equals(t)) {
+				continue;
+			} else if ("..".equals(t)) {
+				if (!stack.isEmpty()) {
+					stack.pop();
+				}
+			} else if (!"".equals(t)){
+				stack.push(t);
+			}
+		}
+
+		StringBuilder sb = new StringBuilder();
+		if (!stack.isEmpty()) {
+			for (String s : stack) {
+				sb = sb.append("/").append(s);
+			}
+		} else {
+			return "/";
+		}
+
+		return sb.toString();
 	}
 }
