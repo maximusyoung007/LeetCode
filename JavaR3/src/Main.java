@@ -2,6 +2,7 @@ import solution.Solution0020;
 import solution.Solution0056;
 import solution.Solution0057;
 import solution.Solution0071;
+import solution.Solution0150;
 import solution.Solution0155;
 import solution.Solution0452;
 
@@ -76,7 +77,13 @@ public class Main {
 //		minStack.pop();
 //		System.out.println(minStack.getMin());
 
+		Solution0150 solution0150 = new Solution0150();
+		System.out.println(solution0150.evalRPN(new String[]{"2", "1", "+", "3", "*"}));
+		System.out.println(solution0150.evalRPN(new String[]{"4","13","5","/","+"}));
+		System.out.println(solution0150.evalRPN(new String[]{"10","6","9","3","+","-11","*","/","*","17","+","5","+"}));
 
+//		String s1 = "-11";
+//		System.out.println(Integer.parseInt(s1));
 		System.out.println("Java R3");
 	}
 }
