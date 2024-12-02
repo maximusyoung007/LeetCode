@@ -12,7 +12,9 @@ public class Solution0224 {
 		Stack<Integer> stack = new Stack<>();
 
 		for (int i = 0; i < s.length(); i++) {
-			
+
 		}
+
+		return 0;
 	}
 }
