@@ -110,8 +110,8 @@ public class Main {
 		//[4,2,7,1,3,6,9]
 //		Integer[] root = new Integer[] {4,2,7,1,3,6,9};
 //		Integer[] root = new Integer[] {};
-		Integer[] root = new Integer[] {1,2};
-		TreeNode res = solution0226.invertTree(generateTree(root));
+//		Integer[] root = new Integer[] {1,2};
+//		TreeNode res = solution0226.invertTree(generateTree(root));
 
 
 //		Solution0224 solution0224 = new Solution0224();
@@ -121,7 +121,7 @@ public class Main {
 //		System.out.println(solution0224.calculate("(-1+(-4+5+2)-3)+(6+8)"));
 //		System.out.println(solution0224.calculate("2147483647"));
 //		System.out.println(solution0224.calculate("1-(     -2)"));
-		Solution0002 solution0002 = new Solution0002();
+//		Solution0002 solution0002 = new Solution0002();
 //		ListNode node1 = new ListNode(2);
 //		ListNode node2 = new ListNode(4);
 //		ListNode node3 = new ListNode(3);
