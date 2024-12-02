@@ -5,10 +5,16 @@ import solution.Solution0021;
 import solution.Solution0056;
 import solution.Solution0057;
 import solution.Solution0071;
+import solution.Solution0100;
 import solution.Solution0150;
 import solution.Solution0155;
 import solution.Solution0224;
+import solution.Solution0226;
 import solution.Solution0452;
+import solution.TreeNode;
+
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * @author maximusyoung
@@ -89,6 +95,25 @@ public class Main {
 //		String s1 = "-11";
 //		System.out.println(Integer.parseInt(s1));
 
+//		Solution0100 solution0100 = new Solution0100();
+//		Integer[] tree1 = new Integer[] {1,2,3};
+//		Integer[] tree2 = new Integer[] {1,2,3};
+//		Integer[] tree1 = new Integer[] {1,2};
+//		Integer[] tree2 = new Integer[] {1, null, 2};
+//		Integer[] tree1 = new Integer[] {1, 2, 1};
+//		Integer[] tree2 = new Integer[] {1, 1, 2};
+//
+//		System.out.println(solution0100.isSameTree(generateTree(tree1), generateTree(tree2)));
+
+		Solution0226 solution0226 = new Solution0226();
+//		Integer[] root = new Integer[] {2,1,3};
+		//[4,2,7,1,3,6,9]
+//		Integer[] root = new Integer[] {4,2,7,1,3,6,9};
+//		Integer[] root = new Integer[] {};
+		Integer[] root = new Integer[] {1,2};
+		TreeNode res = solution0226.invertTree(generateTree(root));
+
+
 //		Solution0224 solution0224 = new Solution0224();
 //		System.out.println(solution0224.calculate("1+1"));
 //		System.out.println(solution0224.calculate(" 2-1 + 2 "));
@@ -124,6 +149,34 @@ public class Main {
 		int[] l2 = new int[] {};
 		ListNode res = solution0021.mergeTwoLists(generateListNode(l1), generateListNode(l2));
 		System.out.println("Java R3");
+	}
+
+	public static TreeNode generateTree(Integer[] treeArr) {
+		TreeNode node = new TreeNode(treeArr[0]);
+
+		Queue<TreeNode> queue = new LinkedList<>();
+
+		queue.add(node);
+
+		int k = 1;
+		while (!queue.isEmpty()) {
+			TreeNode t = queue.poll();
+			if (k < treeArr.length && treeArr[k] != null) {
+				TreeNode l = new TreeNode(treeArr[k]);
+				t.left = l;
+				queue.add(l);
+			}
+			k++;
+
+			if (k < treeArr.length && treeArr[k] != null) {
+				TreeNode r = new TreeNode(treeArr[k]);
+				t.right = r;
+				queue.add(r);
+			}
+			k++;
+		}
+
+		return node;
 	}
 
 	public static ListNode generateListNode(int[] a) {
