@@ -1,9 +1,13 @@
+import solution.ListNode;
+import solution.Solution0002;
 import solution.Solution0020;
+import solution.Solution0021;
 import solution.Solution0056;
 import solution.Solution0057;
 import solution.Solution0071;
 import solution.Solution0150;
 import solution.Solution0155;
+import solution.Solution0224;
 import solution.Solution0452;
 
 /**
@@ -77,13 +81,59 @@ public class Main {
 //		minStack.pop();
 //		System.out.println(minStack.getMin());
 
-		Solution0150 solution0150 = new Solution0150();
-		System.out.println(solution0150.evalRPN(new String[]{"2", "1", "+", "3", "*"}));
-		System.out.println(solution0150.evalRPN(new String[]{"4","13","5","/","+"}));
-		System.out.println(solution0150.evalRPN(new String[]{"10","6","9","3","+","-11","*","/","*","17","+","5","+"}));
+//		Solution0150 solution0150 = new Solution0150();
+//		System.out.println(solution0150.evalRPN(new String[]{"2", "1", "+", "3", "*"}));
+//		System.out.println(solution0150.evalRPN(new String[]{"4","13","5","/","+"}));
+//		System.out.println(solution0150.evalRPN(new String[]{"10","6","9","3","+","-11","*","/","*","17","+","5","+"}));
 
 //		String s1 = "-11";
 //		System.out.println(Integer.parseInt(s1));
+
+//		Solution0224 solution0224 = new Solution0224();
+//		System.out.println(solution0224.calculate("1+1"));
+//		System.out.println(solution0224.calculate(" 2-1 + 2 "));
+//		System.out.println(solution0224.calculate("(1+(4+5+2)-3)+(6+8)"));
+//		System.out.println(solution0224.calculate("(-1+(-4+5+2)-3)+(6+8)"));
+//		System.out.println(solution0224.calculate("2147483647"));
+//		System.out.println(solution0224.calculate("1-(     -2)"));
+		Solution0002 solution0002 = new Solution0002();
+//		ListNode node1 = new ListNode(2);
+//		ListNode node2 = new ListNode(4);
+//		ListNode node3 = new ListNode(3);
+//		node1.next = node2;
+//		node2.next = node3;
+//		ListNode l1 = new ListNode(5);
+//		ListNode l2 = new ListNode(6);
+//		ListNode l3 = new ListNode(4);
+//		l1.next = l2;
+//		l2.next = l3;
+//		int[] a = new int[] {2,4,3};
+//		int[] b = new int[] {5,6,4};
+//		int[] a = new int[] {9,9,9,9,9,9,9};
+//		int[] b = new int[] {9,9,9,9};
+//		ListNode res = solution0002.addTwoNumbers(generateListNode(a), generateListNode(b));
+//		while (res != null) {
+//			System.out.println(res.val);
+//			res = res.next;
+//		}
+//
+		Solution0021 solution0021 = new Solution0021();
+//		int[] l1 = new int[] {1,2,4};
+//		int[] l2 = new int[] {1,3,4};
+		int[] l1 = new int[] {};
+		int[] l2 = new int[] {};
+		ListNode res = solution0021.mergeTwoLists(generateListNode(l1), generateListNode(l2));
 		System.out.println("Java R3");
+	}
+
+	public static ListNode generateListNode(int[] a) {
+		ListNode head = new ListNode(-1);
+		ListNode cur = head;
+		for (int i : a) {
+			cur.next = new ListNode(i);
+			cur = cur.next;
+		}
+
+		return head.next;
 	}
 }
