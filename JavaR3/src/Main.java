@@ -5,7 +5,9 @@ import solution.Solution0021;
 import solution.Solution0056;
 import solution.Solution0057;
 import solution.Solution0071;
+import solution.Solution0092;
 import solution.Solution0100;
+import solution.Solution0101;
 import solution.Solution0150;
 import solution.Solution0155;
 import solution.Solution0224;
@@ -142,12 +144,31 @@ public class Main {
 //			res = res.next;
 //		}
 //
-		Solution0021 solution0021 = new Solution0021();
+//		Solution0021 solution0021 = new Solution0021();
 //		int[] l1 = new int[] {1,2,4};
 //		int[] l2 = new int[] {1,3,4};
-		int[] l1 = new int[] {};
-		int[] l2 = new int[] {};
-		ListNode res = solution0021.mergeTwoLists(generateListNode(l1), generateListNode(l2));
+//		int[] l1 = new int[] {};
+//		int[] l2 = new int[] {};
+//		ListNode res = solution0021.mergeTwoLists(generateListNode(l1), generateListNode(l2));
+
+//		Solution0101 solution0101 = new Solution0101();
+		//root = [1,2,2,3,4,4,3]
+		//[1,2,2,null,3,null,3]
+//		Integer[] root = new Integer[] {1,2,2,3,4,4,3};
+//		Integer[] root = new Integer[] {1,2,2,null,3,null,3};
+//		Integer[] root = new Integer[] {1,0};
+
+//		System.out.println(solution0101.isSymmetric(generateTree(root)));
+
+		//[[7,null],[13,0],[11,4],[10,2],[1,0]]
+
+		//head = [1,2,3,4,5], left = 2, right = 4
+		//[1,4,3,2,5]
+		Solution0092 solution0092 = new Solution0092();
+		int[] head = new int[] {1,2,3,4,5};
+		int left = 2, right = 4;
+		solution0092.reverseBetween(generateListNode(head), left, right);
+
 		System.out.println("Java R3");
 	}
 
