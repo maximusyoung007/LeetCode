@@ -1,5 +1,6 @@
 import solution.ListNode;
 import solution.Solution0002;
+import solution.Solution0019;
 import solution.Solution0020;
 import solution.Solution0021;
 import solution.Solution0056;
@@ -164,10 +165,23 @@ public class Main {
 
 		//head = [1,2,3,4,5], left = 2, right = 4
 		//[1,4,3,2,5]
-		Solution0092 solution0092 = new Solution0092();
-		int[] head = new int[] {1,2,3,4,5};
-		int left = 2, right = 4;
-		solution0092.reverseBetween(generateListNode(head), left, right);
+//		Solution0092 solution0092 = new Solution0092();
+//		int[] head = new int[] {1,2,3,4,5};
+//		int left = 2, right = 4;
+//		int left = 1, right = 4;
+//		printLinkList(solution0092.reverseBetween(generateListNode(head), left, right));
+//		printLinkList(solution0092.reverseBetween(generateListNode(head), 1, 4));
+//		printLinkList(solution0092.reverseBetween(generateListNode(head), 1, 5));
+//		printLinkList(solution0092.reverseBetween(generateListNode(new int[]{5}), 1, 1));
+
+		Solution0019 solution0019 = new Solution0019();
+		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2,3,4,5}), 2));
+		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2,3,4,5}), 1));
+		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2,3,4,5}), 5));
+		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2,3,4,5}), 4));
+		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1}), 1));
+		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2}), 1));
+		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2}), 1));
 
 		System.out.println("Java R3");
 	}
@@ -209,5 +223,14 @@ public class Main {
 		}
 
 		return head.next;
+	}
+
+	public static void printLinkList(ListNode head) {
+		while (head != null) {
+			System.out.print(head.val);
+			head = head.next;
+		}
+
+		System.out.println();
 	}
 }
