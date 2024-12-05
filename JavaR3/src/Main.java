@@ -5,7 +5,9 @@ import solution.Solution0020;
 import solution.Solution0021;
 import solution.Solution0056;
 import solution.Solution0057;
+import solution.Solution0061;
 import solution.Solution0071;
+import solution.Solution0082;
 import solution.Solution0092;
 import solution.Solution0100;
 import solution.Solution0101;
@@ -174,15 +176,30 @@ public class Main {
 //		printLinkList(solution0092.reverseBetween(generateListNode(head), 1, 5));
 //		printLinkList(solution0092.reverseBetween(generateListNode(new int[]{5}), 1, 1));
 
-		Solution0019 solution0019 = new Solution0019();
-		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2,3,4,5}), 2));
-		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2,3,4,5}), 1));
-		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2,3,4,5}), 5));
-		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2,3,4,5}), 4));
-		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1}), 1));
-		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2}), 1));
-		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2}), 1));
+//		Solution0019 solution0019 = new Solution0019();
+//		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2,3,4,5}), 2));
+//		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2,3,4,5}), 1));
+//		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2,3,4,5}), 5));
+//		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2,3,4,5}), 4));
+//		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1}), 1));
+//		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2}), 1));
+//		printLinkList(solution0019.removeNthFromEnd(generateListNode(new int[] {1,2}), 1));
 
+//		Solution0082 solution0082 = new Solution0082();
+//		printLinkList(solution0082.deleteDuplicates(generateListNode(new int[] {1,2,3,3,4,5})));
+//		printLinkList(solution0082.deleteDuplicates(generateListNode(new int[] {1,2,3,3,4,4,5})));
+//		printLinkList(solution0082.deleteDuplicates(generateListNode(new int[] {1,1,1,2,3,3})));
+//		printLinkList(solution0082.deleteDuplicates(generateListNode(new int[] {1,1})));
+
+		Solution0061 solution0061 = new Solution0061();
+		printLinkList(solution0061.rotateRight(generateListNode(new int[] {1,2,3,4,5}), 1));
+		printLinkList(solution0061.rotateRight(generateListNode(new int[] {1,2,3,4,5}), 2));
+		printLinkList(solution0061.rotateRight(generateListNode(new int[] {1,2,3,4,5}), 3));
+		printLinkList(solution0061.rotateRight(generateListNode(new int[] {1,2,3,4,5}), 4));
+		printLinkList(solution0061.rotateRight(generateListNode(new int[] {1,2,3,4,5}), 5));
+		printLinkList(solution0061.rotateRight(generateListNode(new int[] {0,1,2}), 4));
+		printLinkList(solution0061.rotateRight(generateListNode(new int[] {0}), 4));
+		printLinkList(solution0061.rotateRight(generateListNode(new int[] {}), 4));
 		System.out.println("Java R3");
 	}
 
