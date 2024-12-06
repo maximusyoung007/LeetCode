@@ -8,6 +8,7 @@ import solution.Solution0057;
 import solution.Solution0061;
 import solution.Solution0071;
 import solution.Solution0082;
+import solution.Solution0086;
 import solution.Solution0092;
 import solution.Solution0100;
 import solution.Solution0101;
@@ -191,15 +192,24 @@ public class Main {
 //		printLinkList(solution0082.deleteDuplicates(generateListNode(new int[] {1,1,1,2,3,3})));
 //		printLinkList(solution0082.deleteDuplicates(generateListNode(new int[] {1,1})));
 
-		Solution0061 solution0061 = new Solution0061();
-		printLinkList(solution0061.rotateRight(generateListNode(new int[] {1,2,3,4,5}), 1));
-		printLinkList(solution0061.rotateRight(generateListNode(new int[] {1,2,3,4,5}), 2));
-		printLinkList(solution0061.rotateRight(generateListNode(new int[] {1,2,3,4,5}), 3));
-		printLinkList(solution0061.rotateRight(generateListNode(new int[] {1,2,3,4,5}), 4));
-		printLinkList(solution0061.rotateRight(generateListNode(new int[] {1,2,3,4,5}), 5));
-		printLinkList(solution0061.rotateRight(generateListNode(new int[] {0,1,2}), 4));
-		printLinkList(solution0061.rotateRight(generateListNode(new int[] {0}), 4));
-		printLinkList(solution0061.rotateRight(generateListNode(new int[] {}), 4));
+//		Solution0061 solution0061 = new Solution0061();
+//		printLinkList(solution0061.rotateRight(generateListNode(new int[] {1,2,3,4,5}), 1));
+//		printLinkList(solution0061.rotateRight(generateListNode(new int[] {1,2,3,4,5}), 2));
+//		printLinkList(solution0061.rotateRight(generateListNode(new int[] {1,2,3,4,5}), 3));
+//		printLinkList(solution0061.rotateRight(generateListNode(new int[] {1,2,3,4,5}), 4));
+//		printLinkList(solution0061.rotateRight(generateListNode(new int[] {1,2,3,4,5}), 5));
+//		printLinkList(solution0061.rotateRight(generateListNode(new int[] {0,1,2}), 4));
+//		printLinkList(solution0061.rotateRight(generateListNode(new int[] {0}), 4));
+
+		Solution0086 solution0086 = new Solution0086();
+
+		printLinkList(solution0086.partition(generateListNode(new int[] {1,4,3,2,5,2}), 3));
+		printLinkList(solution0086.partition(generateListNode(new int[] {1,4,3,2,5,2}), 2));
+		printLinkList(solution0086.partition(generateListNode(new int[] {1,4,3,2,5,2, 1}), 5));
+		printLinkList(solution0086.partition(generateListNode(new int[] {2,1}), 2));
+		printLinkList(solution0086.partition(generateListNode(new int[] {}), 2));
+		//[1,0,2,2,4,3,5]
+		printLinkList(solution0086.partition(generateListNode(new int[] {1,4,3,0,2,5,2}), 3));
 		System.out.println("Java R3");
 	}
 
