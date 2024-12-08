@@ -3,6 +3,7 @@ import solution.Solution0002;
 import solution.Solution0019;
 import solution.Solution0020;
 import solution.Solution0021;
+import solution.Solution0025;
 import solution.Solution0056;
 import solution.Solution0057;
 import solution.Solution0061;
@@ -111,7 +112,7 @@ public class Main {
 //
 //		System.out.println(solution0100.isSameTree(generateTree(tree1), generateTree(tree2)));
 
-		Solution0226 solution0226 = new Solution0226();
+//		Solution0226 solution0226 = new Solution0226();
 //		Integer[] root = new Integer[] {2,1,3};
 		//[4,2,7,1,3,6,9]
 //		Integer[] root = new Integer[] {4,2,7,1,3,6,9};
@@ -201,15 +202,23 @@ public class Main {
 //		printLinkList(solution0061.rotateRight(generateListNode(new int[] {0,1,2}), 4));
 //		printLinkList(solution0061.rotateRight(generateListNode(new int[] {0}), 4));
 
-		Solution0086 solution0086 = new Solution0086();
+//		Solution0086 solution0086 = new Solution0086();
 
-		printLinkList(solution0086.partition(generateListNode(new int[] {1,4,3,2,5,2}), 3));
-		printLinkList(solution0086.partition(generateListNode(new int[] {1,4,3,2,5,2}), 2));
-		printLinkList(solution0086.partition(generateListNode(new int[] {1,4,3,2,5,2, 1}), 5));
-		printLinkList(solution0086.partition(generateListNode(new int[] {2,1}), 2));
-		printLinkList(solution0086.partition(generateListNode(new int[] {}), 2));
+//		printLinkList(solution0086.partition(generateListNode(new int[] {1,4,3,2,5,2}), 3));
+//		printLinkList(solution0086.partition(generateListNode(new int[] {1,4,3,2,5,2}), 2));
+//		printLinkList(solution0086.partition(generateListNode(new int[] {1,4,3,2,5,2, 1}), 5));
+//		printLinkList(solution0086.partition(generateListNode(new int[] {2,1}), 2));
+//		printLinkList(solution0086.partition(generateListNode(new int[] {}), 2));
 		//[1,0,2,2,4,3,5]
-		printLinkList(solution0086.partition(generateListNode(new int[] {1,4,3,0,2,5,2}), 3));
+//		printLinkList(solution0086.partition(generateListNode(new int[] {1,4,3,0,2,5,2}), 3));
+		Solution0025 solution0025 = new Solution0025();
+		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1,2,3,4,5}), 3));
+		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1,2,3,4,5,6}), 3));
+		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1,2,3}), 3));
+		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1,2,3,4,5}), 2));
+		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1}), 1));
+		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1,2,3}), 1));
+
 		System.out.println("Java R3");
 	}
 
