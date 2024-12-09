@@ -1,3 +1,4 @@
+import com.sun.source.tree.Tree;
 import solution.ListNode;
 import solution.Solution0002;
 import solution.Solution0019;
@@ -13,6 +14,9 @@ import solution.Solution0086;
 import solution.Solution0092;
 import solution.Solution0100;
 import solution.Solution0101;
+import solution.Solution0105;
+import solution.Solution0106;
+import solution.Solution0114;
 import solution.Solution0150;
 import solution.Solution0155;
 import solution.Solution0224;
@@ -211,13 +215,34 @@ public class Main {
 //		printLinkList(solution0086.partition(generateListNode(new int[] {}), 2));
 		//[1,0,2,2,4,3,5]
 //		printLinkList(solution0086.partition(generateListNode(new int[] {1,4,3,0,2,5,2}), 3));
-		Solution0025 solution0025 = new Solution0025();
-		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1,2,3,4,5}), 3));
-		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1,2,3,4,5,6}), 3));
-		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1,2,3}), 3));
-		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1,2,3,4,5}), 2));
-		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1}), 1));
-		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1,2,3}), 1));
+//		Solution0025 solution0025 = new Solution0025();
+//		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1,2,3,4,5}), 3));
+//		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1,2,3,4,5,6}), 3));
+//		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1,2,3}), 3));
+//		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1,2,3,4,5}), 2));
+//		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1}), 1));
+//		printLinkList(solution0025.reverseKGroup(generateListNode(new int[] {1,2,3}), 1));
+
+//		Solution0105 solution0105 = new Solution0105();
+//		int[] preOrder = new int[] {3,9,20,15,7};
+//		int[] inOrder = new int[] {9,3,15,20,7};
+//		printTree(solution0105.buildTree(new int[] {3,9,20,15,7}, new int[] {9,3,15,20,7}));
+//		printTree(solution0105.buildTree(new int[] {-1}, new int[] {-1}));
+//		printTree(solution0105.buildTree(new int[] {1,2,3}, new int[] {3,2,1}));
+//		TreeNode res = solution0105.buildTree(new int[] {1,2,3}, new int[] {3,2,1});
+		//printTree(res);
+
+//		Solution0106 solution0106 = new Solution0106();
+		//[9,3,15,20,7], postorder = [9,15,7,20,3]
+//		printTree(solution0106.buildTree(new int[] {9,3,15,20,7}, new int[] {9,15,7,20,3}));
+//		printTree(solution0106.buildTree(new int[] {-1}, new int[] {-1}));
+//		printTree(solution0106.buildTree(new int[] {3,2,1}, new int[] {3,2,1}));
+
+		//[1,2,5,3,4,null,6]
+		Solution0114 solution0114 = new Solution0114();
+//		TreeNode root = generateTree(new Integer[] {1,2,5,3,4,null,6});
+		TreeNode root = generateTree(new Integer[] {0});
+		solution0114.flatten(root);
 
 		System.out.println("Java R3");
 	}
@@ -267,6 +292,23 @@ public class Main {
 			head = head.next;
 		}
 
+		System.out.println();
+	}
+
+	public static void printTree(TreeNode treeNode) {
+		Queue<TreeNode> queue = new LinkedList<>();
+		queue.add(treeNode);
+
+		while (!queue.isEmpty()) {
+			TreeNode t = queue.poll();
+			if (t != null) {
+				System.out.print(t.val + " ");
+				queue.add(t.left);
+				queue.add(t.right);
+			} else {
+				System.out.print("null ");
+			}
+		}
 		System.out.println();
 	}
 }
