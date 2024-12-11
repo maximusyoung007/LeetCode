@@ -18,6 +18,8 @@ import solution.Solution0105;
 import solution.Solution0106;
 import solution.Solution0112;
 import solution.Solution0114;
+import solution.Solution0124;
+import solution.Solution0129;
 import solution.Solution0150;
 import solution.Solution0155;
 import solution.Solution0224;
@@ -245,10 +247,21 @@ public class Main {
 //		TreeNode root = generateTree(new Integer[] {0});
 //		solution0114.flatten(root);
 
-		Solution0112 solution0112 = new Solution0112();
-		TreeNode root = generateTree(new Integer[] {5,4,8,11,null,13,4,7,2,null,null,null,1});
-		System.out.println(solution0112.hasPathSum(root, 22));
-		System.out.println(solution0112.hasPathSum(generateTree(new Integer[]{1, 2, 3}), 5));
+//		Solution0112 solution0112 = new Solution0112();
+//		TreeNode root = generateTree(new Integer[] {5,4,8,11,null,13,4,7,2,null,null,null,1});
+//		System.out.println(solution0112.hasPathSum(root, 22));
+//		System.out.println(solution0112.hasPathSum(generateTree(new Integer[]{1, 2, 3}), 5));
+
+//		Solution0129 solution0129 = new Solution0129();
+		//System.out.println(solution0129.sumNumbers(generateTree(new Integer[]{4, 9, 0, 5, 1})));
+//		System.out.println(solution0129.sumNumbers(generateTree(new Integer[]{1})));
+
+		Solution0124 solution0124 = new Solution0124();
+		System.out.println(solution0124.maxPathSum(generateTree(new Integer[]{1, 2, 3})));
+		//[-10,9,20,null,null,15,7]
+		System.out.println(solution0124.maxPathSum(generateTree(new Integer[]{-10,9,20,null,null,15,7})));
+		//[5,4,8,11,null,13,4,7,2,null,null,null,1]
+		System.out.println(solution0124.maxPathSum(generateTree(new Integer[]{5,4,8,11,null,13,4,7,2,null,null,null,1})));
 
 		System.out.println("Java R3");
 	}
