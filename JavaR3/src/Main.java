@@ -14,6 +14,7 @@ import solution.Solution0086;
 import solution.Solution0092;
 import solution.Solution0100;
 import solution.Solution0101;
+import solution.Solution0102;
 import solution.Solution0105;
 import solution.Solution0106;
 import solution.Solution0112;
@@ -28,6 +29,7 @@ import solution.Solution0224;
 import solution.Solution0226;
 import solution.Solution0236;
 import solution.Solution0452;
+import solution.Solution0637;
 import solution.TreeNode;
 
 import java.util.LinkedList;
@@ -279,12 +281,21 @@ public class Main {
 //		System.out.println(solution0236.lowestCommonAncestor(
 //			generateTree(new Integer[]{3, 5, 1, 6, 2, 0, 8, null, null, 7, 4}), new TreeNode(5), new TreeNode(4)).val);
 
-		Solution0199 solution0199 = new Solution0199();
-		System.out.println(solution0199.rightSideView(generateTree(new Integer[]{1, 2, 3, null, 5, null, 4})));
+//		Solution0199 solution0199 = new Solution0199();
+//		System.out.println(solution0199.rightSideView(generateTree(new Integer[]{1, 2, 3, null, 5, null, 4})));
 		//1,2,3,4,null,null,null,5
-		System.out.println(solution0199.rightSideView(generateTree(new Integer[]{1,2,3,4,null,null,null,5})));
-		System.out.println(solution0199.rightSideView(generateTree(new Integer[]{1,null, 3})));
-		System.out.println(solution0199.rightSideView(generateTree(new Integer[]{})));
+//		System.out.println(solution0199.rightSideView(generateTree(new Integer[]{1,2,3,4,null,null,null,5})));
+//		System.out.println(solution0199.rightSideView(generateTree(new Integer[]{1,null, 3})));
+//		System.out.println(solution0199.rightSideView(generateTree(new Integer[]{})));
+
+//		Solution0637 solution0637 = new Solution0637();
+//		System.out.println(solution0637.averageOfLevels(generateTree(new Integer[]{3, 9, 20, null, null, 15, 7})));
+//		System.out.println(solution0637.averageOfLevels(generateTree(new Integer[]{3,9,20,15,7})));
+
+		Solution0102 solution0102 = new Solution0102();
+		System.out.println(solution0102.levelOrder(generateTree(new Integer[]{3, 9, 20, null, null, 15, 7})));
+		System.out.println(solution0102.levelOrder(generateTree(new Integer[]{1})));
+		System.out.println(solution0102.levelOrder(generateTree(new Integer[]{})));
 
 		System.out.println("Java R3");
 	}
