@@ -2,33 +2,41 @@ package solution;
 
 public class Solution0236 {
 	public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-		return dfs(root, p, q);
-	}
+		/**
+		 * node是最近公共祖先有3种情况
+		 * 1、p，q分别位于root 左右两侧
+		 * 2、p=root, q位于root左子树或右子树
+		 * 3、q=root, p位于root左子树或右子树
+		 */
 
-	public TreeNode dfs(TreeNode node, TreeNode p, TreeNode q) {
-		if (node == null) {
+		if (root == null) {
 			return null;
-		}
-		if (find(node, p) && find(node, q)) {
-			return node;
-		}
+		} else {
 
-		TreeNode left = dfs(node.left, p, q);
-		TreeNode right = dfs(node.right, p, q);
-		return left != null ? left : right;
+			if (root.val == p.val || root.val == q.val) {
+				return root;
+			}
+
+			TreeNode leftNode = lowestCommonAncestor(root.left, p, q);
+			TreeNode rightNode = lowestCommonAncestor(root.right, p, q);
+
+			//leftNode和rightNode都为空，则没有找到
+			if (leftNode == null && rightNode == null) {
+				return null;
+			}
+
+			//p,q分别位于root两侧
+			if (leftNode != null && rightNode != null) {
+				return root;
+			}
+
+			//leftNode和rightNode其中一个为空，那么p,q都在左或者右子树,那么最近公共祖先就是子树的第一个节点
+			if (leftNode != null) {
+				return leftNode;
+			}
+            return rightNode;
+        }
+
 	}
 
-	public TreeNode find(TreeNode node, TreeNode target) {
-		if (node == null) {
-			return null;
-		}
-
-		if (node.val == target.val) {
-			return node;
-		}
-
-
-
-		return find(node.left, target) || find(node.right, target);
-	}
 }

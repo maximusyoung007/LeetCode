@@ -22,6 +22,7 @@ import solution.Solution0124;
 import solution.Solution0129;
 import solution.Solution0150;
 import solution.Solution0155;
+import solution.Solution0199;
 import solution.Solution0222;
 import solution.Solution0224;
 import solution.Solution0226;
@@ -271,12 +272,19 @@ public class Main {
 //		System.out.println(s
 //		olution0222.countNodes(generateTree(new Integer[]{1})));
 
-		Solution0236 solution0236 = new Solution0236();
-		//System.out.println(solution0236.lowestCommonAncestor(
-		//	generateTree(new Integer[]{3, 5, 1, 6, 2, 0, 8, null, null, 7, 4}), new TreeNode(5), new TreeNode(1)).val);
+//		Solution0236 solution0236 = new Solution0236();
+//		System.out.println(solution0236.lowestCommonAncestor(
+//			generateTree(new Integer[]{3, 5, 1, 6, 2, 0, 8, null, null, 7, 4}), new TreeNode(5), new TreeNode(1)).val);
+//
+//		System.out.println(solution0236.lowestCommonAncestor(
+//			generateTree(new Integer[]{3, 5, 1, 6, 2, 0, 8, null, null, 7, 4}), new TreeNode(5), new TreeNode(4)).val);
 
-		System.out.println(solution0236.lowestCommonAncestor(
-			generateTree(new Integer[]{3, 5, 1, 6, 2, 0, 8, null, null, 7, 4}), new TreeNode(5), new TreeNode(4)).val);
+		Solution0199 solution0199 = new Solution0199();
+		System.out.println(solution0199.rightSideView(generateTree(new Integer[]{1, 2, 3, null, 5, null, 4})));
+		//1,2,3,4,null,null,null,5
+		System.out.println(solution0199.rightSideView(generateTree(new Integer[]{1,2,3,4,null,null,null,5})));
+		System.out.println(solution0199.rightSideView(generateTree(new Integer[]{1,null, 3})));
+		System.out.println(solution0199.rightSideView(generateTree(new Integer[]{})));
 
 		System.out.println("Java R3");
 	}
