@@ -12,6 +12,7 @@ import solution.Solution0071;
 import solution.Solution0082;
 import solution.Solution0086;
 import solution.Solution0092;
+import solution.Solution0098;
 import solution.Solution0100;
 import solution.Solution0101;
 import solution.Solution0102;
@@ -316,10 +317,14 @@ public class Main {
 //		//[236,104,701,null,227,null,911]
 //		System.out.println(solution0530.getMinimumDifference2(generateTree(new Integer[]{236,104,701,null,227,null,911})));
 
-		Solution0230 solution0230 = new Solution0230();
-		System.out.println(solution0230.kthSmallest(generateTree(new Integer[]{3, 1, 4, null, 2}), 1));
-		System.out.println(solution0230.kthSmallest(generateTree(new Integer[]{5,3,6,2,4,null,null,1}), 3));
+//		Solution0230 solution0230 = new Solution0230();
+//		System.out.println(solution0230.kthSmallest(generateTree(new Integer[]{3, 1, 4, null, 2}), 1));
+//		System.out.println(solution0230.kthSmallest(generateTree(new Integer[]{5,3,6,2,4,null,null,1}), 3));
 		//5,3,6,2,4,null,null,1], k = 3
+		Solution0098 solution0098 = new Solution0098();
+		System.out.println(solution0098.isValidBST(generateTree(new Integer[]{2, 1, 3})));
+		System.out.println(solution0098.isValidBST(generateTree(new Integer[]{5,1,4,null,null,3,6})));
+
 		System.out.println("Java R3");
 	}
 
