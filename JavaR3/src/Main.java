@@ -15,6 +15,7 @@ import solution.Solution0092;
 import solution.Solution0100;
 import solution.Solution0101;
 import solution.Solution0102;
+import solution.Solution0103;
 import solution.Solution0105;
 import solution.Solution0106;
 import solution.Solution0112;
@@ -27,8 +28,10 @@ import solution.Solution0199;
 import solution.Solution0222;
 import solution.Solution0224;
 import solution.Solution0226;
+import solution.Solution0230;
 import solution.Solution0236;
 import solution.Solution0452;
+import solution.Solution0530;
 import solution.Solution0637;
 import solution.TreeNode;
 
@@ -292,11 +295,31 @@ public class Main {
 //		System.out.println(solution0637.averageOfLevels(generateTree(new Integer[]{3, 9, 20, null, null, 15, 7})));
 //		System.out.println(solution0637.averageOfLevels(generateTree(new Integer[]{3,9,20,15,7})));
 
-		Solution0102 solution0102 = new Solution0102();
-		System.out.println(solution0102.levelOrder(generateTree(new Integer[]{3, 9, 20, null, null, 15, 7})));
-		System.out.println(solution0102.levelOrder(generateTree(new Integer[]{1})));
-		System.out.println(solution0102.levelOrder(generateTree(new Integer[]{})));
+//		Solution0102 solution0102 = new Solution0102();
+//		System.out.println(solution0102.levelOrder(generateTree(new Integer[]{3, 9, 20, null, null, 15, 7})));
+//		System.out.println(solution0102.levelOrder(generateTree(new Integer[]{1})));
+//		System.out.println(solution0102.levelOrder(generateTree(new Integer[]{})));
 
+//		Solution0103 solution0103 = new Solution0103();
+//		System.out.println(solution0103.zigzagLevelOrder(generateTree(new Integer[]{3, 9, 20, null, null, 15, 7})));
+
+//		Solution0530 solution0530 = new Solution0530();
+//		System.out.println(solution0530.getMinimumDifference(generateTree(new Integer[]{4, 2, 6, 1, 3})));
+//		//1,0,48,null,null,12,49
+//		System.out.println(solution0530.getMinimumDifference(generateTree(new Integer[]{1,0,48,null,null,12,49})));
+//		//[236,104,701,null,227,null,911]
+//		System.out.println(solution0530.getMinimumDifference(generateTree(new Integer[]{236,104,701,null,227,null,911})));
+//
+//		System.out.println(solution0530.getMinimumDifference2(generateTree(new Integer[]{4, 2, 6, 1, 3})));
+//		//1,0,48,null,null,12,49
+//		System.out.println(solution0530.getMinimumDifference2(generateTree(new Integer[]{1,0,48,null,null,12,49})));
+//		//[236,104,701,null,227,null,911]
+//		System.out.println(solution0530.getMinimumDifference2(generateTree(new Integer[]{236,104,701,null,227,null,911})));
+
+		Solution0230 solution0230 = new Solution0230();
+		System.out.println(solution0230.kthSmallest(generateTree(new Integer[]{3, 1, 4, null, 2}), 1));
+		System.out.println(solution0230.kthSmallest(generateTree(new Integer[]{5,3,6,2,4,null,null,1}), 3));
+		//5,3,6,2,4,null,null,1], k = 3
 		System.out.println("Java R3");
 	}
 
