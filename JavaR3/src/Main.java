@@ -23,9 +23,11 @@ import solution.Solution0112;
 import solution.Solution0114;
 import solution.Solution0124;
 import solution.Solution0129;
+import solution.Solution0130;
 import solution.Solution0150;
 import solution.Solution0155;
 import solution.Solution0199;
+import solution.Solution0200;
 import solution.Solution0222;
 import solution.Solution0224;
 import solution.Solution0226;
@@ -321,9 +323,39 @@ public class Main {
 //		System.out.println(solution0230.kthSmallest(generateTree(new Integer[]{3, 1, 4, null, 2}), 1));
 //		System.out.println(solution0230.kthSmallest(generateTree(new Integer[]{5,3,6,2,4,null,null,1}), 3));
 		//5,3,6,2,4,null,null,1], k = 3
-		Solution0098 solution0098 = new Solution0098();
-		System.out.println(solution0098.isValidBST(generateTree(new Integer[]{2, 1, 3})));
-		System.out.println(solution0098.isValidBST(generateTree(new Integer[]{5,1,4,null,null,3,6})));
+//		Solution0098 solution0098 = new Solution0098();
+//		System.out.println(solution0098.isValidBST(generateTree(new Integer[]{2, 1, 3})));
+//		System.out.println(solution0098.isValidBST(generateTree(new Integer[]{5,1,4,null,null,3,6})));
+
+		//grid = [
+		//  ["1","1","1","1","0"],
+		//  ["1","1","0","1","0"],
+		//  ["1","1","0","0","0"],
+		//  ["0","0","0","0","0"]
+
+//		Solution0200 solution0200 = new Solution0200();
+//		char [][] grid = new char[][]  {
+//			{'1','1','1','1','0'},
+//			{'1','1','0','1','0'},
+//			{'1','1','0','0','0'},
+//			{'0','0','0','0','0'}};
+//		char [][] grid = new char[][]{
+//			{'1', '1', '0', '0', '0'},
+//			{'1', '1', '0', '0', '0'},
+//			{'0', '0', '1', '0', '0'},
+//			{'0', '0', '0', '1', '1'}
+//		};
+//		char[][] grid = new char[][] {{'1'}};
+//		char[][] grid = new char[][] {{'0'}};
+//		System.out.println(solution0200.numIslands(grid));
+
+//		Solution0130 solution0130 = new Solution0130();
+//		char[][] board = new char[][] {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
+//		char[][] board = new char[][] {{'O','O','O'},{'O','O','O'},{'O','O','O'}};
+//		solution0130.solve(new char[][] {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}});
+//		solution0130.solve(board);
+
+
 
 		System.out.println("Java R3");
 	}

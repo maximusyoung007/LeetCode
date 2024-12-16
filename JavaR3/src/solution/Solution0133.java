@@ -38,13 +38,13 @@ public class Solution0133 {
 		Node newNode;
 		if (!map.containsKey(node.val)) {
 			newNode = new Node(node.val);
+			map.put(node.val, newNode);
 			List<Node> newNeighbor = new ArrayList<>();
 			List<Node> neighbor = node.neighbors;
 			for (Node node1 : neighbor) {
 				newNeighbor.add(dfs(node1));
 			}
 			newNode.neighbors = newNeighbor;
-			map.put(node.val, newNode);
 		} else {
 			newNode = map.get(node.val);
 		}
