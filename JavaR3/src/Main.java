@@ -1,6 +1,7 @@
 import com.sun.source.tree.Tree;
 import solution.ListNode;
 import solution.Solution0002;
+import solution.Solution0017;
 import solution.Solution0019;
 import solution.Solution0020;
 import solution.Solution0021;
@@ -402,10 +403,15 @@ public class Main {
 //		}
 //		System.out.println(solution0207.findOrder(2, new int[][]{}));
 		//1[[1,0],[1,2],[0,1]]
-		int[] res = solution0207.findOrder(3, new int[][]{{1, 0}, {1,2}, {0,1}});
-		for (int re : res) {
-			System.out.println(re);
-		}
+//		int[] res = solution0207.findOrder(3, new int[][]{{1, 0}, {1,2}, {0,1}});
+//		for (int re : res) {
+//			System.out.println(re);
+//		}
+
+		Solution0017 solution0017 = new Solution0017();
+		System.out.println(solution0017.letterCombinations("23"));
+		System.out.println(solution0017.letterCombinations(""));
+		System.out.println(solution0017.letterCombinations("2"));
 
 		System.out.println("Java R3");
 	}
