@@ -28,17 +28,23 @@ import solution.Solution0150;
 import solution.Solution0155;
 import solution.Solution0199;
 import solution.Solution0200;
+import solution.Solution0207;
+import solution.Solution0210;
 import solution.Solution0222;
 import solution.Solution0224;
 import solution.Solution0226;
 import solution.Solution0230;
 import solution.Solution0236;
+import solution.Solution0399;
 import solution.Solution0452;
 import solution.Solution0530;
 import solution.Solution0637;
 import solution.TreeNode;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 /**
@@ -355,9 +361,66 @@ public class Main {
 //		solution0130.solve(new char[][] {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}});
 //		solution0130.solve(board);
 
+		//equations = [["a","b"],["b","c"]], values = [2.0,3.0], queries = [["a","c"],["b","a"],["a","e"],["a","a"],["x","x"]]
+		//equations = [["a","b"],["b","c"],["bc","cd"]], values = [1.5,2.5,5.0], queries = [["a","c"],["c","b"],["bc","cd"],["cd","bc"]]
+//		String[][] equations = new String[][] {
+//			{"a", "b"},
+//			{"b", "c"},
+//			{"bc", "cd"}
+//		};
+//
+//		double[] values = new double[] {1.5,2.5,5.0};
+//		String [][] queries = new String[][] {
+//			{"a","c"},{"c","b"},{"bc","cd"},{"cd","bc"}
+//		};
+//		Solution0399 solution0399 = new Solution0399();
+//		double[] res = solution0399.calcEquation(arr2List(equations), values, arr2List(queries));
+//		for (double re : res) {
+//			System.out.print(re + " ");
+//		}
+//		System.out.println();
 
+//		Solution0207 solution0207 = new Solution0207();
+////numCourses = 2, prerequisites = [[1,0]]
+//		System.out.println(solution0207.canFinish(2, new int[][]{{1, 0}}));
+//		System.out.println(solution0207.canFinish(2, new int[][]{{1, 0}, {0,1}}));
+//		//[[1,4],[2,4],[3,1],[3,2]]
+//		System.out.println(solution0207.canFinish(5, new int[][]{{1, 4}, {2, 4}, {3, 1}, {3, 2}}));
+//		System.out.println(solution0207.canFinish(2, new int[][]{}));
+
+		Solution0210 solution0207 = new Solution0210();
+//numCourses = 2, prerequisites = [[1,0]]
+//		int[] res = solution0207.findOrder(2, new int[][]{{1, 0}});
+//		for (int re : res) {
+//			System.out.println(re);
+//		}
+//		System.out.println(solution0207.findOrder(2, new int[][]{{1, 0}, {0,1}}));
+		//[[1,4],[2,4],[3,1],[3,2]]
+//		int[] res2 = solution0207.findOrder(5, new int[][]{{1, 4}, {2, 4}, {3, 1}, {3, 2}});
+//		for (int i : res2) {
+//			System.out.println(i);
+//		}
+//		System.out.println(solution0207.findOrder(2, new int[][]{}));
+		//1[[1,0],[1,2],[0,1]]
+		int[] res = solution0207.findOrder(3, new int[][]{{1, 0}, {1,2}, {0,1}});
+		for (int re : res) {
+			System.out.println(re);
+		}
 
 		System.out.println("Java R3");
+	}
+
+	public static List<List<String>> arr2List(String[][] arr) {
+		List<List<String>> res = new ArrayList<>();
+		for (String[] strings : arr) {
+			List<String> rs = new ArrayList<>();
+			for (String string : strings) {
+				rs.add(string);
+			}
+			res.add(rs);
+		}
+
+		return res;
 	}
 
 	public static TreeNode generateTree(Integer[] treeArr) {
