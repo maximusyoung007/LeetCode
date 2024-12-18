@@ -422,8 +422,12 @@ public class Main {
 		//start = "AACCGGTT", end = "AACCGGTA", bank = ["AACCGGTA"]
 //		System.out.println(solution0433.minMutation("AACCGGTT", "AACCGGTA", new String[]{"AACCGGTA"}));
 //		System.out.println(solution0433.minMutation("AACCGGTT", "AACCGGTA", new String[]{}));
-		System.out.println(solution0433.minMutation("AAAAAAAA", "CCCCCCCC", new String[]{"AAAAAAAA", "AAAAAAAC", "AAAAAACC", "AAAAACCC",
-			"AAAACCCC", "AACACCCC", "ACCACCCC", "ACCCCCCC", "CCCCCCCA"}));
+//		System.out.println(solution0433.minMutation("AAAAAAAA", "CCCCCCCC",
+//			new String[]{"AAAAAAAA", "AAAAAAAC", "AAAAAACC", "AAAAACCC",
+//			"AAAACCCC", "AACACCCC", "ACCACCCC", "ACCCCCCC", "CCCCCCCA"}));
+		System.out.println(solution0433.minMutation("AAAACCCC", "CCCCCCCC", new String[]{
+			"AAAACCCA", "AAACCCCA", "AACCCCCA", "AACCCCCC", "ACCCCCCC", "CCCCCCCC", "AAACCCCC", "AACCCCCC"
+		}));
 		System.out.println("Java R3");
 	}
 

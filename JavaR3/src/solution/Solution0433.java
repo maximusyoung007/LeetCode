@@ -7,23 +7,21 @@ import java.util.Set;
 
 public class Solution0433 {
 	public int minMutation(String startGene, String endGene, String[] bank) {
-//		if (judge(startGene, endGene)) {
-//			return 1;
-//		}
 
 		Set<String> exist = new HashSet<>();
 		Queue<String> queue = new LinkedList<>();
 		queue.add(startGene);
+		exist.add(startGene);
 
 		int count = 1;
 		int k = 1;
 		while (!queue.isEmpty()) {
+			int tk = 0;
 			for (int i = 0; i < k; i++) {
 				String gene = queue.poll();
-				int tk = 0;
 
 				for (String s : bank) {
-					//广度优先
+					//广度优先，一层就是bank所有的值，然后一层一层往后移动
 					if (!exist.contains(s) && judge(gene, s)) {
 						queue.add(s);
 						exist.add(s);
@@ -33,9 +31,9 @@ public class Solution0433 {
 						}
 					}
 				}
-
-				k = tk;
 			}
+			//一层有k个
+			k = tk;
 			//一层全部遍历完了，添加层数
 			count++;
 		}
