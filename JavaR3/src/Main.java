@@ -37,6 +37,7 @@ import solution.Solution0226;
 import solution.Solution0230;
 import solution.Solution0236;
 import solution.Solution0399;
+import solution.Solution0433;
 import solution.Solution0452;
 import solution.Solution0530;
 import solution.Solution0637;
@@ -408,11 +409,21 @@ public class Main {
 //			System.out.println(re);
 //		}
 
-		Solution0017 solution0017 = new Solution0017();
-		System.out.println(solution0017.letterCombinations("23"));
-		System.out.println(solution0017.letterCombinations(""));
-		System.out.println(solution0017.letterCombinations("2"));
+//		Solution0017 solution0017 = new Solution0017();
+//		System.out.println(solution0017.letterCombinations("23"));
+//		System.out.println(solution0017.letterCombinations(""));
+//		System.out.println(solution0017.letterCombinations("2"));
 
+		//start = "AACCGGTT", end = "AAACGGTA", bank = ["AACCGGTA","AACCGCTA","AAACGGTA"]
+		Solution0433 solution0433 = new Solution0433();
+//		System.out.println(solution0433.minMutation("AACCGGTT", "AAACGGTA", new String[]{"AACCGGTA", "AACCGCTA", "AAACGGTA"}));
+		//start = "AAAAACCC", end = "AACCCCCC", bank = ["AAAACCCC","AAACCCCC","AACCCCCC"]
+//		System.out.println(solution0433.minMutation("AAAAACCC", "AACCCCCC", new String[]{"AAAACCCC", "AAACCCCC", "AACCCCCC"}));
+		//start = "AACCGGTT", end = "AACCGGTA", bank = ["AACCGGTA"]
+//		System.out.println(solution0433.minMutation("AACCGGTT", "AACCGGTA", new String[]{"AACCGGTA"}));
+//		System.out.println(solution0433.minMutation("AACCGGTT", "AACCGGTA", new String[]{}));
+		System.out.println(solution0433.minMutation("AAAAAAAA", "CCCCCCCC", new String[]{"AAAAAAAA", "AAAAAAAC", "AAAAAACC", "AAAAACCC",
+			"AAAACCCC", "AACACCCC", "ACCACCCC", "ACCCCCCC", "CCCCCCCA"}));
 		System.out.println("Java R3");
 	}
 
