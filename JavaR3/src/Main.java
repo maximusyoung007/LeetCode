@@ -41,6 +41,7 @@ import solution.Solution0433;
 import solution.Solution0452;
 import solution.Solution0530;
 import solution.Solution0637;
+import solution.Solution0909;
 import solution.TreeNode;
 
 import java.util.ArrayList;
@@ -425,9 +426,18 @@ public class Main {
 //		System.out.println(solution0433.minMutation("AAAAAAAA", "CCCCCCCC",
 //			new String[]{"AAAAAAAA", "AAAAAAAC", "AAAAAACC", "AAAAACCC",
 //			"AAAACCCC", "AACACCCC", "ACCACCCC", "ACCCCCCC", "CCCCCCCA"}));
-		System.out.println(solution0433.minMutation("AAAACCCC", "CCCCCCCC", new String[]{
-			"AAAACCCA", "AAACCCCA", "AACCCCCA", "AACCCCCC", "ACCCCCCC", "CCCCCCCC", "AAACCCCC", "AACCCCCC"
-		}));
+//		System.out.println(solution0433.minMutation("AAAACCCC", "CCCCCCCC", new String[]{
+//			"AAAACCCA", "AAACCCCA", "AACCCCCA", "AACCCCCC", "ACCCCCCC", "CCCCCCCC", "AAACCCCC", "AACCCCCC"
+//		}));
+		Solution0909 solution0909 = new Solution0909();
+//		int[][] board = new int[][] {{-1,-1,-1,-1,-1,-1},{-1,-1,-1,-1,-1,-1},
+//			{-1,-1,-1,-1,-1,-1},{-1,35,-1,-1,13,-1},{-1,-1,-1,-1,-1,-1},{-1,15,-1,-1,-1,-1}};
+//		int[][] board = new int[][] {{-1,-1}, {-1,3}};
+//		int[][] board = new int[][] {{1,1,-1},{1,1,1},{-1,1,1}};
+
+		int[][] board = new int[][] {{-1,-1,19,10,-1},{2,-1,-1,6,-1},{-1,17,-1,19,-1},{25,-1,20,-1,-1},{-1,-1,-1,-1,15}};
+		System.out.println(solution0909.snakesAndLadders(board));
+
 		System.out.println("Java R3");
 	}
 
