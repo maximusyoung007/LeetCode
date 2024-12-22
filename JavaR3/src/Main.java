@@ -5,11 +5,17 @@ import solution.Solution0017;
 import solution.Solution0019;
 import solution.Solution0020;
 import solution.Solution0021;
+import solution.Solution0022;
 import solution.Solution0025;
+import solution.Solution0039;
+import solution.Solution0046;
+import solution.Solution0052;
 import solution.Solution0056;
 import solution.Solution0057;
 import solution.Solution0061;
 import solution.Solution0071;
+import solution.Solution0077;
+import solution.Solution0079;
 import solution.Solution0082;
 import solution.Solution0086;
 import solution.Solution0092;
@@ -429,14 +435,51 @@ public class Main {
 //		System.out.println(solution0433.minMutation("AAAACCCC", "CCCCCCCC", new String[]{
 //			"AAAACCCA", "AAACCCCA", "AACCCCCA", "AACCCCCC", "ACCCCCCC", "CCCCCCCC", "AAACCCCC", "AACCCCCC"
 //		}));
-		Solution0909 solution0909 = new Solution0909();
+//		Solution0909 solution0909 = new Solution0909();
 //		int[][] board = new int[][] {{-1,-1,-1,-1,-1,-1},{-1,-1,-1,-1,-1,-1},
 //			{-1,-1,-1,-1,-1,-1},{-1,35,-1,-1,13,-1},{-1,-1,-1,-1,-1,-1},{-1,15,-1,-1,-1,-1}};
 //		int[][] board = new int[][] {{-1,-1}, {-1,3}};
 //		int[][] board = new int[][] {{1,1,-1},{1,1,1},{-1,1,1}};
 
-		int[][] board = new int[][] {{-1,-1,19,10,-1},{2,-1,-1,6,-1},{-1,17,-1,19,-1},{25,-1,20,-1,-1},{-1,-1,-1,-1,15}};
-		System.out.println(solution0909.snakesAndLadders(board));
+//		int[][] board = new int[][] {{-1,-1,19,10,-1},{2,-1,-1,6,-1},{-1,17,-1,19,-1},{25,-1,20,-1,-1},{-1,-1,-1,-1,15}};
+//		System.out.println(solution0909.snakesAndLadders(board));
+
+//		Solution0077 solution0077 = new Solution0077();
+//		System.out.println(solution0077.combine(4, 2));
+//		System.out.println(solution0077.combine(1, 1));
+
+//		Solution0046 solution0046 = new Solution0046();
+//		System.out.println(solution0046.permute(new int[]{1, 2, 3}));
+//		System.out.println(solution0046.permute(new int[]{0,1}));
+//		Solution0039 solution0039 = new Solution0039();
+//		System.out.println(solution0039.combinationSum(new int[]{2, 3, 6, 7}, 7));
+//		System.out.println(solution0039.combinationSum(new int[]{2, 3,5}, 8));
+//		System.out.println(solution0039.combinationSum(new int[]{2}, 1));
+
+//		Solution0022 solution0022 = new Solution0022();
+//		System.out.println(solution0022.generateParenthesis(3));
+//		System.out.println(solution0022.generateParenthesis(1));
+
+		Solution0079 solution0079 = new Solution0079();
+//		char[][] board = new char[][] {
+//			{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}
+//			{'A','B','C','E'},{'S','F','E','S'},{'A','D','E','E'}
+//		};
+//		System.out.println(solution0079.exist(board, "ABCCED"));
+//		System.out.println(solution0079.exist(board, "SEE"));
+//		System.out.println(solution0079.exist(board, "ABCB"));
+//		System.out.println(solution0079.exist(board, "ABCESEEEFS"));
+//		char[][] board = new char[][] {
+//			{'a', 'b'}, {'c', 'd'}
+//		};
+//		System.out.println(solution0079.exist(board, "acdb"));
+		char[][] board = new char[][] {
+			{'a'}
+		};
+		System.out.println(solution0079.exist(board, "a"));
+
+//		Solution0052 solution0052 = new Solution0052();
+//		System.out.println(solution0052.totalNQueens(4));
 
 		System.out.println("Java R3");
 	}
