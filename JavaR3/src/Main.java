@@ -29,6 +29,7 @@ import solution.Solution0106;
 import solution.Solution0112;
 import solution.Solution0114;
 import solution.Solution0124;
+import solution.Solution0127;
 import solution.Solution0129;
 import solution.Solution0130;
 import solution.Solution0150;
@@ -460,7 +461,7 @@ public class Main {
 //		System.out.println(solution0022.generateParenthesis(3));
 //		System.out.println(solution0022.generateParenthesis(1));
 
-		Solution0079 solution0079 = new Solution0079();
+//		Solution0079 solution0079 = new Solution0079();
 //		char[][] board = new char[][] {
 //			{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}
 //			{'A','B','C','E'},{'S','F','E','S'},{'A','D','E','E'}
@@ -473,13 +474,20 @@ public class Main {
 //			{'a', 'b'}, {'c', 'd'}
 //		};
 //		System.out.println(solution0079.exist(board, "acdb"));
-		char[][] board = new char[][] {
-			{'a'}
-		};
-		System.out.println(solution0079.exist(board, "a"));
+//		char[][] board = new char[][] {
+//			{'a'}
+//		};
+//		System.out.println(solution0079.exist(board, "a"));
 
 //		Solution0052 solution0052 = new Solution0052();
 //		System.out.println(solution0052.totalNQueens(4));
+
+		//"dot","dog","lot","log","cog"
+		Solution0127 solution0127 = new Solution0127();
+		List<String> wordList = new ArrayList<>() {
+			{add("hot");add("dog");add("lot");add("log");add("cog");}
+		};
+		System.out.println(solution0127.ladderLength("hit", "cog", wordList));
 
 		System.out.println("Java R3");
 	}
