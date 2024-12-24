@@ -26,12 +26,14 @@ import solution.Solution0102;
 import solution.Solution0103;
 import solution.Solution0105;
 import solution.Solution0106;
+import solution.Solution0108;
 import solution.Solution0112;
 import solution.Solution0114;
 import solution.Solution0124;
 import solution.Solution0127;
 import solution.Solution0129;
 import solution.Solution0130;
+import solution.Solution0148;
 import solution.Solution0150;
 import solution.Solution0155;
 import solution.Solution0199;
@@ -483,11 +485,18 @@ public class Main {
 //		System.out.println(solution0052.totalNQueens(4));
 
 		//"dot","dog","lot","log","cog"
-		Solution0127 solution0127 = new Solution0127();
-		List<String> wordList = new ArrayList<>() {
-			{add("hot");add("dog");add("lot");add("log");add("cog");}
-		};
-		System.out.println(solution0127.ladderLength("hit", "cog", wordList));
+//		Solution0127 solution0127 = new Solution0127();
+//		List<String> wordList = new ArrayList<>() {
+//			{add("hot");add("dog");add("lot");add("log");add("cog");}
+//		};
+//		System.out.println(solution0127.ladderLength("hit", "cog", wordList));
+//		Solution0108 solution0108 = new Solution0108();
+//		TreeNode node = solution0108.sortedArrayToBST(new int[] {-10, -3, 0, 5, 9});
+
+		Solution0148 solution0148 = new Solution0148();
+		printLinkList(solution0148.sortList(generateListNode(new int[] {4,2,1,3})));
+		printLinkList(solution0148.sortList(generateListNode(new int[] {-1,5,3,4,0})));
+		printLinkList(solution0148.sortList(generateListNode(new int[] {})));
 
 		System.out.println("Java R3");
 	}
@@ -549,7 +558,7 @@ public class Main {
 
 	public static void printLinkList(ListNode head) {
 		while (head != null) {
-			System.out.print(head.val);
+			System.out.print(head.val + " ");
 			head = head.next;
 		}
 
