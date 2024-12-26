@@ -10,6 +10,7 @@ import solution.Solution0025;
 import solution.Solution0039;
 import solution.Solution0046;
 import solution.Solution0052;
+import solution.Solution0053;
 import solution.Solution0056;
 import solution.Solution0057;
 import solution.Solution0061;
@@ -493,10 +494,15 @@ public class Main {
 //		Solution0108 solution0108 = new Solution0108();
 //		TreeNode node = solution0108.sortedArrayToBST(new int[] {-10, -3, 0, 5, 9});
 
-		Solution0148 solution0148 = new Solution0148();
-		printLinkList(solution0148.sortList(generateListNode(new int[] {4,2,1,3})));
-		printLinkList(solution0148.sortList(generateListNode(new int[] {-1,5,3,4,0})));
-		printLinkList(solution0148.sortList(generateListNode(new int[] {})));
+//		Solution0148 solution0148 = new Solution0148();
+//		printLinkList(solution0148.sortList(generateListNode(new int[] {4,2,1,3})));
+//		printLinkList(solution0148.sortList(generateListNode(new int[] {-1,5,3,4,0})));
+//		printLinkList(solution0148.sortList(generateListNode(new int[] {})));
+
+		Solution0053 solution0053 = new Solution0053();
+		System.out.println(solution0053.maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
+		System.out.println(solution0053.maxSubArray(new int[]{1}));
+		System.out.println(solution0053.maxSubArray(new int[]{5,4,-1,7,8}));
 
 		System.out.println("Java R3");
 	}
