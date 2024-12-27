@@ -7,6 +7,7 @@ import solution.Solution0020;
 import solution.Solution0021;
 import solution.Solution0022;
 import solution.Solution0025;
+import solution.Solution0035;
 import solution.Solution0039;
 import solution.Solution0046;
 import solution.Solution0052;
@@ -14,6 +15,7 @@ import solution.Solution0053;
 import solution.Solution0056;
 import solution.Solution0057;
 import solution.Solution0061;
+import solution.Solution0067;
 import solution.Solution0071;
 import solution.Solution0074;
 import solution.Solution0077;
@@ -53,6 +55,7 @@ import solution.Solution0452;
 import solution.Solution0530;
 import solution.Solution0637;
 import solution.Solution0909;
+import solution.Solution0918;
 import solution.TreeNode;
 
 import java.util.ArrayList;
@@ -505,15 +508,34 @@ public class Main {
 //		System.out.println(solution0053.maxSubArray(new int[]{1}));
 //		System.out.println(solution0053.maxSubArray(new int[]{5,4,-1,7,8}));
 
-		Solution0074 solution0074 = new Solution0074();
-		System.out.println(solution0074.searchMatrix(new int[][]{{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 60}}, 3));
-		System.out.println(solution0074.searchMatrix(new int[][]{{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 60}}, 13));
-		System.out.println(solution0074.searchMatrix(new int[][]{{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 60}}, 5));
-		System.out.println(solution0074.searchMatrix(new int[][]{{1, 3}}, 1));
-		System.out.println(solution0074.searchMatrix(new int[][]{{1, 3, 5}}, 4));
-		System.out.println(solution0074.searchMatrix(new int[][]{{1, 3, 5}}, 5));
+//		Solution0074 solution0074 = new Solution0074();
+//		System.out.println(solution0074.searchMatrix(new int[][]{{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 60}}, 3));
+//		System.out.println(solution0074.searchMatrix(new int[][]{{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 60}}, 13));
+//		System.out.println(solution0074.searchMatrix(new int[][]{{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 60}}, 5));
+//		System.out.println(solution0074.searchMatrix(new int[][]{{1, 3}}, 1));
+//		System.out.println(solution0074.searchMatrix(new int[][]{{1, 3, 5}}, 4));
+//		System.out.println(solution0074.searchMatrix(new int[][]{{1, 3, 5}}, 5));
+//		Solution0053 solution0053 = new Solution0053();
+//		System.out.println(solution0053.maxSubArray(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
+//		System.out.println(solution0053.maxSubArray(new int[]{1}));
+//		System.out.println(solution0053.maxSubArray(new int[]{5,4,-1,7,8}));
+
+//		Solution0918 solution0918 = new Solution0918();
+//		System.out.println(solution0918.maxSubarraySumCircular(new int[]{1, -2, 3, -2}));
+//		System.out.println(solution0918.maxSubarraySumCircular(new int[]{5,-3,5}));
+//		System.out.println(solution0918.maxSubarraySumCircular(new int[]{3,-2,2,-3}));
+//		System.out.println(solution0918.maxSubarraySumCircular(new int[]{-3,-2,-3}));
+//		Solution0035 solution0035 = new Solution0035();
+//		System.out.println(solution0035.searchInsert(new int[]{1, 3, 5, 6}, 5));
+//		System.out.println(solution0035.searchInsert(new int[]{1, 3, 5, 6}, 2));
+//		System.out.println(solution0035.searchInsert(new int[]{1, 3, 5, 6}, 7));
+//		Solution0067 solution0067 = new Solution0067();
+//		System.out.println(solution0067.addBinary("11", "1"));
+//		System.out.println(solution0067.addBinary("1010", "1011"));
 
 		System.out.println("Java R3");
+
+
 	}
 
 	public static List<List<String>> arr2List(String[][] arr) {
