@@ -40,10 +40,12 @@ import solution.Solution0130;
 import solution.Solution0148;
 import solution.Solution0150;
 import solution.Solution0155;
+import solution.Solution0162;
 import solution.Solution0199;
 import solution.Solution0200;
 import solution.Solution0207;
 import solution.Solution0210;
+import solution.Solution0212;
 import solution.Solution0222;
 import solution.Solution0224;
 import solution.Solution0226;
@@ -532,6 +534,24 @@ public class Main {
 //		Solution0067 solution0067 = new Solution0067();
 //		System.out.println(solution0067.addBinary("11", "1"));
 //		System.out.println(solution0067.addBinary("1010", "1011"));
+//		Solution0162 solution0162 = new Solution0162();
+//		System.out.println(solution0162.findPeakElement(new int[]{1, 2, 3, 1}));
+//		System.out.println(solution0162.findPeakElement(new int[]{1,2,1,3,5,6,4}));
+//		System.out.println(solution0162.findPeakElement(new int[]{1}));
+
+		Solution0212 solution0212 = new Solution0212();
+		//board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]],
+		//words = ["oath","pea","eat","rain"]
+//		char[][] board = new char[][] {{'o','a','a','n'},{'e','t','a','e'},{'i','h','k','r'},{'i','f','l','v'}};
+//		String[] words = new String[] {"oath","pea","eat","rain"};
+//		char[][] board = new char[][] {{'a', 'b'}, {'c', 'd'}};
+//		String[] words = new String[] {"abcd"};
+		char[][] board = new char[][] {{'a'}};
+		String[] words = new String[] {"a"};
+		List<String> res = solution0212.findWords(board, words);
+		for (String re : res) {
+			System.out.println(re);
+		}
 
 		System.out.println("Java R3");
 
