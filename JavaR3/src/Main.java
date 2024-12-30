@@ -6,7 +6,10 @@ import solution.Solution0019;
 import solution.Solution0020;
 import solution.Solution0021;
 import solution.Solution0022;
+import solution.Solution0023;
 import solution.Solution0025;
+import solution.Solution0033;
+import solution.Solution0034;
 import solution.Solution0035;
 import solution.Solution0039;
 import solution.Solution0046;
@@ -539,20 +542,51 @@ public class Main {
 //		System.out.println(solution0162.findPeakElement(new int[]{1,2,1,3,5,6,4}));
 //		System.out.println(solution0162.findPeakElement(new int[]{1}));
 
-		Solution0212 solution0212 = new Solution0212();
+//		Solution0212 solution0212 = new Solution0212();
 		//board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]],
 		//words = ["oath","pea","eat","rain"]
 //		char[][] board = new char[][] {{'o','a','a','n'},{'e','t','a','e'},{'i','h','k','r'},{'i','f','l','v'}};
 //		String[] words = new String[] {"oath","pea","eat","rain"};
 //		char[][] board = new char[][] {{'a', 'b'}, {'c', 'd'}};
 //		String[] words = new String[] {"abcd"};
-		char[][] board = new char[][] {{'a'}};
-		String[] words = new String[] {"a"};
-		List<String> res = solution0212.findWords(board, words);
-		for (String re : res) {
-			System.out.println(re);
-		}
+//		char[][] board = new char[][] {{'a'}};
+//		String[] words = new String[] {"a"};
+//		List<String> res = solution0212.findWords(board, words);
+//		for (String re : res) {
+//			System.out.println(re);
+//		}
 
+//		Solution0023 solution0023 = new Solution0023();
+//		ListNode res = solution0023.mergeKLists(new ListNode[] {
+//			generateListNode(new int[] {1,4,5}),
+//			generateListNode(new int[] {1,3,4}),
+//			generateListNode(new int[] {2,6})});
+//		printLinkList(res);
+//		printLinkList(solution0023.mergeKLists(new ListNode[] {}));
+//		Solution0033 solution0033 = new Solution0033();
+//		System.out.println(solution0033.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 4));
+//		System.out.println(solution0033.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 5));
+//		System.out.println(solution0033.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 6));
+//		System.out.println(solution0033.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 7));
+//		System.out.println(solution0033.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 0));
+//		System.out.println(solution0033.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 1));
+//		System.out.println(solution0033.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 2));
+//		System.out.println(solution0033.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 3));
+//		System.out.println(solution0033.search(new int[]{3,1}, 3));
+
+		Solution0034 solution0034 = new Solution0034();
+		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 8));
+		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 7));
+		printArr(solution0034.searchRange(new int[]{5, 5, 7, 7, 8, 8, 10}, 5));
+		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 5));
+		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 6));
+		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 10));
+		printArr(solution0034.searchRange(new int[]{10}, 1));
+		printArr(solution0034.searchRange(new int[]{10}, 10));
+		printArr(solution0034.searchRange(new int[]{2,2}, 3));
+		printArr(solution0034.searchRange(new int[]{}, 10));
+		printArr(solution0034.searchRange(new int[]{1,4}, 4));
+		printArr(solution0034.searchRange(new int[]{2,2}, 2));
 		System.out.println("Java R3");
 
 
@@ -635,6 +669,13 @@ public class Main {
 			} else {
 				System.out.print("null ");
 			}
+		}
+		System.out.println();
+	}
+
+	public static void printArr(int[] nums) {
+		for (int num : nums) {
+			System.out.print(num);
 		}
 		System.out.println();
 	}
