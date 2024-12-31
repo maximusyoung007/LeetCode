@@ -1,6 +1,7 @@
 import com.sun.source.tree.Tree;
 import solution.ListNode;
 import solution.Solution0002;
+import solution.Solution0004;
 import solution.Solution0017;
 import solution.Solution0019;
 import solution.Solution0020;
@@ -42,6 +43,7 @@ import solution.Solution0129;
 import solution.Solution0130;
 import solution.Solution0148;
 import solution.Solution0150;
+import solution.Solution0153;
 import solution.Solution0155;
 import solution.Solution0162;
 import solution.Solution0199;
@@ -49,11 +51,13 @@ import solution.Solution0200;
 import solution.Solution0207;
 import solution.Solution0210;
 import solution.Solution0212;
+import solution.Solution0215;
 import solution.Solution0222;
 import solution.Solution0224;
 import solution.Solution0226;
 import solution.Solution0230;
 import solution.Solution0236;
+import solution.Solution0373;
 import solution.Solution0399;
 import solution.Solution0433;
 import solution.Solution0452;
@@ -574,19 +578,34 @@ public class Main {
 //		System.out.println(solution0033.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 3));
 //		System.out.println(solution0033.search(new int[]{3,1}, 3));
 
-		Solution0034 solution0034 = new Solution0034();
-		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 8));
-		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 7));
-		printArr(solution0034.searchRange(new int[]{5, 5, 7, 7, 8, 8, 10}, 5));
-		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 5));
-		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 6));
-		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 10));
-		printArr(solution0034.searchRange(new int[]{10}, 1));
-		printArr(solution0034.searchRange(new int[]{10}, 10));
-		printArr(solution0034.searchRange(new int[]{2,2}, 3));
-		printArr(solution0034.searchRange(new int[]{}, 10));
-		printArr(solution0034.searchRange(new int[]{1,4}, 4));
-		printArr(solution0034.searchRange(new int[]{2,2}, 2));
+//		Solution0034 solution0034 = new Solution0034();
+//		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 8));
+//		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 7));
+//		printArr(solution0034.searchRange(new int[]{5, 5, 7, 7, 8, 8, 10}, 5));
+//		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 5));
+//		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 6));
+//		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 10));
+//		printArr(solution0034.searchRange(new int[]{10}, 1));
+//		printArr(solution0034.searchRange(new int[]{10}, 10));
+//		printArr(solution0034.searchRange(new int[]{2,2}, 3));
+//		printArr(solution0034.searchRange(new int[]{}, 10));
+//		printArr(solution0034.searchRange(new int[]{1,4}, 4));
+//		printArr(solution0034.searchRange(new int[]{2,2}, 2));
+//		Solution0004 solution0004 = new Solution0004();
+//		System.out.println(solution0004.findMedianSortedArrays(new int[]{1, 3, 4, 9}, new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}));
+//		System.out.println(solution0004.findMedianSortedArrays(new int[]{1, 3}, new int[]{2}));
+//		System.out.println(solution0004.findMedianSortedArrays(new int[]{1, 2}, new int[]{3,4}));
+//		System.out.println(solution0004.findMedianSortedArrays(new int[]{}, new int[]{1}));
+//		System.out.println(solution0004.findMedianSortedArrays(new int[]{2,3,4,5,6}, new int[]{1}));
+
+//		Solution0215 solution0215 = new Solution0215();
+//		System.out.println(solution0215.findKthLargest(new int[]{3, 2, 1, 5, 6, 4}, 2));
+//		System.out.println(solution0215.findKthLargest(new int[]{3, 2, 3, 1, 2, 4, 5, 5, 6}, 4));
+
+		Solution0373 solution0373 = new Solution0373();
+//		System.out.println(solution0373.kSmallestPairs(new int[]{1, 1, 2}, new int[]{1, 2, 3}, 2));
+//		System.out.println(solution0373.kSmallestPairs(new int[]{1, 7, 11}, new int[]{2, 4, 6}, 3));
+		System.out.println(solution0373.kSmallestPairs(new int[]{1,2,4,5,6}, new int[]{3,5,7,9}, 20));
 		System.out.println("Java R3");
 
 
