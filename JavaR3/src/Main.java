@@ -42,6 +42,7 @@ import solution.Solution0129;
 import solution.Solution0130;
 import solution.Solution0148;
 import solution.Solution0150;
+import solution.Solution0153;
 import solution.Solution0155;
 import solution.Solution0162;
 import solution.Solution0199;
@@ -574,19 +575,26 @@ public class Main {
 //		System.out.println(solution0033.search(new int[]{4, 5, 6, 7, 0, 1, 2}, 3));
 //		System.out.println(solution0033.search(new int[]{3,1}, 3));
 
-		Solution0034 solution0034 = new Solution0034();
-		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 8));
-		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 7));
-		printArr(solution0034.searchRange(new int[]{5, 5, 7, 7, 8, 8, 10}, 5));
-		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 5));
-		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 6));
-		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 10));
-		printArr(solution0034.searchRange(new int[]{10}, 1));
-		printArr(solution0034.searchRange(new int[]{10}, 10));
-		printArr(solution0034.searchRange(new int[]{2,2}, 3));
-		printArr(solution0034.searchRange(new int[]{}, 10));
-		printArr(solution0034.searchRange(new int[]{1,4}, 4));
-		printArr(solution0034.searchRange(new int[]{2,2}, 2));
+//		Solution0034 solution0034 = new Solution0034();
+//		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 8));
+//		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 7));
+//		printArr(solution0034.searchRange(new int[]{5, 5, 7, 7, 8, 8, 10}, 5));
+//		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 5));
+//		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 6));
+//		printArr(solution0034.searchRange(new int[]{5, 7, 7, 8, 8, 10}, 10));
+//		printArr(solution0034.searchRange(new int[]{10}, 1));
+//		printArr(solution0034.searchRange(new int[]{10}, 10));
+//		printArr(solution0034.searchRange(new int[]{2,2}, 3));
+//		printArr(solution0034.searchRange(new int[]{}, 10));
+//		printArr(solution0034.searchRange(new int[]{1,4}, 4));
+//		printArr(solution0034.searchRange(new int[]{2,2}, 2));
+
+		Solution0153 solution0153 = new Solution0153();
+		System.out.println(solution0153.findMin(new int[]{3, 4, 5, 1, 2}));
+		System.out.println(solution0153.findMin(new int[]{4 ,5, 1, 2, 3}));
+		System.out.println(solution0153.findMin(new int[]{5, 1, 2,3,4}));
+		System.out.println(solution0153.findMin(new int[]{1,2,3, 4, 5}));
+		System.out.println(solution0153.findMin(new int[]{4,5,6,7,0,1,2}));
 		System.out.println("Java R3");
 
 
